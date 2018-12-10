@@ -1,0 +1,6 @@
+framework module Pods_knStore {
+  umbrella header "Pods-knStore-umbrella.h"
+
+  export *
+  module * { export * }
+}
