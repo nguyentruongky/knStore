@@ -74,6 +74,21 @@
 		C1F67CEC21BF6FF600CDC2ED /* knStateview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CEB21BF6FF600CDC2ED /* knStateview.swift */; };
 		C1F67CEE21BF705600CDC2ED /* knSectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CED21BF705500CDC2ED /* knSectionList.swift */; };
 		C1F67CF021BF711F00CDC2ED /* knExpandList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CEF21BF711F00CDC2ED /* knExpandList.swift */; };
+		C1F67CFC21BF73FC00CDC2ED /* GeocodingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CF221BF73FC00CDC2ED /* GeocodingWorker.swift */; };
+		C1F67CFD21BF73FC00CDC2ED /* RequestLocationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CF321BF73FC00CDC2ED /* RequestLocationWorker.swift */; };
+		C1F67CFE21BF73FC00CDC2ED /* UploadWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CF421BF73FC00CDC2ED /* UploadWorker.swift */; };
+		C1F67D0121BF73FC00CDC2ED /* knPhotoSelectWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CF721BF73FC00CDC2ED /* knPhotoSelectWorker.swift */; };
+		C1F67D0221BF73FC00CDC2ED /* GoogleLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CF821BF73FC00CDC2ED /* GoogleLocationManager.swift */; };
+		C1F67D0321BF73FC00CDC2ED /* LocationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CF921BF73FC00CDC2ED /* LocationWorker.swift */; };
+		C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CFB21BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift */; };
+		C1F67D0721BF740200CDC2ED /* AnimateItemCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0621BF740200CDC2ED /* AnimateItemCollectionLayout.swift */; };
+		C1F67D0A21BF74D800CDC2ED /* SearchHistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0921BF74D800CDC2ED /* SearchHistoryWorker.swift */; };
+		C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */; };
+		C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */; };
+		C1F67D1021BF78E100CDC2ED /* MessageHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0F21BF78E100CDC2ED /* MessageHub.swift */; };
+		C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */; };
+		C1F67D1421BF7B5200CDC2ED /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1321BF7B5200CDC2ED /* Boss.swift */; };
+		C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +162,21 @@
 		C1F67CEB21BF6FF600CDC2ED /* knStateview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knStateview.swift; sourceTree = "<group>"; };
 		C1F67CED21BF705500CDC2ED /* knSectionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knSectionList.swift; sourceTree = "<group>"; };
 		C1F67CEF21BF711F00CDC2ED /* knExpandList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = knExpandList.swift; sourceTree = "<group>"; };
+		C1F67CF221BF73FC00CDC2ED /* GeocodingWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingWorker.swift; sourceTree = "<group>"; };
+		C1F67CF321BF73FC00CDC2ED /* RequestLocationWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestLocationWorker.swift; sourceTree = "<group>"; };
+		C1F67CF421BF73FC00CDC2ED /* UploadWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadWorker.swift; sourceTree = "<group>"; };
+		C1F67CF721BF73FC00CDC2ED /* knPhotoSelectWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knPhotoSelectWorker.swift; sourceTree = "<group>"; };
+		C1F67CF821BF73FC00CDC2ED /* GoogleLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleLocationManager.swift; sourceTree = "<group>"; };
+		C1F67CF921BF73FC00CDC2ED /* LocationWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationWorker.swift; sourceTree = "<group>"; };
+		C1F67CFB21BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDeviceTokenWorker.swift; sourceTree = "<group>"; };
+		C1F67D0621BF740200CDC2ED /* AnimateItemCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateItemCollectionLayout.swift; sourceTree = "<group>"; };
+		C1F67D0921BF74D800CDC2ED /* SearchHistoryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryWorker.swift; sourceTree = "<group>"; };
+		C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExtension.swift; sourceTree = "<group>"; };
+		C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
+		C1F67D0F21BF78E100CDC2ED /* MessageHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHub.swift; sourceTree = "<group>"; };
+		C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.StartPoint.swift; sourceTree = "<group>"; };
+		C1F67D1321BF7B5200CDC2ED /* Boss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
+		C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidation.swift; sourceTree = "<group>"; };
 		E314C17B2F2D391633D2A07C /* Pods_knStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_knStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -216,6 +246,8 @@
 				C1F67C8F21BF65C100CDC2ED /* assistants */,
 				C1F67C9621BF67AE00CDC2ED /* controls */,
 				C1F67C5E21BE712600CDC2ED /* must_have */,
+				C1F67D0821BF740700CDC2ED /* others */,
+				C1F67CF121BF73FC00CDC2ED /* workers */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -224,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				C1F67C6821BE713900CDC2ED /* 1.Setting.swift */,
+				C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */,
 				C1F67C7221BE713A00CDC2ED /* DateExtension.swift */,
 				C1F67C9221BF65C100CDC2ED /* DeviceType.swift */,
 				C1F67C5F21BE713900CDC2ED /* General.swift */,
@@ -234,6 +267,7 @@
 				C1F67C8B21BEFEA100CDC2ED /* knListView.swift */,
 				C1F67C6A21BE713900CDC2ED /* knUIMaker.swift */,
 				C1F67C6521BE713900CDC2ED /* knView.swift */,
+				C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */,
 				C1F67C6F21BE713A00CDC2ED /* OtherExtensions.swift */,
 				C1F67C6B21BE713A00CDC2ED /* ServiceConnector.swift */,
 				C1F67C6121BE713900CDC2ED /* StringExtension.swift */,
@@ -262,6 +296,7 @@
 		C1F67C9621BF67AE00CDC2ED /* controls */ = {
 			isa = PBXGroup;
 			children = (
+				C1F67D1321BF7B5200CDC2ED /* Boss.swift */,
 				C1F67CB821BF67AE00CDC2ED /* GradientView.swift */,
 				C1F67CB521BF67AE00CDC2ED /* KMPlaceholderTextView.swift */,
 				C1F67CA521BF67AE00CDC2ED /* knAnalogClockView.swift */,
@@ -272,13 +307,13 @@
 				C1F67CA021BF67AE00CDC2ED /* knDateDialog.swift */,
 				C1F67C9F21BF67AE00CDC2ED /* knDotLoadingIndicator.swift */,
 				C1F67CB721BF67AE00CDC2ED /* knDraggableViewCollection.swift */,
+				C1F67CEF21BF711F00CDC2ED /* knExpandList.swift */,
 				C1F67CBD21BF67AE00CDC2ED /* knGistTextField.swift */,
 				C1F67C9921BF67AE00CDC2ED /* knImageSlideView.swift */,
 				C1F67CAC21BF67AE00CDC2ED /* knPagerController.swift */,
 				C1F67CE721BF6FDD00CDC2ED /* knPicker.swift */,
 				C1F67CA321BF67AE00CDC2ED /* knRippleAnimationView.swift */,
 				C1F67CED21BF705500CDC2ED /* knSectionList.swift */,
-				C1F67CEF21BF711F00CDC2ED /* knExpandList.swift */,
 				C1F67CEB21BF6FF600CDC2ED /* knStateview.swift */,
 				C1F67CE621BF6FDD00CDC2ED /* knTabController.swift */,
 				C1F67CBB21BF67AE00CDC2ED /* knTagView.swift */,
@@ -300,6 +335,32 @@
 				C1F67CA821BF67AE00CDC2ED /* ZFRippleButton.swift */,
 			);
 			path = controls;
+			sourceTree = "<group>";
+		};
+		C1F67CF121BF73FC00CDC2ED /* workers */ = {
+			isa = PBXGroup;
+			children = (
+				C1F67CF221BF73FC00CDC2ED /* GeocodingWorker.swift */,
+				C1F67D0921BF74D800CDC2ED /* SearchHistoryWorker.swift */,
+				C1F67CF321BF73FC00CDC2ED /* RequestLocationWorker.swift */,
+				C1F67CF421BF73FC00CDC2ED /* UploadWorker.swift */,
+				C1F67CF721BF73FC00CDC2ED /* knPhotoSelectWorker.swift */,
+				C1F67CF821BF73FC00CDC2ED /* GoogleLocationManager.swift */,
+				C1F67CF921BF73FC00CDC2ED /* LocationWorker.swift */,
+				C1F67CFB21BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift */,
+			);
+			path = workers;
+			sourceTree = "<group>";
+		};
+		C1F67D0821BF740700CDC2ED /* others */ = {
+			isa = PBXGroup;
+			children = (
+				C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */,
+				C1F67D0621BF740200CDC2ED /* AnimateItemCollectionLayout.swift */,
+				C1F67D0F21BF78E100CDC2ED /* MessageHub.swift */,
+				C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */,
+			);
+			path = others;
 			sourceTree = "<group>";
 		};
 		E652BEFA3A2C16FB3FF7AA00 /* Pods */ = {
@@ -441,6 +502,7 @@
 				C1F67CE321BF67AE00CDC2ED /* PlacePickerView.swift in Sources */,
 				C1F67C7921BE713A00CDC2ED /* knView.swift in Sources */,
 				C1F67C4D21BE6F4800CDC2ED /* ViewController.swift in Sources */,
+				C1F67D1421BF7B5200CDC2ED /* Boss.swift in Sources */,
 				C1F67C8D21BEFEA100CDC2ED /* knListView.swift in Sources */,
 				C1F67C7621BE713A00CDC2ED /* UITextFieldExtension.swift in Sources */,
 				C1F67CDB21BF67AE00CDC2ED /* knAnimationScrollView.swift in Sources */,
@@ -457,6 +519,7 @@
 				C1F67CBE21BF67AE00CDC2ED /* WebBrowser.swift in Sources */,
 				C1F67CE921BF6FDD00CDC2ED /* knTabController.swift in Sources */,
 				C1F67CEE21BF705600CDC2ED /* knSectionList.swift in Sources */,
+				C1F67CFE21BF73FC00CDC2ED /* UploadWorker.swift in Sources */,
 				C1F67CD321BF67AE00CDC2ED /* knPagerController.swift in Sources */,
 				C1F67C7721BE713A00CDC2ED /* knConstraints.swift in Sources */,
 				C1F67C7E21BE713A00CDC2ED /* knUIMaker.swift in Sources */,
@@ -465,29 +528,42 @@
 				C1F67CE421BF67AE00CDC2ED /* knGistTextField.swift in Sources */,
 				C1F67C7D21BE713A00CDC2ED /* UIViewExtension.swift in Sources */,
 				C1F67CC721BF67AE00CDC2ED /* knDateDialog.swift in Sources */,
+				C1F67CFD21BF73FC00CDC2ED /* RequestLocationWorker.swift in Sources */,
 				C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */,
+				C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */,
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
 				C1F67CDD21BF67AE00CDC2ED /* QRCode.swift in Sources */,
 				C1F67C7321BE713A00CDC2ED /* General.swift in Sources */,
 				C1F67CCF21BF67AE00CDC2ED /* ZFRippleButton.swift in Sources */,
 				C1F67CC021BF67AE00CDC2ED /* knImageSlideView.swift in Sources */,
+				C1F67D0121BF73FC00CDC2ED /* knPhotoSelectWorker.swift in Sources */,
 				C1F67CDA21BF67AE00CDC2ED /* PagerController.swift in Sources */,
 				C1F67C8021BE713A00CDC2ED /* UIApplicationExtension.swift in Sources */,
 				C1F67C7A21BE713A00CDC2ED /* knController.swift in Sources */,
 				C1F67C7F21BE713A00CDC2ED /* ServiceConnector.swift in Sources */,
 				C1F67CDC21BF67AE00CDC2ED /* KMPlaceholderTextView.swift in Sources */,
 				C1F67CCC21BF67AE00CDC2ED /* knAnalogClockView.swift in Sources */,
+				C1F67D0221BF73FC00CDC2ED /* GoogleLocationManager.swift in Sources */,
 				C1F67CD921BF67AE00CDC2ED /* knBarButtonNumber.swift in Sources */,
 				C1F67CD221BF67AE00CDC2ED /* PINController.swift in Sources */,
 				C1F67C9321BF65C100CDC2ED /* Controller+Keyboard.swift in Sources */,
 				C1F67C9421BF65C100CDC2ED /* Localization.swift in Sources */,
+				C1F67D0321BF73FC00CDC2ED /* LocationWorker.swift in Sources */,
+				C1F67D1021BF78E100CDC2ED /* MessageHub.swift in Sources */,
+				C1F67D0721BF740200CDC2ED /* AnimateItemCollectionLayout.swift in Sources */,
+				C1F67D0A21BF74D800CDC2ED /* SearchHistoryWorker.swift in Sources */,
 				C1F67CD421BF67AE00CDC2ED /* knUnderlineTextField.swift in Sources */,
+				C1F67CFC21BF73FC00CDC2ED /* GeocodingWorker.swift in Sources */,
+				C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */,
 				C1F67C7821BE713A00CDC2ED /* UIFontExtension.swift in Sources */,
 				C1F67CF021BF711F00CDC2ED /* knExpandList.swift in Sources */,
 				C1F67CDE21BF67AE00CDC2ED /* knDraggableViewCollection.swift in Sources */,
 				C1F67C7C21BE713A00CDC2ED /* 1.Setting.swift in Sources */,
 				C1F67C8321BE713A00CDC2ED /* OtherExtensions.swift in Sources */,
+				C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */,
 				C1F67CCD21BF67AE00CDC2ED /* knTwoColumnsController.swift in Sources */,
+				C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */,
+				C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

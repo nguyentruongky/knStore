@@ -115,6 +115,28 @@ extension UITableView {
     }
 }
 
+extension UITableViewController {
+    func animateTable() {
+        tableView.reloadData()
+        let cells = tableView.visibleCells
+        let tableHeight = tableView.bounds.size.height
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+        var index = 0
+        for cell in cells {
+            UIView.animate(withDuration: 1.25, delay: 0.05 * Double(index),
+                           usingSpringWithDamping: 0.65,
+                           initialSpringVelocity: 0.0,
+                           options: UIView.AnimationOptions(),
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            })
+            index += 1
+        }
+    }
+}
+
 extension UITextView {
     func wrapText(aroundRect rect: CGRect) {
         let path = UIBezierPath(rect: rect)
@@ -130,6 +152,15 @@ extension Bundle {
     var buildVersion: String? {
         return infoDictionary?["CFBundleVersion"] as? String
     }
+    
+    func getJson(from file: String) -> AnyObject? {
+        guard let filePath = path(forResource: file, ofType: "json") else { return nil }
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+            return jsonResult as AnyObject
+        } catch { return nil }
+    }
 }
 
 
@@ -140,26 +171,21 @@ extension UITabBar {
     }
 }
 
+extension UITabBarController {
+    func setTabBar(visible: Bool) {
+        tabBar.frame.size.height = visible ? 49 : 0
+        tabBar.isHidden = !visible
+    }
+}
+
+
 extension UserDefaults {
     static func set<T>(key: String, value: T?) {
         UserDefaults.standard.setValue(value, forKey: key)
     }
     
-    static func getString(key: String) -> String? {
-        return UserDefaults.standard.value(forKeyPath: key) as? String
-    }
-    
-    static func setBool(key: String, value: Bool?) {
-        UserDefaults.standard.setValue(value, forKey: key)
-    }
-    
-    static func getBool(key: String, defaultValue: Bool = false) -> Bool {
-        guard let value = UserDefaults.standard.value(forKeyPath: key) as? Bool else { return defaultValue }
-        return value
-    }
-    
-    static func getInt(key: String) -> Int? {
-        return UserDefaults.standard.value(forKeyPath: key) as? Int
+    static func get<T>(key: String) -> T? {
+        return UserDefaults.standard.value(forKeyPath: key) as? T
     }
 }
 

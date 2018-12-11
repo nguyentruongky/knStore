@@ -107,6 +107,14 @@ extension String {
     func substring(to: Int) -> String {
         return String(prefix(to))
     }
+    
+    func remove(_ string: String) -> String {
+        return replacingOccurrences(of: string, with: "")
+    }
+    
+    func replace(_ string: String, with newString: String) -> String {
+        return replacingOccurrences(of: string, with: newString)
+    }
 }
 
 public extension String {
