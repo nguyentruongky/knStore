@@ -8,8 +8,7 @@
 
 import Foundation
 
-typealias knSetting = Setting
-struct Setting {
+struct AppSetting {
     static var baseUrl: String = ""
     static var token: String?
 }

@@ -15,7 +15,7 @@ class knListCell<U>: knTableCell {
 class knListView<C: knListCell<U>, U>: knView, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
     fileprivate let cellId = "cellId"
-    var rowHeight: CGFloat = UITableViewAutomaticDimension
+    var rowHeight: CGFloat = UITableView.automaticDimension
     
     lazy var tableView: UITableView = { [weak self] in
         let tb = UITableView()
@@ -30,7 +30,7 @@ class knListView<C: knListCell<U>, U>: knView, UITableViewDataSource, UITableVie
     override func setupView() {
         addSubview(tableView)
         tableView.fill(toView: self)
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         tableView.register(C.self, forCellReuseIdentifier: cellId)
     }
@@ -51,7 +51,7 @@ class knListView<C: knListCell<U>, U>: knView, UITableViewDataSource, UITableVie
 
 class knStaticListView: knView, UITableViewDataSource, UITableViewDelegate {
     var datasource = [knTableCell]() { didSet { tableView.reloadData() }}
-    var rowHeight = UITableViewAutomaticDimension
+    var rowHeight = UITableView.automaticDimension
     
     lazy var tableView: UITableView = { [weak self] in
         let tb = UITableView()
@@ -64,7 +64,7 @@ class knStaticListView: knView, UITableViewDataSource, UITableViewDelegate {
         }()
     
     override func setupView() {
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
     }
     
@@ -85,7 +85,7 @@ class knStaticListView: knView, UITableViewDataSource, UITableViewDelegate {
 class knListController<C: knListCell<U>, U>: knController, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
     fileprivate let cellId = "cellId"
-    var rowHeight = UITableViewAutomaticDimension
+    var rowHeight = UITableView.automaticDimension
     var contentInset: UIEdgeInsets?
     
     lazy var tableView: UITableView = { [weak self] in
@@ -108,7 +108,7 @@ class knListController<C: knListCell<U>, U>: knController, UITableViewDataSource
     
     override func setupView() {
         tableView.register(C.self, forCellReuseIdentifier: cellId)
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         if let inset = contentInset {
             tableView.contentInset = inset
@@ -140,7 +140,7 @@ class knListController<C: knListCell<U>, U>: knController, UITableViewDataSource
 
 class knStaticListController: knController, UITableViewDelegate, UITableViewDataSource {
     var datasource = [UITableViewCell]() { didSet { tableView.reloadData() }}
-    var rowHeight = UITableViewAutomaticDimension
+    var rowHeight = UITableView.automaticDimension
     var contentInset: UIEdgeInsets?
     
     override func viewDidLoad() {
@@ -156,7 +156,7 @@ class knStaticListController: knController, UITableViewDelegate, UITableViewData
     }
     
     override func setupView() {
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         if let inset = contentInset {
             tableView.contentInset = inset

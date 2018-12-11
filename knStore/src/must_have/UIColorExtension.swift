@@ -10,10 +10,9 @@ import UIKit
 
 extension UIColor {
     
-    /**
-     amount greater than 1 is darker, less than 1 is lighter
-     */
-    func adjustBrightness(_ amount:CGFloat) -> UIColor {
+    /// - Parameters:
+    ///     - amount: greater than 1 -> darker
+    func adjustBrightness(_ amount: CGFloat) -> UIColor {
         var hue:CGFloat = 0
         var saturation:CGFloat = 0
         var brightness:CGFloat = 0
@@ -42,13 +41,10 @@ extension UIColor {
             cString.remove(at: cString.startIndex)
         }
         
-        if ((cString.characters.count) != 6) {
-            return UIColor.gray
-        }
+        if ((cString.count) != 6) { return UIColor.gray }
         
         var rgbValue:UInt32 = 0
         Scanner(string: cString).scanHexInt32(&rgbValue)
-        
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
@@ -57,12 +53,9 @@ extension UIColor {
         )
     }
    
-    func getRGBAComponents() -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)?
-    {
+    func getRGBAComponents() -> (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)? {
         var (red, green, blue, alpha) = (CGFloat(0.0), CGFloat(0.0), CGFloat(0.0), CGFloat(0.0))
-        if self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        {
-            return (red, green, blue, alpha)
+        if getRed(&red, green: &green, blue: &blue, alpha: &alpha) { return (red, green, blue, alpha)
         } else {
             return nil
         }

@@ -48,6 +48,8 @@ class knCustomTableController: knController {
         registerCells()
     }
     
+    func registerCells() {}
+    
     lazy var tableView: UITableView = { [weak self] in
         let tb = UITableView()
         tb.translatesAutoresizingMaskIntoConstraints = false

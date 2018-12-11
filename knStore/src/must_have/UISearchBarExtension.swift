@@ -8,15 +8,13 @@
 
 import UIKit
 extension UISearchBar {
-    
     private func getViewElement<T>(type: T.Type) -> T? {
         let svs = subviews.flatMap { $0.subviews }
         guard let element = (svs.filter { $0 is T }).first as? T else { return nil }
         return element
     }
     
-    func setTextFieldBackgroundColor(_ color: UIColor) {
-        
+    func setTextFieldBackground(_ color: UIColor) {
         if let textField = getViewElement(type: UITextField.self) {
             switch searchBarStyle {
             case .minimal:

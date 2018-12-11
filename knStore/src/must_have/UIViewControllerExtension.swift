@@ -8,15 +8,12 @@
 
 import UIKit
 
-
 extension UIViewController {
-    
-    func enabledView(_ enabled: Bool) {
+    func setEnabled(_ enabled: Bool) {
         view.isUserInteractionEnabled = enabled
     }
     
-    func createFakeBackButton() -> [UIBarButtonItem] {
-        
+    private func createFakeBackButton() -> [UIBarButtonItem] {
         let height: CGFloat = 36
         let backView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: height))
         let image = UIImage(named: "back_arrow")
@@ -24,13 +21,12 @@ extension UIViewController {
         imageView.frame = CGRect(x: 0, y: 0, width: 36, height: height)
         backView.addSubview(imageView)
         let content = UILabel()
-        content.text = ""
         content.sizeToFit()
         content.frame.size = CGSize(width: content.frame.size.width, height: height)
         content.frame.origin = CGPoint(x: 30, y: 0)
         backView.addSubview(content)
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: height))
-        button.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        button.addTarget(self, action: #selector(dismissBack), for: .touchUpInside)
         backView.addSubview(button)
         
         let barButton = UIBarButtonItem(customView: backView)
@@ -41,19 +37,15 @@ extension UIViewController {
     }
     
     func addFakeBackButton() {
-        guard let count = navigationController?.viewControllers.count else { return }
-        guard count >= 2 else { return }
-        let buttons = createFakeBackButton()
-        navigationItem.leftBarButtonItems = buttons
+        navigationItem.leftBarButtonItems = createFakeBackButton()
     }
     
-    @objc func goBack() {
+    @objc func dismissBack() {
         dismiss(animated: true, completion: nil)
     }
     
     @discardableResult
     func addBackButton(tintColor: UIColor = .black) -> UIBarButtonItem {
-        
         let backArrowImageView = UIImageView(image: UIImage(named: "back_arrow")?.changeColor())
         backArrowImageView.contentMode = .scaleAspectFit
         backArrowImageView.tintColor = tintColor
@@ -64,14 +56,12 @@ extension UIViewController {
         backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         
         let backBarButton = UIBarButtonItem(customView: backButton)
-        
         navigationItem.leftBarButtonItem = backBarButton
-        
         return backBarButton
     }
     
     @objc func back() {
-        _ = navigationController?.popViewController(animated: true)
+        pop()
     }
 
     func present(_ controller: UIViewController) {
@@ -81,13 +71,23 @@ extension UIViewController {
     func push(_ controller: UIViewController) {
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    func pop() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func pop(to controller: UIViewController) {
+        navigationController?.popToViewController(controller, animated: true)
+    }
+    
+    func popToRoot() {
+        navigationController?.popToRootViewController(animated: true)
+    }
 
 }
 
 extension UITableViewController {
-    
     func animateTable() {
-        
         tableView.reloadData()
         let cells = tableView.visibleCells
         let tableHeight = tableView.bounds.size.height
@@ -100,19 +100,15 @@ extension UITableViewController {
                                        usingSpringWithDamping: 0.65,
                                        initialSpringVelocity: 0.0,
                                        options: UIView.AnimationOptions(),
-                                       animations:
-                {
+                                       animations: {
                     cell.transform = CGAffineTransform(translationX: 0, y: 0)
-                },
-                                       completion: nil)
-            
+                })
             index += 1
         }
     }
 }
 
 extension UITabBarController {
-    
     func setTabBar(visible: Bool) {
         tabBar.frame.size.height = visible ? 49 : 0
         tabBar.isHidden = !visible
@@ -126,7 +122,7 @@ extension UINavigationController {
                         self?.isNavigationBarHidden = hide })
     }
     
-    func setBarHiddenWhenScrolling(inScrollView scrollView: UIScrollView) {
+    func hideBarWhenScrolling(inScrollView scrollView: UIScrollView) {
         let actualPosition = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
         if actualPosition.y > 0 {
             setNavigationBarHidden(false, animated: true)
@@ -136,12 +132,13 @@ extension UINavigationController {
     }
     
     func changeTitleFont(_ font: UIFont, color: UIColor = .white) {
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color,
-                                             NSAttributedString.Key.font: font]
+        navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: color,
+            NSAttributedString.Key.font: font]
     }
     
-    func removeBottomSeparator(color: UIColor = .white, titleColor: UIColor = .black) {
-        navigationBar.setBackgroundImage(UIImage.imageFromColor(colour: color), for: .default)
+    func removeLine(color: UIColor = .white, titleColor: UIColor = .black) {
+        navigationBar.setBackgroundImage(UIImage.createImage(from: color), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.tintColor = titleColor
     }
@@ -149,7 +146,6 @@ extension UINavigationController {
     func fillNavigationBar(withColors colors: [CGColor],
                            startPoint: CGPoint = CGPoint(x: 0, y: 0),
                            endPoint: CGPoint = CGPoint(x: 1, y: 1)) {
-        
         let gradientLayer = CAGradientLayer()
         var updatedFrame = navigationBar.bounds
         updatedFrame.size.height += 20
@@ -161,4 +157,3 @@ extension UINavigationController {
         navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
     }
 }
-

@@ -8,14 +8,14 @@
 
 import UIKit
 
-enum knWeight: String {
-    case black = "Muli-Black"
-    case bold = "Muli-Bold"
-    case medium = "Muli-SemiBold"
-    case regular = "Muli-Regular"
-}
-
 extension UIFont {
+    enum knWeight: String {
+        case black = "Muli-Black"
+        case bold = "Muli-Bold"
+        case medium = "Muli-SemiBold"
+        case regular = "Muli-Regular"
+    }
+
     static func main(_ weight: knWeight = .regular, size: CGFloat = 15) -> UIFont {
         return font(weight.rawValue, size: size)
     }

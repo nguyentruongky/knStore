@@ -81,9 +81,8 @@ class UIMaker {
 
         button.setTitleColor(titleColor, for: .normal)
         button.setTitleColor(titleColor.withAlphaComponent(0.4), for: .disabled)
-        
-        button.setBackgroundColor(color: background, forState: .normal)
-        button.setBackgroundColor(color: background.withAlphaComponent(0.5), forState: .disabled)
+        button.setBackground(color: background, forState: .normal)
+        button.setBackground(color: background.withAlphaComponent(0.5), forState: .disabled)
         
         button.titleLabel?.font = font
         button.createRoundCorner(cornerRadius)

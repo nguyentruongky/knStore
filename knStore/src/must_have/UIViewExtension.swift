@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIView {
-    
     func createBorder(_ width: CGFloat, color: UIColor) {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
@@ -20,11 +19,7 @@ extension UIView {
         clipsToBounds = true
     }
     
-    func createCircleShape() {
-        createRoundCorner(self.frame.size.width / 2)
-    }
-    
-    func createImageFromView() -> UIImage {
+    func createImage() -> UIImage {
         UIGraphicsBeginImageContext(bounds.size)
         layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -38,30 +33,28 @@ extension UIView {
         }
     }
     
-    func setupGradientLayer(colors: [UIColor],
-                            size: CGSize = .zero,
-                            startPoint: CGPoint = CGPoint(x: 0, y: 0), endPoint: CGPoint = CGPoint(x: 1, y: 1)) {
-        
+    func setGradientBackground(colors: [UIColor],
+                               size: CGSize = .zero,
+                               startPoint: CGPoint = CGPoint(x: 0, y: 0),
+                               endPoint: CGPoint = CGPoint(x: 1, y: 1)) {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0,
-                                     width: size.width == 0 ? bounds.size.width : size.width,
-                                     height: size.height == 0 ? bounds.size.height : size.height)
-        gradientLayer.colors = colors.map({ (uiColor) -> CGColor in
-            return uiColor.cgColor
-        })
+        gradientLayer.frame = CGRect(origin: CGPoint.zero,
+                                     size: size == .zero ? bounds.size : size)
+        gradientLayer.colors = colors.map({ return $0.cgColor })
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint
-        
         layer.insertSublayer(gradientLayer, at: 0)
     }
     
-    func setGradientBorder(colors: [UIColor], width: CGFloat = 1) {
+    func setGradientBorder(colors: [UIColor], size: CGSize = .zero,
+                           width: CGFloat = 1) {
         let gradient = CAGradientLayer()
-        gradient.frame =  CGRect(origin: .zero, size: frame.size)
+        gradient.frame = CGRect(origin: CGPoint.zero,
+                                     size: size == .zero ? bounds.size : size)
         gradient.colors = colors.map({ return $0.cgColor })
         
         let shape = CAShapeLayer()
-        shape.lineWidth = 3
+        shape.lineWidth = width
         shape.path = UIBezierPath(rect: bounds).cgPath
         shape.strokeColor = UIColor.black.cgColor
         shape.fillColor = UIColor.clear.cgColor
@@ -77,11 +70,9 @@ extension UIView {
         layer.add(animation, forKey: "shake")
     }
 
-
-    func enable(_ value: Bool) {
+    func setEnabled(_ value: Bool) {
         isUserInteractionEnabled = value
     }
-
 }
 
 

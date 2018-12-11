@@ -14,7 +14,6 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 var statusBarStyle = UIStatusBarStyle.lightContent { didSet {UIApplication.shared.statusBarStyle = statusBarStyle}}
 var isStatusBarHidden = false { didSet { UIApplication.shared.isStatusBarHidden = isStatusBarHidden}}
 
-
 func run(_ action: @escaping () -> Void, after second: Double) {
     let triggerTime = DispatchTime.now() + .milliseconds(Int(second * 1000))
     DispatchQueue.main.asyncAfter(deadline: triggerTime) { action() }
@@ -25,7 +24,6 @@ func hideKeyboard() {
 }
 
 func makeCall(to number: String) {
-    
     guard let phoneUrl = URL(string: "tel://\(number)") else { return }
     guard UIApplication.shared.canOpenURL(phoneUrl) else { return }
     if #available(iOS 10.0, *) {
@@ -35,42 +33,15 @@ func makeCall(to number: String) {
     }
 }
 
-enum knErrorCode : Int {
-    case loginFail
-    case invalidEmail
-    case invalidPassword
-    case notFound
-    case timeOut
-    case serverError
-    case empty
-    case emailExist
-    case emptyPassword
-    case weakPassword
-    case notSure
-    case facebookCancel
-    case cantGetUploadedUrl
-    case uploadFail
-    
-    case sendFail
-}
-
 struct knError {
-    var code: Int?
+    var code: String = "unknown"
     var message: String?
     var data: AnyObject?
     
-    init() { }
-    
-    init(code: Int, message: String? = nil, data: AnyObject? = nil) {
+    init() {}
+    init(code: String, message: String? = nil, data: AnyObject? = nil) {
         self.code = code
         self.message = message
         self.data = data
     }
-    
-    init(knCode: knErrorCode?, message: String? = nil, data: AnyObject? = nil) {
-        self.code = knCode?.rawValue
-        self.message = message
-        self.data = data
-    }
-    
 }

@@ -9,40 +9,35 @@
 import UIKit
 
 extension String {
-
-    func capitalizingFirstLetter() -> String {
-        guard characters.count > 0 else { return self }
-        
-        let first = String(characters.prefix(1)).capitalized
-        let other = String(characters.dropFirst())
-        return first + other
-    }
-    
-    
-    /**
-     format some string in normal string.
-     */
-
     static func format(strings: [String],
                        boldFont: UIFont = UIFont.boldSystemFont(ofSize: 14),
                        boldColor: UIColor = UIColor.blue,
                        inString string: String,
                        font: UIFont = UIFont.systemFont(ofSize: 14),
-                       color: UIColor = UIColor.black) -> NSAttributedString {
-
+                       color: UIColor = UIColor.black,
+                       lineSpacing: CGFloat = 7,
+                       alignment: NSTextAlignment = .left) -> NSAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = lineSpacing
+        paragraphStyle.maximumLineHeight = 40
+        paragraphStyle.alignment = alignment
+        
         let attributedString =
             NSMutableAttributedString(string: string,
                                       attributes: [
                                         NSAttributedString.Key.font: font,
-                                        NSAttributedString.Key.foregroundColor: color])
-        let boldFontAttribute = [NSAttributedString.Key.font: boldFont, NSAttributedString.Key.foregroundColor: boldColor]
+                                        NSAttributedString.Key.foregroundColor: color,
+                                        NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        let boldFontAttribute = [NSAttributedString.Key.font: boldFont,
+                                 NSAttributedString.Key.foregroundColor: boldColor]
         for bold in strings {
             attributedString.addAttributes(boldFontAttribute, range: (string as NSString).range(of: bold))
         }
         return attributedString
     }
 
-    func formatParagraph(alignment: NSTextAlignment = NSTextAlignment.left, spacing: CGFloat = 7) -> NSAttributedString {
+    func formatParagraph(alignment: NSTextAlignment = NSTextAlignment.left,
+                         spacing: CGFloat = 7) -> NSAttributedString {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = spacing
         paragraphStyle.alignment = alignment
@@ -53,7 +48,6 @@ extension String {
     }
     
     func strikethroughText() -> NSMutableAttributedString {
-
         let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: self)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle,
                                      value: NSUnderlineStyle.single.rawValue,
@@ -68,9 +62,7 @@ extension String {
 }
 
 extension String {
-    
     func formatThousandSeparator(_ separatorCharacter: String = " ") -> String {
-        
         guard let numberFromString = Double(self) else { return self }
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -88,7 +80,6 @@ extension String {
     }
     
     func isValidEmail() -> Bool {
-
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: self)
@@ -103,7 +94,6 @@ extension String {
     }
     
     func substring(from: Int, to: Int) -> String {
-
         let start = index(startIndex, offsetBy: from)
         let end = index(endIndex, offsetBy: -(count - to) + 1)
         let range = start ..< end
@@ -119,64 +109,14 @@ extension String {
     }
 }
 
-//
-//  SwiftString.swift
-//  SwiftString
-//
-//  Created by Andrew Mayne on 30/01/2016.
-//  Copyright © 2016 Red Brick Labs. All rights reserved.
-//
-
 public extension String {
-    
-    // https://gist.github.com/stevenschobert/540dd33e828461916c11
-    func camelize() -> String {
-        let source = clean(" ", allOf: "-", "_")
-        if source.contains(" ") {
-            let first = source.substring(to: source.characters.index(source.startIndex, offsetBy: 1))
-            let cammel = NSString(format: "%@", (source as NSString).capitalized.replacingOccurrences(of: " ", with: "", options: [], range: nil)) as String
-            let rest = String(cammel.characters.dropFirst())
-            return "\(first)\(rest)"
-        } else {
-            let first = (source as NSString).lowercased.substring(to: source.characters.index(source.startIndex, offsetBy: 1))
-            let rest = String(source.characters.dropFirst())
-            return "\(first)\(rest)"
-        }
-    }
-    
-    func capitalize() -> String {
-        return capitalized
-    }
-    
     func contains(_ substring: String) -> Bool {
         return range(of: substring) != nil
     }
     
-    func chompLeft(_ prefix: String) -> String {
-        if let prefixRange = range(of: prefix) {
-            if prefixRange.upperBound >= endIndex {
-                return String(self[startIndex..<prefixRange.lowerBound])
-            } else {
-                return String(self[prefixRange.upperBound..<endIndex])
-            }
-        }
-        return self
-    }
-    
-    func chompRight(_ suffix: String) -> String {
-        if let suffixRange = range(of: suffix, options: .backwards) {
-            if suffixRange.upperBound >= endIndex {
-                return String(self[startIndex..<suffixRange.lowerBound])
-            } else {
-                return String(self[suffixRange.upperBound..<endIndex])
-            }
-        }
-        return self
-    }
-    
     func collapseWhitespace() -> String {
-        let components = self.components(separatedBy: CharacterSet.whitespacesAndNewlines).filter { !$0.isEmpty }
-        return components.joined(separator: " ")
+        let parts = components(separatedBy: CharacterSet.whitespacesAndNewlines).filter { !$0.isEmpty }
+        return parts.joined(separator: " ")
     }
     
     func clean(_ with: String, allOf: String...) -> String {
@@ -196,18 +136,17 @@ public extension String {
     }
 
     func indexOf(_ substring: String) -> Int? {
-        
         guard let range = range(of: substring) else { return nil }
-        return characters.distance(from: startIndex, to: range.lowerBound)
+        return distance(from: startIndex, to: range.lowerBound)
     }
     
     func lastIndexOf(_ target: String) -> Int? {
         guard let range = range(of: target, options: .backwards) else { return nil }
-        return characters.distance(from: startIndex, to: range.lowerBound)
+        return distance(from: startIndex, to: range.lowerBound)
     }
     
     func isAlpha() -> Bool {
-        for chr in characters {
+        for chr in self {
             if (!(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z") ) {
                 return false
             }
@@ -225,12 +164,11 @@ public extension String {
     }
     
     static func random(_ length: Int = 5) -> String {
-        
         let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         var randomString: String = ""
         
-        for _ in 0..<length {
-            let randomValue = arc4random_uniform(UInt32(base.characters.count))
+        for _ in 0 ..< length {
+            let randomValue = arc4random_uniform(UInt32(base.count))
             randomString += "\(base[base.characters.index(base.startIndex, offsetBy: Int(randomValue))])"
         }
         

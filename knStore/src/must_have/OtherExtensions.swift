@@ -40,10 +40,8 @@ extension UILabel{
     }
 }
 
-
-
 extension UIScrollView {
-    func animateHeaderView(staticView: UIView, animatedView: UIView) {
+    func animateView(animatedView: UIView, staticView: UIView) {
         var headerTransform = CATransform3DIdentity
         let yOffset = contentOffset.y
         staticView.isHidden = yOffset < 0
@@ -58,18 +56,14 @@ extension UIScrollView {
     }
 }
 
-
-
-
 extension UITableView {
     func resizeTableHeaderView(toSize size: CGSize) {
         guard let headerView = tableHeaderView else { return }
+        guard headerView.frame.size != size else { return }
         headerView.frame.size = headerView.systemLayoutSizeFitting(size)
         tableHeaderView? = headerView
     }
 }
-
-
 
 extension UITextView {
     func wrapText(aroundRect rect: CGRect) {
@@ -78,20 +72,15 @@ extension UITextView {
     }
 }
 
-
-
-
 extension Bundle {
-    var releaseVersionNumber: String? {
+    var releaseVersion: String? {
         return infoDictionary?["CFBundleShortVersionString"] as? String
     }
-    var buildVersionNumber: String? {
+    
+    var buildVersion: String? {
         return infoDictionary?["CFBundleVersion"] as? String
     }
 }
-
-
-
 
 extension UserDefaults {
     static func set<T>(key: String, value: T?) {

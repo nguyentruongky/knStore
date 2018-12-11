@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIButton {
-
     func setTitle(_ title: String) {
         setTitle(title, for: .normal)
     }
@@ -22,14 +21,12 @@ extension UIButton {
         addTarget(target, action: action, for: .touchUpInside)
     }
     
-    func setBackgroundColor(color: UIColor, forState: UIControl.State) {
-
+    func setBackground(color: UIColor, forState: UIControl.State) {
         let colorImage = imageFromColor(color: color)
         setBackgroundImage(colorImage, for: forState)
     }
 
-    private func imageFromColor(color: UIColor) -> UIImage
-    {
+    private func imageFromColor(color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()!
@@ -41,7 +38,6 @@ extension UIButton {
     }
 
     func animate(atPosition position: CGPoint) {
-        
         clipsToBounds = true
         CATransaction.begin()
         
@@ -66,9 +62,8 @@ extension UIButton {
         CATransaction.commit()
     }
 
-    
-    func setProcessIndicator(visible: Bool, style: UIActivityIndicatorView.Style = .white) {
-        
+    func setProcessIndicator(visible: Bool,
+                             style: UIActivityIndicatorView.Style = .white) {
         if visible {
             titleLabel?.layer.opacity = 0
             isEnabled = false
@@ -78,16 +73,11 @@ extension UIButton {
             indicator.startAnimating()
             addSubview(indicator)
             indicator.center(toView: self)
-        }
-        else {
+        } else {
             titleLabel?.layer.opacity = 1
             isEnabled = true
             let indicator = viewWithTag(10001)
             indicator?.removeFromSuperview()
         }
     }
-    
-    
 }
-
-

@@ -10,15 +10,13 @@ import UIKit
 import Kingfisher
 
 extension UIImageView {
-
     func downloadImage(from url: String?, placeholder: UIImage? = nil) {
-
         guard let url = url, let nsurl = URL(string: url) else { return }
         kf.setImage(with: ImageResource(downloadURL: nsurl), placeholder: placeholder)
     }
     
     func blur() {
-        
+        layoutIfNeeded()
         let darkBlur = UIBlurEffect(style: UIBlurEffect.Style.dark)
         let blurView = UIVisualEffectView(effect: darkBlur)
         blurView.frame = frame
@@ -26,12 +24,11 @@ extension UIImageView {
         addSubview(blurView)
     }
     
-    func change(color: UIColor) {
+    func changeColor(to color: UIColor) {
         guard let image = image else { return }
         self.image = image.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         tintColor = color
     }
-    
 }
 
 extension UIImage {
@@ -52,22 +49,18 @@ extension UIImage {
     }
     
     func resize(to targetSize: CGSize) -> UIImage {
-        
         let widthRatio  = targetSize.width  / size.width
         let heightRatio = targetSize.height / size.height
         
-        // Figure out what our orientation is, and use that to form the rectangle
         var newSize: CGSize
         if(widthRatio > heightRatio) {
-            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+            newSize = CGSize(width: size.width * heightRatio,
+                             height: size.height * heightRatio)
         } else {
-            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+            newSize = CGSize(width: size.width * widthRatio,
+                             height: size.height * widthRatio)
         }
-        
-        // This is the rect that we've calculated out and this is what is actually used below
-        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
-        
-        // Actually do the resizing to the rect using the ImageContext stuff
+        let rect = CGRect(origin: CGPoint.zero, size: newSize)
         UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
         draw(in: rect)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -102,16 +95,13 @@ extension UIImage {
 
     static func delete(name: String) {
         let fileManager = FileManager.default
-        do {
-            try fileManager.removeItem(atPath: name)
-        }
+        do { try fileManager.removeItem(atPath: name) }
         catch let error as NSError {
             print("Ooops! Something went wrong: \(error)")
         }
     }
     
     func resize(toWidth width: CGFloat, compressionQuality quality: CGFloat = 0.5) -> UIImage {
-        
         let newSize = CGSize(width: width, height: CGFloat(ceil(width / size.width * size.height)))
         let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: newSize))
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
@@ -129,13 +119,12 @@ extension UIImage {
     func changeColor() -> UIImage {
         return withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
     }
-
-    static func imageFromColor(colour: UIColor) -> UIImage
-    {
+    
+    static func createImage(from color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()!
-        context.setFillColor(colour.cgColor)
+        context.setFillColor(color.cgColor)
         context.fill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -151,14 +140,16 @@ extension UIImage {
         return image!
     }
     
-    func createImage(with newSize:CGSize, radius: CGFloat, byRoundingCorners: UIRectCorner? = nil) -> UIImage {
-        
+    func createImage(with newSize: CGSize, radius: CGFloat,
+                     byRoundingCorners: UIRectCorner? = nil) -> UIImage {
         let widthRatio  = newSize.width  / size.width
         let heightRatio = newSize.height / size.height
         
         let targetSize = widthRatio > heightRatio ?
-            CGSize(width: size.width * heightRatio, height: size.height * heightRatio) :
-            CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+            CGSize(width: size.width * heightRatio,
+                   height: size.height * heightRatio) :
+            CGSize(width: size.width * widthRatio,
+                   height: size.height * widthRatio)
         
         UIGraphicsBeginImageContextWithOptions(targetSize, false, 0.0)
         let imgRect = CGRect(x: 0, y: 0, width: targetSize.width, height: targetSize.height)
@@ -174,11 +165,8 @@ extension UIImage {
     }
     
     func crop(to size: CGSize) -> UIImage {
-        
         let contextImage = UIImage(cgImage: cgImage!)
-        
         let contextSize = contextImage.size
-        
         var posX: CGFloat = 0.0
         var posY: CGFloat = 0.0
         var cgwidth: CGFloat = CGFloat(size.width)

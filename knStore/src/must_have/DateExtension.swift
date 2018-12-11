@@ -9,11 +9,8 @@
 import Foundation
 
 extension Date {
-    
     var timeAgo: String {
-        
         let now = Date()
-        
         let components = Calendar.current.dateComponents(
             [.year, .month, .weekOfYear, .day, .hour, .minute, .second],
             from: now,
@@ -52,12 +49,8 @@ extension Date {
         return "just now"
     }
 
-    static var thisMonday: Date {
-        return Calendar(identifier: .iso8601).date(from: Calendar(identifier: .iso8601).dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date()))!
-    }
-
-    static func dateFrom(year: Int = 1970, month: Int = 1, day: Int = 1, hour: Int = 0, minute: Int = 0, second: Int = 0) -> Date? {
-        
+    static func dateFrom(year: Int = 1970, month: Int = 1, day: Int = 1,
+                         hour: Int = 0, minute: Int = 0, second: Int = 0) -> Date? {
         var component = DateComponents()
         component.year = year
         component.month = month
@@ -66,11 +59,8 @@ extension Date {
         component.minute = minute
         component.second = second
         component.timeZone = TimeZone(abbreviation: "UTC")
-        
         return Calendar.current.date(from: component)!
     }
-
-
     
     var isToday: Bool { return Calendar.current.isDateInToday(self) }
 
@@ -101,7 +91,6 @@ extension Date {
     }
 
     init(dateString: String, format: String, locale: Locale = Locale(identifier: "en_US_POSIX")) {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
@@ -113,7 +102,6 @@ extension Date {
     }
     
     init(iso8601String: String) {
-        
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
@@ -130,19 +118,22 @@ extension Date {
         
         self.init(timeInterval:0, since:d!)
     }
-    
-    static var currentYear: Int { get { return Calendar.current.component(.year, from: Date()) } }
-    static var currentMonth: Int { get { return Calendar.current.component(.month, from: Date()) }}
-    static var currentDay: Int { get { return Calendar.current.component(.day, from: Date()) }}
-    static var currentHour: Int { get {return Calendar.current.component(.hour, from: Date())}}
-    static var currentMinute: Int { get {return Calendar.current.component(.minute, from: Date())}}
+    static var thisMonday: Date {
+        return Calendar(identifier: .iso8601).date(from: Calendar(identifier: .iso8601).dateComponents([.yearForWeekOfYear, .weekOfYear], from: Date()))!
+    }
+    static var thisYear: Int { get { return Calendar.current.component(.year, from: Date()) } }
+    static var thisMonth: Int { get { return Calendar.current.component(.month, from: Date()) }}
+    static var thisDay: Int { get { return Calendar.current.component(.day, from: Date()) }}
+    static var thisHour: Int { get {return Calendar.current.component(.hour, from: Date())}}
+    static var thisMinute: Int { get {return Calendar.current.component(.minute, from: Date())}}
     var year: Int {get {return Calendar.current.component(.year, from: self)}}
     var month: Int {get {return Calendar.current.component(.month, from: self)}}
     var day: Int {get {return Calendar.current.component(.day, from: self)}}
     var hour: Int {get {return Calendar.current.component(.hour, from: self)}}
     var minute: Int {get {return Calendar.current.component(.minute, from: self)}}
 
-    func toString(_ format: String = "MM/dd/yyyy", locale: Locale = Locale(identifier: "en_US_POSIX")) -> String {
+    func toString(_ format: String = "MM/dd/yyyy",
+                  locale: Locale = Locale(identifier: "en_US_POSIX")) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
         dateFormatter.dateFormat = format
@@ -167,13 +158,9 @@ extension Date {
     }
 
     func toCurrentTimezoneString(format: String = "yyyy-MM-dd'T'HH:mm:ss.SSS") -> String {
-
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
-    
-
-
 }

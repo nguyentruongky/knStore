@@ -12,6 +12,7 @@ extension UITextField {
     enum ViewType {
         case left, right
     }
+    
     @discardableResult
     func setView(_ view: ViewType, space: CGFloat) -> UIView {
         let spaceView = UIView(frame: CGRect(x: 0, y: 0, width: space, height: 1))
@@ -19,7 +20,7 @@ extension UITextField {
         return spaceView
     }
     
-    private func setView(_ type: ViewType, with view: UIView) {
+    func setView(_ type: ViewType, with view: UIView) {
         if type == ViewType.left {
             leftView = view
             leftViewMode = .always
@@ -49,17 +50,15 @@ extension UITextField {
         return button
     }
     
-    func changePlaceholderTextColor(_ color: UIColor) {
-        
+    func setPlaceholderColor(_ color: UIColor) {
         guard let placeholder = placeholder else { return }
-        let attributes = [NSAttributedString.Key.foregroundColor : color]
-        attributedPlaceholder = NSAttributedString(string:placeholder, attributes: attributes)
+        let attributes = [NSAttributedString.Key.foregroundColor: color]
+        attributedPlaceholder = NSAttributedString(string: placeholder,
+                                                   attributes: attributes)
     }
     
     func toggleSecure() {
-        resignFirstResponder()
         isSecureTextEntry = !isSecureTextEntry
-        becomeFirstResponder()
     }
     
     func selectAllText() {
