@@ -1,12 +1,13 @@
 //
-//  UIViewController.swift
-//  kLibrary
+//  UIViewController+Keyboard.swift
 //
-//  Created by Ky Nguyen on 8/27/16.
-//  Copyright © 2016 Ky Nguyen. All rights reserved.
-//
+//  Created by Håkon Bogen on 10/12/14.
+//  Copyright (c) 2014 Håkon Bogen. All rights reserved.
+//  MIT LICENSE
 
 import UIKit
+
+private var scrollViewKey : UInt8 = 0
 
 extension UIViewController {
     func setEnabled(_ enabled: Bool) {
@@ -63,11 +64,11 @@ extension UIViewController {
     @objc func back() {
         pop()
     }
-
+    
     func present(_ controller: UIViewController) {
         present(controller, animated: true)
     }
-
+    
     func push(_ controller: UIViewController) {
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -83,7 +84,7 @@ extension UIViewController {
     func popToRoot() {
         navigationController?.popToRootViewController(animated: true)
     }
-
+    
 }
 
 extension UITableViewController {
@@ -97,12 +98,12 @@ extension UITableViewController {
         var index = 0
         for cell in cells {
             UIView.animate(withDuration: 1.25, delay: 0.05 * Double(index),
-                                       usingSpringWithDamping: 0.65,
-                                       initialSpringVelocity: 0.0,
-                                       options: UIView.AnimationOptions(),
-                                       animations: {
-                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
-                })
+                           usingSpringWithDamping: 0.65,
+                           initialSpringVelocity: 0.0,
+                           options: UIView.AnimationOptions(),
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            })
             index += 1
         }
     }

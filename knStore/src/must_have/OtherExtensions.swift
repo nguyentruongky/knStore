@@ -63,6 +63,56 @@ extension UITableView {
         headerView.frame.size = headerView.systemLayoutSizeFitting(size)
         tableHeaderView? = headerView
     }
+    
+    func getCell(id: String, at indexPath: IndexPath) -> UITableViewCell {
+        return dequeueReusableCell(withIdentifier: id, for: indexPath)
+    }
+    
+    func setFooter(_ footer: UIView, height: CGFloat) {
+        footer.height(height)
+        tableFooterView = UIView()
+        tableFooterView?.frame.size.height = height
+        tableFooterView?.addSubview(footer)
+        tableFooterView?.addConstraints(withFormat: "H:|[v0]|", views: footer)
+        tableFooterView?.addConstraints(withFormat: "V:|[v0]", views: footer)
+    }
+    
+    func setHeader(_ header: UIView, height: CGFloat) {
+        if height == 0 {
+            tableHeaderView = UIView()
+            tableHeaderView?.addSubview(header)
+            header.fill(toView: tableHeaderView!)
+            return
+        }
+        header.height(height)
+        tableHeaderView = UIView()
+        tableHeaderView?.frame.size.height = height
+        tableHeaderView?.addSubview(header)
+        tableHeaderView?.addConstraints(withFormat: "H:|[v0]|", views: header)
+        tableHeaderView?.addConstraints(withFormat: "V:|[v0]", views: header)
+    }
+    
+    func updateHeaderHeight() {
+        guard let headerView = tableHeaderView else { return }
+        let height = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        var headerFrame = headerView.frame
+        
+        guard height != headerFrame.size.height else { return }
+        headerFrame.size.height = height
+        headerView.frame = headerFrame
+        tableHeaderView = headerView
+    }
+    
+    func updateFooterHeight() {
+        guard let footerView = tableFooterView else { return }
+        let height = footerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        var footerFrame = footerView.frame
+        
+        guard height != footerFrame.size.height else { return }
+        footerFrame.size.height = height
+        footerView.frame = footerFrame
+        tableFooterView = footerView
+    }
 }
 
 extension UITextView {
@@ -79,6 +129,14 @@ extension Bundle {
     
     var buildVersion: String? {
         return infoDictionary?["CFBundleVersion"] as? String
+    }
+}
+
+
+extension UITabBar {
+    func removeLine() {
+        shadowImage = UIImage()
+        backgroundImage = UIImage()
     }
 }
 
@@ -102,5 +160,20 @@ extension UserDefaults {
     
     static func getInt(key: String) -> Int? {
         return UserDefaults.standard.value(forKeyPath: key) as? Int
+    }
+}
+
+
+extension UIStackView {
+    func addViews(_ views: UIView...) {
+        for v in views {
+            addArrangedSubview(v)
+        }
+    }
+    
+    func addViews(_ views: [UIView]) {
+        for v in views {
+            addArrangedSubview(v)
+        }
     }
 }

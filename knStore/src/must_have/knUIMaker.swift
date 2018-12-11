@@ -90,6 +90,19 @@ class UIMaker {
         return button
     }
     
+    static func makeStackView(axis: NSLayoutConstraint.Axis = .vertical,
+                              distributon: UIStackView.Distribution = .equalSpacing,
+                              alignment: UIStackView.Alignment = .center,
+                              space: CGFloat = 16) -> UIStackView {
+        let stackView = UIStackView()
+        stackView.axis = axis
+        stackView.distribution = distributon
+        stackView.alignment = alignment
+        stackView.spacing = space
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }
+    
     static func makeButton(image: UIImage? = nil) -> UIButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false

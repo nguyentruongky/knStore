@@ -25,6 +25,10 @@ extension UIColor {
         return self
     }
     
+    func alpha(_ value: CGFloat) -> UIColor {
+        return withAlphaComponent(value)
+    }
+    
     static func color(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1) -> UIColor {
         return UIColor(red: r / 255, green: g / 255, blue: b / 255, alpha: alpha)
     }

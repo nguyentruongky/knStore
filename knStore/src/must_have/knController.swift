@@ -19,13 +19,15 @@ class knController : UIViewController {
         print("Deinit \(NSStringFromClass(type(of: self)))")
         removeKeyboardNotificationListeners()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return statusBarStyle }
+    override var prefersStatusBarHidden: Bool { return isStatusBarHidden }
 }
 
 class knTableController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        automaticallyAdjustsScrollViewInsets = false
         registerCells()
     }
     

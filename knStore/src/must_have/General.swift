@@ -11,8 +11,8 @@ import UIKit
 var screenWidth: CGFloat { return UIScreen.main.bounds.width }
 var screenHeight: CGFloat { return UIScreen.main.bounds.height }
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-var statusBarStyle = UIStatusBarStyle.lightContent { didSet {UIApplication.shared.statusBarStyle = statusBarStyle}}
-var isStatusBarHidden = false { didSet { UIApplication.shared.isStatusBarHidden = isStatusBarHidden}}
+var statusBarStyle = UIStatusBarStyle.lightContent
+var isStatusBarHidden = false
 
 func run(_ action: @escaping () -> Void, after second: Double) {
     let triggerTime = DispatchTime.now() + .milliseconds(Int(second * 1000))
@@ -33,6 +33,27 @@ func makeCall(to number: String) {
     }
 }
 
+func openAppstore(url: String) {
+    guard let link = URL(string: url) else { return }
+    if #available(iOS 10.0, *) {
+        UIApplication.shared.open(link)
+    } else {
+        UIApplication.shared.openURL(link)
+    }
+}
+
+func hasNotch() -> Bool {
+    return DeviceType.IS_IPHONE_X ||
+        DeviceType.isIphoneXR ||
+        DeviceType.isIphoneXS ||
+        DeviceType.isIphoneXSMax
+}
+
+func wrap(_ controller: UIViewController) -> UINavigationController {
+    return UINavigationController(rootViewController: controller)
+}
+
+
 struct knError {
     var code: String = "unknown"
     var message: String?
@@ -45,3 +66,11 @@ struct knError {
         self.data = data
     }
 }
+
+let isSimulator: Bool = {
+    #if arch(i386) || arch(x86_64)
+    return true
+    #else
+    return false
+    #endif
+}()
