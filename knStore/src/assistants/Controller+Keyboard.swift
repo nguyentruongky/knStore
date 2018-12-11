@@ -10,83 +10,50 @@ import UIKit
 private var scrollViewKey : UInt8 = 0
 
 extension UIViewController {
-    func setEnabled(_ enabled: Bool) {
-        view.isUserInteractionEnabled = enabled
+    
+    public func setupKeyboardNotifcationListenerForScrollView(scrollView: UIScrollView) {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:
+            UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        internalScrollView = scrollView
     }
     
-    private func createFakeBackButton() -> [UIBarButtonItem] {
-        let height: CGFloat = 36
-        let backView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: height))
-        let image = UIImage(named: "back_arrow")
-        let imageView = UIImageView(image: image)
-        imageView.frame = CGRect(x: 0, y: 0, width: 36, height: height)
-        backView.addSubview(imageView)
-        let content = UILabel()
-        content.sizeToFit()
-        content.frame.size = CGSize(width: content.frame.size.width, height: height)
-        content.frame.origin = CGPoint(x: 30, y: 0)
-        backView.addSubview(content)
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 120, height: height))
-        button.addTarget(self, action: #selector(dismissBack), for: .touchUpInside)
-        backView.addSubview(button)
-        
-        let barButton = UIBarButtonItem(customView: backView)
-        let negativeSpacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        negativeSpacer.width = -20
-        
-        return [negativeSpacer, barButton]
+    public func removeKeyboardNotificationListeners() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func addFakeBackButton() {
-        navigationItem.leftBarButtonItems = createFakeBackButton()
+    private var internalScrollView: UIScrollView! {
+        get {
+            return objc_getAssociatedObject(self, &scrollViewKey) as? UIScrollView
+        }
+        set(newValue) {
+            objc_setAssociatedObject(self, &scrollViewKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
     }
     
-    @objc func dismissBack() {
-        dismiss(animated: true, completion: nil)
+    @objc func keyboardWillShow(notification: NSNotification) {
+        let userInfo = notification.userInfo as! Dictionary<String, AnyObject>
+        let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]?.cgRectValue
+        let keyboardFrameConvertedToViewFrame = view.convert(keyboardFrame!, from: nil)
+        let options = UIView.AnimationOptions.beginFromCurrentState
+        UIView.animate(withDuration: animationDuration, delay: 0, options:options, animations: { () -> Void in
+            let insetHeight = (self.internalScrollView.frame.height + self.internalScrollView.frame.origin.y) - keyboardFrameConvertedToViewFrame.origin.y
+            self.internalScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: insetHeight, right: 0)
+            self.internalScrollView.scrollIndicatorInsets  = UIEdgeInsets(top: 0, left: 0, bottom: insetHeight, right: 0)
+        }) { (complete) -> Void in
+        }
     }
     
-    @discardableResult
-    func addBackButton(tintColor: UIColor = .black) -> UIBarButtonItem {
-        let backArrowImageView = UIImageView(image: UIImage(named: "back_arrow")?.changeColor())
-        backArrowImageView.contentMode = .scaleAspectFit
-        backArrowImageView.tintColor = tintColor
-        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 36))
-        backButton.addSubview(backArrowImageView)
-        backButton.addConstraints(withFormat: "H:|-(-4)-[v0]", views: backArrowImageView)
-        backArrowImageView.vertical(toView: backButton)
-        backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
-        
-        let backBarButton = UIBarButtonItem(customView: backButton)
-        navigationItem.leftBarButtonItem = backBarButton
-        return backBarButton
+    @objc func keyboardWillHide(notification: NSNotification) {
+        let userInfo = notification.userInfo as! Dictionary<String, AnyObject>
+        let animationDuration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+        let options = UIView.AnimationOptions.beginFromCurrentState
+        UIView.animate(withDuration: animationDuration, delay: 0, options:options, animations: { () -> Void in
+            self.internalScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            self.internalScrollView.scrollIndicatorInsets  = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }) { (complete) -> Void in
+        }
     }
-    
-    @objc func back() {
-        pop()
-    }
-    
-    func present(_ controller: UIViewController) {
-        present(controller, animated: true)
-    }
-    
-    func push(_ controller: UIViewController) {
-        navigationController?.pushViewController(controller, animated: true)
-    }
-    
-    func pop() {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    func pop(to controller: UIViewController) {
-        navigationController?.popToViewController(controller, animated: true)
-    }
-    
-    func popToRoot() {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
 }
-
-
-
-

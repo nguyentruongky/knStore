@@ -31,7 +31,7 @@ class knMapController: knController {
     }
 
     override func setupView() {
-        addBackButton(tintColor: UIColor.color(value: 141))
+        addBackButton(tintColor: UIColor(value: 141))
         navigationController?.removeLine(color: .clear)
         view.addSubview(mapView)
         mapView.fill(toView: view)

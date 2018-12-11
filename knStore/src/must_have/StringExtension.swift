@@ -115,6 +115,27 @@ extension String {
     func replace(_ string: String, with newString: String) -> String {
         return replacingOccurrences(of: string, with: newString)
     }
+    
+    var wordCount: Int {
+        let regex = try? NSRegularExpression(pattern: "\\w+")
+        return regex?.numberOfMatches(in: self, range: NSRange(location: 0, length: self.utf16.count)) ?? 0
+    }
+    
+    func replacingOccurrences(of search: String, with replacement: String, count maxReplacements: Int) -> String {
+        var count = 0
+        var returnValue = self
+        
+        while let range = returnValue.range(of: search) {
+            returnValue = returnValue.replacingCharacters(in: range, with: replacement)
+            count += 1
+            
+            if count == maxReplacements {
+                return returnValue
+            }
+        }
+        
+        return returnValue
+    }
 }
 
 public extension String {

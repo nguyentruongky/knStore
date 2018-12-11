@@ -36,7 +36,7 @@ class knImageSlideView: GridView<knImageSlideCell, String> {
         
         dots.translatesAutoresizingMaskIntoConstraints = false
         dots.currentPageIndicatorTintColor = UIColor.white
-        dots.pageIndicatorTintColor = UIColor.color(value: 243)
+        dots.pageIndicatorTintColor = UIColor(value: 243)
         
         addSubviews(views: collectionView, dots)
         addConstraints(withFormat: "V:|-8-[v0][v1]|", views: collectionView, dots)

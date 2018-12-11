@@ -21,11 +21,11 @@ class knGistTextField: UITextField {
     struct knColors {
         private init() { }
         
-        static let kn_127 = UIColor.color(value: 127)
-        static let kn_229 = UIColor.color(value: 229)
-        static let kn_241_147_78 = UIColor.color(r: 241, g: 147, b: 78)
-        static let kn_133_189_175 = UIColor.color(r: 133, g: 189, b: 175)
-        static let kn_119_203_189 = UIColor.color(r: 119, g: 203, b: 189)
+        static let kn_127 = UIColor(value: 127)
+        static let kn_229 = UIColor(value: 229)
+        static let kn_241_147_78 = UIColor(r: 241, g: 147, b: 78)
+        static let kn_133_189_175 = UIColor(r: 133, g: 189, b: 175)
+        static let kn_119_203_189 = UIColor(r: 119, g: 203, b: 189)
         
     }
     

@@ -29,8 +29,8 @@ class knTabBoss: knTabController {
         
         setTabBar(items: [storiesTab], height: tabHeight)
         viewControllers = [stories]
-        normalColor = UIColor.color(value: 178)
-        selectedColor = UIColor.color(value: 29)
+        normalColor = UIColor(value: 178)
+        selectedColor = UIColor(value: 29)
 
         kn_tabBar.backgroundColor = .white
         selectedIndex = 1

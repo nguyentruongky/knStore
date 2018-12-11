@@ -32,7 +32,6 @@
 		C1F67C8421BE713A00CDC2ED /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7021BE713A00CDC2ED /* IntExtension.swift */; };
 		C1F67C8521BE713A00CDC2ED /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7121BE713A00CDC2ED /* UIImageExtension.swift */; };
 		C1F67C8621BE713A00CDC2ED /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7221BE713A00CDC2ED /* DateExtension.swift */; };
-		C1F67C8821BEFCC700CDC2ED /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C8721BEFCC700CDC2ED /* UIViewController+Keyboard.swift */; };
 		C1F67C8D21BEFEA100CDC2ED /* knListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C8B21BEFEA100CDC2ED /* knListView.swift */; };
 		C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C8C21BEFEA100CDC2ED /* knGridView.swift */; };
 		C1F67C9321BF65C100CDC2ED /* Controller+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */; };
@@ -52,7 +51,6 @@
 		C1F67CCD21BF67AE00CDC2ED /* knTwoColumnsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CA621BF67AE00CDC2ED /* knTwoColumnsController.swift */; };
 		C1F67CCE21BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CA721BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift */; };
 		C1F67CCF21BF67AE00CDC2ED /* ZFRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CA821BF67AE00CDC2ED /* ZFRippleButton.swift */; };
-		C1F67CD221BF67AE00CDC2ED /* PINController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CAB21BF67AE00CDC2ED /* PINController.swift */; };
 		C1F67CD321BF67AE00CDC2ED /* knPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CAC21BF67AE00CDC2ED /* knPagerController.swift */; };
 		C1F67CD421BF67AE00CDC2ED /* knUnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CAD21BF67AE00CDC2ED /* knUnderlineTextField.swift */; };
 		C1F67CD621BF67AE00CDC2ED /* TransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CAF21BF67AE00CDC2ED /* TransitionSubmitButton.swift */; };
@@ -89,6 +87,31 @@
 		C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */; };
 		C1F67D1421BF7B5200CDC2ED /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1321BF7B5200CDC2ED /* Boss.swift */; };
 		C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */; };
+		C1F67D1821BFA00200CDC2ED /* AnnouncementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1721BFA00200CDC2ED /* AnnouncementView.swift */; };
+		C1F67D1A21BFA11600CDC2ED /* FAPaginationLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1921BFA11600CDC2ED /* FAPaginationLayout.swift */; };
+		C1F67D1C21BFA17600CDC2ED /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1B21BFA17600CDC2ED /* Authentication.swift */; };
+		C1F67D1E21BFA1FD00CDC2ED /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1D21BFA1FD00CDC2ED /* Camera.swift */; };
+		C1F67D2021BFA2CB00CDC2ED /* DNSPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1F21BFA2CB00CDC2ED /* DNSPopup.swift */; };
+		C1F67D2221BFA66900CDC2ED /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2121BFA66900CDC2ED /* OTPView.swift */; };
+		C1F67D2421BFA6C100CDC2ED /* PINController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2321BFA6C100CDC2ED /* PINController.swift */; };
+		C1F67D2621BFA6D100CDC2ED /* PhotoThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2521BFA6D100CDC2ED /* PhotoThumbView.swift */; };
+		C1F67D2821BFA6FE00CDC2ED /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2721BFA6FE00CDC2ED /* Reachability.swift */; };
+		C1F67D2A21BFA79300CDC2ED /* TextViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2921BFA79300CDC2ED /* TextViewer.swift */; };
+		C1F67D2C21BFA7C000CDC2ED /* iPadDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2B21BFA7C000CDC2ED /* iPadDetail.swift */; };
+		C1F67D2E21BFA7DA00CDC2ED /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2D21BFA7DA00CDC2ED /* Secret.swift */; };
+		C1F67D3021BFA90500CDC2ED /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2F21BFA90500CDC2ED /* UIViewControllerExtension.swift */; };
+		C1F67D3E21BFB75300CDC2ED /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3221BFB75200CDC2ED /* Recorder.swift */; };
+		C1F67D3F21BFB75300CDC2ED /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3321BFB75300CDC2ED /* Vocabulary.swift */; };
+		C1F67D4021BFB75300CDC2ED /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3421BFB75300CDC2ED /* Speaker.swift */; };
+		C1F67D4121BFB75300CDC2ED /* Texter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3521BFB75300CDC2ED /* Texter.swift */; };
+		C1F67D4221BFB75300CDC2ED /* Analyser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3621BFB75300CDC2ED /* Analyser.swift */; };
+		C1F67D4321BFB75300CDC2ED /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3721BFB75300CDC2ED /* Assistant.swift */; };
+		C1F67D4421BFB75300CDC2ED /* SendSpeechOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3921BFB75300CDC2ED /* SendSpeechOrder.swift */; };
+		C1F67D4521BFB75300CDC2ED /* ReceiveSpeechOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3A21BFB75300CDC2ED /* ReceiveSpeechOrder.swift */; };
+		C1F67D4621BFB75300CDC2ED /* SellSpeechOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3B21BFB75300CDC2ED /* SellSpeechOrder.swift */; };
+		C1F67D4721BFB75300CDC2ED /* BuySpeechOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3C21BFB75300CDC2ED /* BuySpeechOrder.swift */; };
+		C1F67D4821BFB75300CDC2ED /* SpeechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3D21BFB75300CDC2ED /* SpeechModel.swift */; };
+		C1F67D4C21BFB7F800CDC2ED /* knPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D4B21BFB7F800CDC2ED /* knPopup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,7 +143,6 @@
 		C1F67C7021BE713A00CDC2ED /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		C1F67C7121BE713A00CDC2ED /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C1F67C7221BE713A00CDC2ED /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		C1F67C8721BEFCC700CDC2ED /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		C1F67C8B21BEFEA100CDC2ED /* knListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knListView.swift; sourceTree = "<group>"; };
 		C1F67C8C21BEFEA100CDC2ED /* knGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knGridView.swift; sourceTree = "<group>"; };
 		C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Keyboard.swift"; sourceTree = "<group>"; };
@@ -140,7 +162,6 @@
 		C1F67CA621BF67AE00CDC2ED /* knTwoColumnsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knTwoColumnsController.swift; sourceTree = "<group>"; };
 		C1F67CA721BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSKCollectionViewRetractableFirstItemLayout.swift; sourceTree = "<group>"; };
 		C1F67CA821BF67AE00CDC2ED /* ZFRippleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFRippleButton.swift; sourceTree = "<group>"; };
-		C1F67CAB21BF67AE00CDC2ED /* PINController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINController.swift; sourceTree = "<group>"; };
 		C1F67CAC21BF67AE00CDC2ED /* knPagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knPagerController.swift; sourceTree = "<group>"; };
 		C1F67CAD21BF67AE00CDC2ED /* knUnderlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knUnderlineTextField.swift; sourceTree = "<group>"; };
 		C1F67CAF21BF67AE00CDC2ED /* TransitionSubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionSubmitButton.swift; sourceTree = "<group>"; };
@@ -177,6 +198,31 @@
 		C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.StartPoint.swift; sourceTree = "<group>"; };
 		C1F67D1321BF7B5200CDC2ED /* Boss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
 		C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidation.swift; sourceTree = "<group>"; };
+		C1F67D1721BFA00200CDC2ED /* AnnouncementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementView.swift; sourceTree = "<group>"; };
+		C1F67D1921BFA11600CDC2ED /* FAPaginationLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAPaginationLayout.swift; sourceTree = "<group>"; };
+		C1F67D1B21BFA17600CDC2ED /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		C1F67D1D21BFA1FD00CDC2ED /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		C1F67D1F21BFA2CB00CDC2ED /* DNSPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPopup.swift; sourceTree = "<group>"; };
+		C1F67D2121BFA66900CDC2ED /* OTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		C1F67D2321BFA6C100CDC2ED /* PINController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PINController.swift; path = "../../../../../../Workspace/Coinhako/mobile-ios/Coinhako/common/PINController.swift"; sourceTree = "<group>"; };
+		C1F67D2521BFA6D100CDC2ED /* PhotoThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoThumbView.swift; sourceTree = "<group>"; };
+		C1F67D2721BFA6FE00CDC2ED /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		C1F67D2921BFA79300CDC2ED /* TextViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewer.swift; sourceTree = "<group>"; };
+		C1F67D2B21BFA7C000CDC2ED /* iPadDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPadDetail.swift; sourceTree = "<group>"; };
+		C1F67D2D21BFA7DA00CDC2ED /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		C1F67D2F21BFA90500CDC2ED /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		C1F67D3221BFB75200CDC2ED /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		C1F67D3321BFB75300CDC2ED /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
+		C1F67D3421BFB75300CDC2ED /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		C1F67D3521BFB75300CDC2ED /* Texter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texter.swift; sourceTree = "<group>"; };
+		C1F67D3621BFB75300CDC2ED /* Analyser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Analyser.swift; sourceTree = "<group>"; };
+		C1F67D3721BFB75300CDC2ED /* Assistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
+		C1F67D3921BFB75300CDC2ED /* SendSpeechOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendSpeechOrder.swift; sourceTree = "<group>"; };
+		C1F67D3A21BFB75300CDC2ED /* ReceiveSpeechOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveSpeechOrder.swift; sourceTree = "<group>"; };
+		C1F67D3B21BFB75300CDC2ED /* SellSpeechOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellSpeechOrder.swift; sourceTree = "<group>"; };
+		C1F67D3C21BFB75300CDC2ED /* BuySpeechOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuySpeechOrder.swift; sourceTree = "<group>"; };
+		C1F67D3D21BFB75300CDC2ED /* SpeechModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechModel.swift; sourceTree = "<group>"; };
+		C1F67D4B21BFB7F800CDC2ED /* knPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knPopup.swift; sourceTree = "<group>"; };
 		E314C17B2F2D391633D2A07C /* Pods_knStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_knStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -278,8 +324,8 @@
 				C1F67C7121BE713A00CDC2ED /* UIImageExtension.swift */,
 				C1F67C6021BE713900CDC2ED /* UISearchBarExtension.swift */,
 				C1F67C6221BE713900CDC2ED /* UITextFieldExtension.swift */,
-				C1F67C8721BEFCC700CDC2ED /* UIViewController+Keyboard.swift */,
 				C1F67C6921BE713900CDC2ED /* UIViewExtension.swift */,
+				C1F67D2F21BFA90500CDC2ED /* UIViewControllerExtension.swift */,
 			);
 			path = must_have;
 			sourceTree = "<group>";
@@ -287,6 +333,7 @@
 		C1F67C8F21BF65C100CDC2ED /* assistants */ = {
 			isa = PBXGroup;
 			children = (
+				C1F67D3121BFB75200CDC2ED /* voice_assistant */,
 				C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */,
 				C1F67C9121BF65C100CDC2ED /* Localization.swift */,
 			);
@@ -296,7 +343,17 @@
 		C1F67C9621BF67AE00CDC2ED /* controls */ = {
 			isa = PBXGroup;
 			children = (
+				C1F67D4B21BFB7F800CDC2ED /* knPopup.swift */,
+				C1F67D1F21BFA2CB00CDC2ED /* DNSPopup.swift */,
+				C1F67D1D21BFA1FD00CDC2ED /* Camera.swift */,
+				C1F67D2121BFA66900CDC2ED /* OTPView.swift */,
+				C1F67D2521BFA6D100CDC2ED /* PhotoThumbView.swift */,
+				C1F67D2321BFA6C100CDC2ED /* PINController.swift */,
+				C1F67D1721BFA00200CDC2ED /* AnnouncementView.swift */,
+				C1F67D2D21BFA7DA00CDC2ED /* Secret.swift */,
+				C1F67D1921BFA11600CDC2ED /* FAPaginationLayout.swift */,
 				C1F67D1321BF7B5200CDC2ED /* Boss.swift */,
+				C1F67D2721BFA6FE00CDC2ED /* Reachability.swift */,
 				C1F67CB821BF67AE00CDC2ED /* GradientView.swift */,
 				C1F67CB521BF67AE00CDC2ED /* KMPlaceholderTextView.swift */,
 				C1F67CA521BF67AE00CDC2ED /* knAnalogClockView.swift */,
@@ -305,10 +362,12 @@
 				C1F67CA221BF67AE00CDC2ED /* knCodeView.swift */,
 				C1F67C9C21BF67AE00CDC2ED /* knComposerView.swift */,
 				C1F67CA021BF67AE00CDC2ED /* knDateDialog.swift */,
+				C1F67D2B21BFA7C000CDC2ED /* iPadDetail.swift */,
 				C1F67C9F21BF67AE00CDC2ED /* knDotLoadingIndicator.swift */,
 				C1F67CB721BF67AE00CDC2ED /* knDraggableViewCollection.swift */,
 				C1F67CEF21BF711F00CDC2ED /* knExpandList.swift */,
 				C1F67CBD21BF67AE00CDC2ED /* knGistTextField.swift */,
+				C1F67D2921BFA79300CDC2ED /* TextViewer.swift */,
 				C1F67C9921BF67AE00CDC2ED /* knImageSlideView.swift */,
 				C1F67CAC21BF67AE00CDC2ED /* knPagerController.swift */,
 				C1F67CE721BF6FDD00CDC2ED /* knPicker.swift */,
@@ -321,7 +380,6 @@
 				C1F67CAD21BF67AE00CDC2ED /* knUnderlineTextField.swift */,
 				C1F67CA121BF67AE00CDC2ED /* MapController.swift */,
 				C1F67CB321BF67AE00CDC2ED /* PagerController.swift */,
-				C1F67CAB21BF67AE00CDC2ED /* PINController.swift */,
 				C1F67CBC21BF67AE00CDC2ED /* PlacePickerView.swift */,
 				C1F67CB621BF67AE00CDC2ED /* QRCode.swift */,
 				C1F67CB021BF67AE00CDC2ED /* QRScanner.swift */,
@@ -355,12 +413,39 @@
 		C1F67D0821BF740700CDC2ED /* others */ = {
 			isa = PBXGroup;
 			children = (
+				C1F67D1B21BFA17600CDC2ED /* Authentication.swift */,
 				C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */,
 				C1F67D0621BF740200CDC2ED /* AnimateItemCollectionLayout.swift */,
 				C1F67D0F21BF78E100CDC2ED /* MessageHub.swift */,
 				C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */,
 			);
 			path = others;
+			sourceTree = "<group>";
+		};
+		C1F67D3121BFB75200CDC2ED /* voice_assistant */ = {
+			isa = PBXGroup;
+			children = (
+				C1F67D3221BFB75200CDC2ED /* Recorder.swift */,
+				C1F67D3321BFB75300CDC2ED /* Vocabulary.swift */,
+				C1F67D3421BFB75300CDC2ED /* Speaker.swift */,
+				C1F67D3521BFB75300CDC2ED /* Texter.swift */,
+				C1F67D3621BFB75300CDC2ED /* Analyser.swift */,
+				C1F67D3721BFB75300CDC2ED /* Assistant.swift */,
+				C1F67D3821BFB75300CDC2ED /* SpeechOrders */,
+			);
+			path = voice_assistant;
+			sourceTree = "<group>";
+		};
+		C1F67D3821BFB75300CDC2ED /* SpeechOrders */ = {
+			isa = PBXGroup;
+			children = (
+				C1F67D3921BFB75300CDC2ED /* SendSpeechOrder.swift */,
+				C1F67D3A21BFB75300CDC2ED /* ReceiveSpeechOrder.swift */,
+				C1F67D3B21BFB75300CDC2ED /* SellSpeechOrder.swift */,
+				C1F67D3C21BFB75300CDC2ED /* BuySpeechOrder.swift */,
+				C1F67D3D21BFB75300CDC2ED /* SpeechModel.swift */,
+			);
+			path = SpeechOrders;
 			sourceTree = "<group>";
 		};
 		E652BEFA3A2C16FB3FF7AA00 /* Pods */ = {
@@ -486,26 +571,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F67D2421BFA6C100CDC2ED /* PINController.swift in Sources */,
 				C1F67CC421BF67AE00CDC2ED /* UIImage+Gif.swift in Sources */,
-				C1F67C8821BEFCC700CDC2ED /* UIViewController+Keyboard.swift in Sources */,
+				C1F67D3F21BFB75300CDC2ED /* Vocabulary.swift in Sources */,
 				C1F67CDF21BF67AE00CDC2ED /* GradientView.swift in Sources */,
 				C1F67CD621BF67AE00CDC2ED /* TransitionSubmitButton.swift in Sources */,
 				C1F67C9521BF65C100CDC2ED /* DeviceType.swift in Sources */,
 				C1F67CC521BF67AE00CDC2ED /* RecordView.swift in Sources */,
+				C1F67D4021BFB75300CDC2ED /* Speaker.swift in Sources */,
 				C1F67CC321BF67AE00CDC2ED /* knComposerView.swift in Sources */,
 				C1F67CCE21BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */,
+				C1F67D3021BFA90500CDC2ED /* UIViewControllerExtension.swift in Sources */,
+				C1F67D1C21BFA17600CDC2ED /* Authentication.swift in Sources */,
 				C1F67C8221BE713A00CDC2ED /* UIButtonExtension.swift in Sources */,
 				C1F67C7421BE713A00CDC2ED /* UISearchBarExtension.swift in Sources */,
 				C1F67C8621BE713A00CDC2ED /* DateExtension.swift in Sources */,
+				C1F67D1E21BFA1FD00CDC2ED /* Camera.swift in Sources */,
 				C1F67CC821BF67AE00CDC2ED /* MapController.swift in Sources */,
+				C1F67D2221BFA66900CDC2ED /* OTPView.swift in Sources */,
+				C1F67D4221BFB75300CDC2ED /* Analyser.swift in Sources */,
 				C1F67C8521BE713A00CDC2ED /* UIImageExtension.swift in Sources */,
 				C1F67CE321BF67AE00CDC2ED /* PlacePickerView.swift in Sources */,
+				C1F67D2621BFA6D100CDC2ED /* PhotoThumbView.swift in Sources */,
 				C1F67C7921BE713A00CDC2ED /* knView.swift in Sources */,
 				C1F67C4D21BE6F4800CDC2ED /* ViewController.swift in Sources */,
 				C1F67D1421BF7B5200CDC2ED /* Boss.swift in Sources */,
 				C1F67C8D21BEFEA100CDC2ED /* knListView.swift in Sources */,
 				C1F67C7621BE713A00CDC2ED /* UITextFieldExtension.swift in Sources */,
 				C1F67CDB21BF67AE00CDC2ED /* knAnimationScrollView.swift in Sources */,
+				C1F67D2021BFA2CB00CDC2ED /* DNSPopup.swift in Sources */,
 				C1F67CE221BF67AE00CDC2ED /* knTagView.swift in Sources */,
 				C1F67CCA21BF67AE00CDC2ED /* knRippleAnimationView.swift in Sources */,
 				C1F67CD721BF67AE00CDC2ED /* QRScanner.swift in Sources */,
@@ -516,6 +610,7 @@
 				C1F67C8421BE713A00CDC2ED /* IntExtension.swift in Sources */,
 				C1F67CEC21BF6FF600CDC2ED /* knStateview.swift in Sources */,
 				C1F67C7B21BE713A00CDC2ED /* UIColorExtension.swift in Sources */,
+				C1F67D4321BFB75300CDC2ED /* Assistant.swift in Sources */,
 				C1F67CBE21BF67AE00CDC2ED /* WebBrowser.swift in Sources */,
 				C1F67CE921BF6FDD00CDC2ED /* knTabController.swift in Sources */,
 				C1F67CEE21BF705600CDC2ED /* knSectionList.swift in Sources */,
@@ -525,6 +620,7 @@
 				C1F67C7E21BE713A00CDC2ED /* knUIMaker.swift in Sources */,
 				C1F67CC621BF67AE00CDC2ED /* knDotLoadingIndicator.swift in Sources */,
 				C1F67CE821BF6FDD00CDC2ED /* TermLabel.swift in Sources */,
+				C1F67D3E21BFB75300CDC2ED /* Recorder.swift in Sources */,
 				C1F67CE421BF67AE00CDC2ED /* knGistTextField.swift in Sources */,
 				C1F67C7D21BE713A00CDC2ED /* UIViewExtension.swift in Sources */,
 				C1F67CC721BF67AE00CDC2ED /* knDateDialog.swift in Sources */,
@@ -532,38 +628,50 @@
 				C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */,
 				C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */,
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
+				C1F67D4521BFB75300CDC2ED /* ReceiveSpeechOrder.swift in Sources */,
 				C1F67CDD21BF67AE00CDC2ED /* QRCode.swift in Sources */,
 				C1F67C7321BE713A00CDC2ED /* General.swift in Sources */,
 				C1F67CCF21BF67AE00CDC2ED /* ZFRippleButton.swift in Sources */,
 				C1F67CC021BF67AE00CDC2ED /* knImageSlideView.swift in Sources */,
+				C1F67D1A21BFA11600CDC2ED /* FAPaginationLayout.swift in Sources */,
 				C1F67D0121BF73FC00CDC2ED /* knPhotoSelectWorker.swift in Sources */,
 				C1F67CDA21BF67AE00CDC2ED /* PagerController.swift in Sources */,
 				C1F67C8021BE713A00CDC2ED /* UIApplicationExtension.swift in Sources */,
 				C1F67C7A21BE713A00CDC2ED /* knController.swift in Sources */,
 				C1F67C7F21BE713A00CDC2ED /* ServiceConnector.swift in Sources */,
+				C1F67D2C21BFA7C000CDC2ED /* iPadDetail.swift in Sources */,
+				C1F67D4721BFB75300CDC2ED /* BuySpeechOrder.swift in Sources */,
 				C1F67CDC21BF67AE00CDC2ED /* KMPlaceholderTextView.swift in Sources */,
 				C1F67CCC21BF67AE00CDC2ED /* knAnalogClockView.swift in Sources */,
 				C1F67D0221BF73FC00CDC2ED /* GoogleLocationManager.swift in Sources */,
+				C1F67D2821BFA6FE00CDC2ED /* Reachability.swift in Sources */,
+				C1F67D2A21BFA79300CDC2ED /* TextViewer.swift in Sources */,
 				C1F67CD921BF67AE00CDC2ED /* knBarButtonNumber.swift in Sources */,
-				C1F67CD221BF67AE00CDC2ED /* PINController.swift in Sources */,
+				C1F67D2E21BFA7DA00CDC2ED /* Secret.swift in Sources */,
+				C1F67D4C21BFB7F800CDC2ED /* knPopup.swift in Sources */,
+				C1F67D4821BFB75300CDC2ED /* SpeechModel.swift in Sources */,
 				C1F67C9321BF65C100CDC2ED /* Controller+Keyboard.swift in Sources */,
 				C1F67C9421BF65C100CDC2ED /* Localization.swift in Sources */,
 				C1F67D0321BF73FC00CDC2ED /* LocationWorker.swift in Sources */,
+				C1F67D4421BFB75300CDC2ED /* SendSpeechOrder.swift in Sources */,
 				C1F67D1021BF78E100CDC2ED /* MessageHub.swift in Sources */,
 				C1F67D0721BF740200CDC2ED /* AnimateItemCollectionLayout.swift in Sources */,
 				C1F67D0A21BF74D800CDC2ED /* SearchHistoryWorker.swift in Sources */,
 				C1F67CD421BF67AE00CDC2ED /* knUnderlineTextField.swift in Sources */,
+				C1F67D4121BFB75300CDC2ED /* Texter.swift in Sources */,
 				C1F67CFC21BF73FC00CDC2ED /* GeocodingWorker.swift in Sources */,
 				C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */,
 				C1F67C7821BE713A00CDC2ED /* UIFontExtension.swift in Sources */,
 				C1F67CF021BF711F00CDC2ED /* knExpandList.swift in Sources */,
 				C1F67CDE21BF67AE00CDC2ED /* knDraggableViewCollection.swift in Sources */,
+				C1F67D4621BFB75300CDC2ED /* SellSpeechOrder.swift in Sources */,
 				C1F67C7C21BE713A00CDC2ED /* 1.Setting.swift in Sources */,
 				C1F67C8321BE713A00CDC2ED /* OtherExtensions.swift in Sources */,
 				C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */,
 				C1F67CCD21BF67AE00CDC2ED /* knTwoColumnsController.swift in Sources */,
 				C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */,
 				C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */,
+				C1F67D1821BFA00200CDC2ED /* AnnouncementView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

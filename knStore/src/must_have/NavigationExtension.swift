@@ -81,3 +81,87 @@ extension UINavigationController {
 //        }
 //    }
 }
+
+
+public extension UINavigationController {
+    
+    /**
+     Pop current view controller to previous view controller.
+     
+     - parameter type:     transition animation type.
+     - parameter duration: transition animation duration.
+     */
+    func kn_dismiss() {
+        guard viewControllers.count >= 2 else { return }
+        guard let previousView = viewControllers[0].view, let thisView = viewControllers[1].view, let screenshot = thisView.takeScreenshot() else { return }
+        
+        let imageView = UIMaker.makeImageView(image: screenshot, contentMode: .scaleAspectFill)
+        imageView.translatesAutoresizingMaskIntoConstraints = true
+        imageView.frame = UIScreen.main.bounds
+        
+        func animate() {
+            imageView.frame.origin.y = screenHeight
+        }
+        
+        func complete(_ isCompleted: Bool) {
+            imageView.removeFromSuperview()
+        }
+        
+        previousView.addSubviews(views: imageView)
+        popViewController(animated: false)
+        UIView.animate(withDuration: 0.35, animations: animate, completion: complete)
+    }
+    
+    /**
+     Push a new view controller on the view controllers's stack.
+     
+     - parameter vc:       view controller to push.
+     - parameter type:     transition animation type.
+     - parameter duration: transition animation duration.
+     */
+    func kn_present(controller vc: UIViewController) {
+        guard let newView = vc.view, let thisView = viewControllers.first?.view else { return }
+        
+        func animate() {
+            newView.frame.origin.y = 0
+        }
+        
+        func complete(_ isCompleted: Bool) {
+            pushViewController(vc, animated: false)
+            newView.removeFromSuperview()
+        }
+        
+        newView.frame.origin.y = screenHeight
+        thisView.addSubview(newView)
+        
+        UIView.animate(withDuration: 0.35, animations: animate, completion: complete)
+    }
+    
+    private func addTransition(transitionType type: String, duration: CFTimeInterval = 0.3) {
+        let transition = CATransition()
+        transition.duration = duration
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype(rawValue: type)
+        view.layer.add(transition, forKey: nil)
+    }
+    
+}
+
+extension UIView {
+    
+    func takeScreenshot() -> UIImage? {
+        
+        // Begin context
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+        
+        // Draw view in that context
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        // And finally, get image
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+}

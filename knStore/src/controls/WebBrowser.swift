@@ -37,12 +37,12 @@ class knWebBrowserController: knController {
     }
     
     override func setupView() {
-        navigationController?.changeTitleFont(UIFont.boldSystemFont(ofSize: 17), color: UIColor.color(value: 85))
+        navigationController?.changeTitleFont(UIFont.boldSystemFont(ofSize: 17), color: UIColor(value: 85))
         statusBarStyle = .default
         navigationController?.hideBar(false)
         navigationController?.removeLine(color: .white)
         navigationController?.isNavigationBarHidden = false
-        addBackButton(tintColor: UIColor.color(value: 85))
+        addBackButton(tintColor: UIColor(value: 85))
         
         view.addSubview(webview)
         webview.fill(toView: view)

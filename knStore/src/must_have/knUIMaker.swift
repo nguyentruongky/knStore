@@ -8,14 +8,14 @@
 
 import UIKit
 class UIMaker {
-    static func makeHorizontalLine(color: UIColor = .color(r: 242, g: 246, b: 254),
+    static func makeHorizontalLine(color: UIColor = UIColor(r: 242, g: 246, b: 254),
                          height: CGFloat = 1) -> UIView {
         let view = makeView(background: color)
         view.height(height)
         return view
     }
     
-    static func makeVerticalLine(color: UIColor = UIColor.color(r: 242, g: 246, b: 254),
+    static func makeVerticalLine(color: UIColor = UIColor(r: 242, g: 246, b: 254),
                                  width: CGFloat = 1) -> UIView {
         let view = makeView(background: color)
         view.width(width)
@@ -110,10 +110,30 @@ class UIMaker {
         return button
     }
 
+    static func makeMainButton(title: String,
+                               bgColor: UIColor = UIColor.gray,
+                               titleColor: UIColor = UIColor.white,
+                               font: UIFont = UIFont.main(.bold, size: 18)) -> UIButton {
+        let button = ZFRippleButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(title, for: .normal)
+        button.titleLabel?.font = font
+        button.setTitleColor(titleColor, for: .normal)
+        button.setTitleColor(UIColor.white.alpha(0.5), for: .disabled)
+        button.setBackground(color: bgColor, forState: .normal)
+        button.setBackground(color: bgColor.alpha(0.5), forState: .disabled)
+        button.rippleBackgroundColor = bgColor.adjustBrightness(1.5)
+        button.rippleColor = bgColor.adjustBrightness(0.9)
+        button.createRoundCorner(7)
+        
+        button.height(56)
+        return button
+    }
+    
     static func makeKeyboardDoneView(title: String = "Done", doneAction: Selector? = nil, font: UIFont = UIFont.systemFont(ofSize: 15)) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 35))
         let button = makeButton(title: title,
-                                titleColor: .color(value: 3),
+                                titleColor: UIColor(value: 3),
                                 font: font)
         if let doneAction = doneAction {
             button.addTarget(self, action: doneAction, for: .touchUpInside)
@@ -126,7 +146,7 @@ class UIMaker {
         button.right(toView: view, space: -30)
         button.centerY(toView: view)
         
-        view.backgroundColor = .color(value: 235)
+        view.backgroundColor = UIColor(value: 235)
         return view
     }
     
