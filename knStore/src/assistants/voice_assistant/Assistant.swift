@@ -72,7 +72,7 @@ class coinVoiceController: knCustomTableController {
         tableView.verticalSpacing(toView: statementLabel, space: padding)
         tableView.bottom(toView: view, space: -112)
 
-        microButton.createRoundCorner(32)
+        microButton.setRoundCorner(32)
         microButton.square(edge: 64)
         microButton.centerX(toView: view)
         microButton.bottom(toView: view, space: -24)

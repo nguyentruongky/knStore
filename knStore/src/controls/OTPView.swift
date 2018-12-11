@@ -78,7 +78,7 @@ class knOTPView: knView {
         let view = UIMaker.makeView()
         view.addSubview(label)
         label.fill(toView: view)
-        view.createRoundCorner(5)
+        view.setRoundCorner(5)
         view.createBorder(0.5, color: UIColor(value: 102))
         
         addSubview(view)

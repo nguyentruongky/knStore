@@ -30,7 +30,7 @@ class knComposerView : UIView {
         tv.font = UIFont.systemFont(ofSize: 14)
         tv.textColor = UIColor(value: 127)
         tv.createBorder(1, color: UIColor(value: 218))
-        tv.createRoundCorner(3)
+        tv.setRoundCorner(3)
         tv.autocorrectionType = .no
         tv.spellCheckingType = .no
         tv.delegate = self

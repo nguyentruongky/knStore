@@ -80,7 +80,7 @@ class knDNSErrorView: knView {
         closeButton.centerX(toView: container)
         closeButton.centerX(toView: container)
         
-        container.createRoundCorner(8)
+        container.setRoundCorner(8)
         
         dismissButton.backgroundColor = UIColor.black.alpha(0.5)
         addSubviews(views: dismissButton, container)

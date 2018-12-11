@@ -8,11 +8,11 @@
 
 import UIKit
 
-class GridCell<U>: knCollectionCell {
+class knGridCell<U>: knCollectionCell {
     var data: U?
 }
 
-class GridView<C: GridCell<U>, U>: knView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class knGridView<C: knGridCell<U>, U>: knView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var datasource = [U]() { didSet { collectionView.reloadData() }}
     fileprivate let cellId = "cellId"
     var collectionView: UICollectionView!
@@ -61,7 +61,7 @@ class GridView<C: GridCell<U>, U>: knView, UICollectionViewDelegate, UICollectio
     func didSelectItem(at indexPath: IndexPath) {}
 }
 
-class GridController<C: GridCell<U>, U>: knController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class GridController<C: knGridCell<U>, U>: knController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var datasource = [U]() { didSet {
         collectionView.reloadData() }}
     fileprivate let cellId = "cellId"

@@ -9,7 +9,7 @@
 import UIKit
 
 private let padding: CGFloat = 24
-final class AnnouncementView: GridView<AnnouncementItemCell, String> {
+final class AnnouncementView: knGridView<AnnouncementItemCell, String> {
     override var datasource: [String] {
         didSet {
             if datasource.count == 1 {
@@ -35,7 +35,7 @@ final class AnnouncementView: GridView<AnnouncementItemCell, String> {
     }
 }
 
-final class AnnouncementItemCell: GridCell<String> {
+final class AnnouncementItemCell: knGridCell<String> {
     override var data: String? { didSet { messageLabel.text = data }}
     let messageLabel = UIMaker.makeLabel(font: UIFont.main(.regular, size: 14),
                                              color: UIColor.white,
@@ -44,7 +44,7 @@ final class AnnouncementItemCell: GridCell<String> {
     
     override func setupView() {
         let view = UIMaker.makeView(background: UIColor(r: 28, g: 61, b: 133))
-        view.createRoundCorner(7)
+        view.setRoundCorner(7)
         view.addSubviews(views: messageLabel)
         messageLabel.fill(toView: view, space: UIEdgeInsets(space: padding))
 

@@ -145,7 +145,7 @@ class knRecordView: knView {
         topBar.addSubview(closeButton)
         
         circleAnimationView.size(CGSize(width: 32, height: 32))
-        circleAnimationView.createRoundCorner(16)
+        circleAnimationView.setRoundCorner(16)
         circleAnimationView.center(toView: microImageView)
 
         microImageView.size(CGSize(width: 12, height: 12))
@@ -167,7 +167,7 @@ class knRecordView: knView {
         recordButton.centerX(toView: recordBar)
         recordButton.centerY(toView: recordBar, space: 8)
         recordButton.size(CGSize(width: 90, height: 90))
-        recordButton.createRoundCorner(45)
+        recordButton.setRoundCorner(45)
         addSubview(topBar)
         addSubview(recordBar)
         
@@ -178,7 +178,7 @@ class knRecordView: knView {
         recordBar.height(150)
         
         recordBar.insertSubview(cancelColorView, belowSubview: recordButton)
-        cancelColorView.createRoundCorner(35)
+        cancelColorView.setRoundCorner(35)
         cancelColorView.size(toView: recordButton, greater: -20)
         cancelColorView.center(toView: recordButton)
         

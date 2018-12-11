@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knImageSlideCell: GridCell<String> {
+class knImageSlideCell: knGridCell<String> {
     override var data: String? { didSet {
         imgView.downloadImage(from: data)
         }}
@@ -20,7 +20,7 @@ class knImageSlideCell: GridCell<String> {
     }
 }
 
-class knImageSlideView: GridView<knImageSlideCell, String> {
+class knImageSlideView: knGridView<knImageSlideCell, String> {
     let dots = UIPageControl()
     override var datasource: [String] { didSet {
         dots.numberOfPages = datasource.count
