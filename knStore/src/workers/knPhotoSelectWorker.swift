@@ -8,19 +8,13 @@
 
 import UIKit
 
-
-protocol knPhotoSelectorDelegate: class {
-    
+fileprivate protocol knPhotoSelectorDelegate: class {
     func present(_ controller: UIViewController)
-    
     func didSelect(_ image: UIImage)
-    
 }
 
-class knPhotoSelector : NSObject {
-
+fileprivate class knPhotoSelector : NSObject {
     var delegate: knPhotoSelectorDelegate?
-
     func showSelection() {
         
         let pickPhoto = UIAlertAction(title: "Choose Photo", style: .default) { (action) in
@@ -37,12 +31,10 @@ class knPhotoSelector : NSObject {
         menu.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         delegate?.present(menu)
     }
-    
     deinit {
         print("Deinit \(NSStringFromClass(type(of: self)))")
     }
 }
-
 
 extension knPhotoSelector: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
@@ -74,17 +66,12 @@ extension knPhotoSelector: UINavigationControllerDelegate, UIImagePickerControll
         imagePicker.allowsEditing = true
         delegate?.present(imagePicker)
     }
-    
 }
 
-
-
-
 class knPhotoSelectorWorker {
-    
     var successResponse : ((UIImage) -> Void)? = nil
     var selectedImage : UIImage?
-    var picker: knPhotoSelector?
+    fileprivate var picker: knPhotoSelector?
     
     init(finishSelection: ((UIImage) -> Void)?) {
         successResponse = finishSelection
@@ -95,17 +82,14 @@ class knPhotoSelectorWorker {
         picker?.delegate = self
         picker?.showSelection()
     }
-    
 }
 
 extension knPhotoSelectorWorker : knPhotoSelectorDelegate {
-    
     func present(_ controller: UIViewController) {
-        
-        let topController = UIApplication.topViewController()
-        topController?.present(controller, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            UIApplication.present(controller)
+        }
     }
-    
     func didSelect(_ image: UIImage) {
         
         selectedImage = image
@@ -113,5 +97,3 @@ extension knPhotoSelectorWorker : knPhotoSelectorDelegate {
         picker = nil
     }
 }
-
-

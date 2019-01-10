@@ -51,13 +51,13 @@ class knConfirmationBoxView: knView {
     }
     
     override func setupView() {
-        containerBackground.setRoundCorner(7)
+        containerBackground.setCorner(radius: 7)
         contentLabel.setLineSpacing()
         backgroundButton.backgroundColor = UIColor.black.alpha(0.5)
         backgroundButton.addTarget(self, action: #selector(close))
         
         noButton.addTarget(self, action: #selector(close))
-        noButton.createBorder(1, color: UIColor(value: 197))
+        noButton.setBorder(1, color: UIColor(value: 197))
         confirmButton.addTarget(self, action: #selector(confirm))
         
         let buttonWrapper = makeButtonWrapper()

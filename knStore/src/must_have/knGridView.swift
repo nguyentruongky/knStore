@@ -14,7 +14,7 @@ class knGridCell<U>: knCollectionCell {
 
 class knGridView<C: knGridCell<U>, U>: knView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var datasource = [U]() { didSet { collectionView.reloadData() }}
-    fileprivate let cellId = "cellId"
+    fileprivate let cellId = String(describing: C.self)
     var collectionView: UICollectionView!
     var contentInset = UIEdgeInsets.zero
     var layout: UICollectionViewLayout!
@@ -64,7 +64,7 @@ class knGridView<C: knGridCell<U>, U>: knView, UICollectionViewDelegate, UIColle
 class GridController<C: knGridCell<U>, U>: knController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var datasource = [U]() { didSet {
         collectionView.reloadData() }}
-    fileprivate let cellId = "cellId"
+    fileprivate let cellId = String(describing: C.self)
     var collectionView: UICollectionView!
     var contentInset = UIEdgeInsets.zero
     var layout: UICollectionViewLayout!

@@ -10,29 +10,17 @@
 import UIKit
 
 protocol knTagSelectionDelegate {
-    
     func didSelectTag(tag: knTag, atIndex index: Int)
 }
 
 class knTagView : UIView {
-    
     let activeBackgroundColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
     let inactiveBackgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
     
     let cellId = "cellId"
-    var tags = [
-        knTag(text: "iOS"),
-        knTag(text: "mobile developement: iOS "),
-        knTag(text: "ambition"),
-        knTag(text: "vision")
-        ] {
-        didSet {
-            collectionView.reloadData()
-        }
-    }
+    var datasource = [knTag]() { didSet { collectionView.reloadData() } }
     
     lazy var collectionView: UICollectionView = {
-        
         let cv = UICollectionView(frame: .zero, collectionViewLayout: CenterAlignedCollectionViewFlowLayout())
         cv.delegate = self
         cv.dataSource = self
@@ -43,7 +31,6 @@ class knTagView : UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupView()
     }
     
@@ -52,9 +39,7 @@ class knTagView : UIView {
     }
     
     func setupView() {
-        
         addSubview(collectionView)
-        
         collectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -66,13 +51,8 @@ class knTagView : UIView {
 }
 
 extension knTagView : UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tags.count
-    }
-    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return datasource.count }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! knTagCell
         configureCell(cell, forIndexPath: indexPath)
         return cell
@@ -88,17 +68,15 @@ extension knTagView : UICollectionViewDelegateFlowLayout, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         guard let cell = collectionView.cellForItem(at: indexPath) as? knTagCell else { return  }
-        
         collectionView.deselectItem(at: indexPath, animated: false)
-        tags[indexPath.row].selected = !tags[indexPath.row].selected
-        cell.backgroundColor = tags[indexPath.row].selected ? activeBackgroundColor : inactiveBackgroundColor
-        cell.tagName.textColor = tags[indexPath.row].selected ? UIColor.white : UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+        datasource[indexPath.row].selected = !datasource[indexPath.row].selected
+        cell.backgroundColor = datasource[indexPath.row].selected ? activeBackgroundColor : inactiveBackgroundColor
+        cell.tagName.textColor = datasource[indexPath.row].selected ? UIColor.white : UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
     }
     
     func configureCell(_ cell: knTagCell, forIndexPath indexPath: IndexPath) {
-        let tag = tags[indexPath.row]
+        let tag = datasource[indexPath.row]
         cell.tagName.text = tag.text
         cell.tagName.textColor = tag.selected ? UIColor.white : UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
         cell.backgroundColor = tag.selected ? activeBackgroundColor : inactiveBackgroundColor
@@ -107,7 +85,6 @@ extension knTagView : UICollectionViewDelegateFlowLayout, UICollectionViewDataSo
 
 
 struct knTag {
-    
     var text: String?
     var selected = false
     
@@ -117,9 +94,7 @@ struct knTag {
 }
 
 class knTagCell: UICollectionViewCell {
-    
     var tagName : UILabel = {
-        
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 13)
@@ -128,11 +103,7 @@ class knTagCell: UICollectionViewCell {
     }()
     var tagNameMaxWidthConstraint: NSLayoutConstraint?
     
-    var tagData: knTag? {
-        didSet {
-            tagName.text = tagData?.text
-        }
-    }
+    var data: knTag? { didSet { tagName.text = data?.text } }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -144,7 +115,6 @@ class knTagCell: UICollectionViewCell {
     }
     
     func setupView() {
-        
         addSubview(tagName)
         tagName.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
         tagName.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true
@@ -237,3 +207,4 @@ class CenterAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
 }
+

@@ -44,7 +44,7 @@ final class AnnouncementItemCell: knGridCell<String> {
     
     override func setupView() {
         let view = UIMaker.makeView(background: UIColor(r: 28, g: 61, b: 133))
-        view.setRoundCorner(7)
+        view.setCorner(radius: 7)
         view.addSubviews(views: messageLabel)
         messageLabel.fill(toView: view, space: UIEdgeInsets(space: padding))
 

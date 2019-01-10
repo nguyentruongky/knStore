@@ -93,7 +93,6 @@
 		C1F67D1E21BFA1FD00CDC2ED /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1D21BFA1FD00CDC2ED /* Camera.swift */; };
 		C1F67D2021BFA2CB00CDC2ED /* DNSPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1F21BFA2CB00CDC2ED /* DNSPopup.swift */; };
 		C1F67D2221BFA66900CDC2ED /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2121BFA66900CDC2ED /* OTPView.swift */; };
-		C1F67D2421BFA6C100CDC2ED /* PINController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2321BFA6C100CDC2ED /* PINController.swift */; };
 		C1F67D2621BFA6D100CDC2ED /* PhotoThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2521BFA6D100CDC2ED /* PhotoThumbView.swift */; };
 		C1F67D2821BFA6FE00CDC2ED /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2721BFA6FE00CDC2ED /* Reachability.swift */; };
 		C1F67D2A21BFA79300CDC2ED /* TextViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2921BFA79300CDC2ED /* TextViewer.swift */; };
@@ -116,13 +115,13 @@
 		C1F67D5521BFC02D00CDC2ED /* ConfirmationBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D5321BFC02D00CDC2ED /* ConfirmationBox.swift */; };
 		C1F67D5621BFC02D00CDC2ED /* PermissionPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D5421BFC02D00CDC2ED /* PermissionPopup.swift */; };
 		C1F67D5821BFC0F100CDC2ED /* SystemSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D5721BFC0F100CDC2ED /* SystemSetting.swift */; };
-		C1F67D5A21BFC10700CDC2ED /* FirebaseUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D5921BFC10600CDC2ED /* FirebaseUploader.swift */; };
 		C1F67D5C21BFC1CF00CDC2ED /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D5B21BFC1CF00CDC2ED /* DateView.swift */; };
 		C1F67D6221BFC28800CDC2ED /* AddMethodDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D5E21BFC28800CDC2ED /* AddMethodDelegate.swift */; };
 		C1F67D6321BFC28800CDC2ED /* GetExpireDateWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D5F21BFC28800CDC2ED /* GetExpireDateWorker.swift */; };
 		C1F67D6421BFC28800CDC2ED /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D6021BFC28800CDC2ED /* AddCard.swift */; };
 		C1F67D6521BFC28800CDC2ED /* AddCard.UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D6121BFC28800CDC2ED /* AddCard.UI.swift */; };
 		C1F67D6721C066C500CDC2ED /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D6621C066C500CDC2ED /* BottomSheet.swift */; };
+		C1FDDE9B21C759C500EEC160 /* PINController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FDDE9A21C759C500EEC160 /* PINController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -215,7 +214,6 @@
 		C1F67D1D21BFA1FD00CDC2ED /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		C1F67D1F21BFA2CB00CDC2ED /* DNSPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPopup.swift; sourceTree = "<group>"; };
 		C1F67D2121BFA66900CDC2ED /* OTPView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
-		C1F67D2321BFA6C100CDC2ED /* PINController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PINController.swift; path = "../../../../../../Workspace/Coinhako/mobile-ios/Coinhako/common/PINController.swift"; sourceTree = "<group>"; };
 		C1F67D2521BFA6D100CDC2ED /* PhotoThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoThumbView.swift; sourceTree = "<group>"; };
 		C1F67D2721BFA6FE00CDC2ED /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		C1F67D2921BFA79300CDC2ED /* TextViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewer.swift; sourceTree = "<group>"; };
@@ -238,13 +236,13 @@
 		C1F67D5321BFC02D00CDC2ED /* ConfirmationBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationBox.swift; sourceTree = "<group>"; };
 		C1F67D5421BFC02D00CDC2ED /* PermissionPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionPopup.swift; sourceTree = "<group>"; };
 		C1F67D5721BFC0F100CDC2ED /* SystemSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemSetting.swift; sourceTree = "<group>"; };
-		C1F67D5921BFC10600CDC2ED /* FirebaseUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseUploader.swift; path = "../../../../../../Workspace/invo/ios/invo-ios/invo-ios/common/FirebaseUploader.swift"; sourceTree = "<group>"; };
 		C1F67D5B21BFC1CF00CDC2ED /* DateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		C1F67D5E21BFC28800CDC2ED /* AddMethodDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMethodDelegate.swift; sourceTree = "<group>"; };
 		C1F67D5F21BFC28800CDC2ED /* GetExpireDateWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetExpireDateWorker.swift; sourceTree = "<group>"; };
 		C1F67D6021BFC28800CDC2ED /* AddCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
 		C1F67D6121BFC28800CDC2ED /* AddCard.UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCard.UI.swift; sourceTree = "<group>"; };
 		C1F67D6621C066C500CDC2ED /* BottomSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		C1FDDE9A21C759C500EEC160 /* PINController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PINController.swift; sourceTree = "<group>"; };
 		E314C17B2F2D391633D2A07C /* Pods_knStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_knStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -323,6 +321,7 @@
 		C1F67C5E21BE712600CDC2ED /* must_have */ = {
 			isa = PBXGroup;
 			children = (
+				C1F67CB521BF67AE00CDC2ED /* KMPlaceholderTextView.swift */,
 				C1F67C6821BE713900CDC2ED /* 1.Setting.swift */,
 				C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */,
 				C1F67C7221BE713A00CDC2ED /* DateExtension.swift */,
@@ -371,31 +370,10 @@
 				C1F67D6621C066C500CDC2ED /* BottomSheet.swift */,
 				C1F67D1D21BFA1FD00CDC2ED /* Camera.swift */,
 				C1F67D5321BFC02D00CDC2ED /* ConfirmationBox.swift */,
-				C1F67D1F21BFA2CB00CDC2ED /* DNSPopup.swift */,
 				C1F67D5B21BFC1CF00CDC2ED /* DateView.swift */,
+				C1F67D1F21BFA2CB00CDC2ED /* DNSPopup.swift */,
 				C1F67D1921BFA11600CDC2ED /* FAPaginationLayout.swift */,
 				C1F67CB821BF67AE00CDC2ED /* GradientView.swift */,
-				C1F67CB521BF67AE00CDC2ED /* KMPlaceholderTextView.swift */,
-				C1F67CA121BF67AE00CDC2ED /* MapController.swift */,
-				C1F67D2121BFA66900CDC2ED /* OTPView.swift */,
-				C1F67D2321BFA6C100CDC2ED /* PINController.swift */,
-				C1F67CB321BF67AE00CDC2ED /* PagerController.swift */,
-				C1F67D5421BFC02D00CDC2ED /* PermissionPopup.swift */,
-				C1F67D2521BFA6D100CDC2ED /* PhotoThumbView.swift */,
-				C1F67CBC21BF67AE00CDC2ED /* PlacePickerView.swift */,
-				C1F67CB621BF67AE00CDC2ED /* QRCode.swift */,
-				C1F67CB021BF67AE00CDC2ED /* QRScanner.swift */,
-				C1F67CA721BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift */,
-				C1F67D2721BFA6FE00CDC2ED /* Reachability.swift */,
-				C1F67C9E21BF67AE00CDC2ED /* RecordView.swift */,
-				C1F67D2D21BFA7DA00CDC2ED /* Secret.swift */,
-				C1F67CB121BF67AE00CDC2ED /* SnakePageControl.swift */,
-				C1F67CE521BF6FDC00CDC2ED /* TermLabel.swift */,
-				C1F67D2921BFA79300CDC2ED /* TextViewer.swift */,
-				C1F67CAF21BF67AE00CDC2ED /* TransitionSubmitButton.swift */,
-				C1F67C9D21BF67AE00CDC2ED /* UIImage+Gif.swift */,
-				C1F67C9721BF67AE00CDC2ED /* WebBrowser.swift */,
-				C1F67CA821BF67AE00CDC2ED /* ZFRippleButton.swift */,
 				C1F67D2B21BFA7C000CDC2ED /* iPadDetail.swift */,
 				C1F67CA521BF67AE00CDC2ED /* knAnalogClockView.swift */,
 				C1F67CB421BF67AE00CDC2ED /* knAnimationScrollView.swift */,
@@ -418,6 +396,26 @@
 				C1F67CBB21BF67AE00CDC2ED /* knTagView.swift */,
 				C1F67CA621BF67AE00CDC2ED /* knTwoColumnsController.swift */,
 				C1F67CAD21BF67AE00CDC2ED /* knUnderlineTextField.swift */,
+				C1F67CA121BF67AE00CDC2ED /* MapController.swift */,
+				C1F67D2121BFA66900CDC2ED /* OTPView.swift */,
+				C1F67CB321BF67AE00CDC2ED /* PagerController.swift */,
+				C1F67D5421BFC02D00CDC2ED /* PermissionPopup.swift */,
+				C1F67D2521BFA6D100CDC2ED /* PhotoThumbView.swift */,
+				C1FDDE9A21C759C500EEC160 /* PINController.swift */,
+				C1F67CBC21BF67AE00CDC2ED /* PlacePickerView.swift */,
+				C1F67CB621BF67AE00CDC2ED /* QRCode.swift */,
+				C1F67CB021BF67AE00CDC2ED /* QRScanner.swift */,
+				C1F67D2721BFA6FE00CDC2ED /* Reachability.swift */,
+				C1F67C9E21BF67AE00CDC2ED /* RecordView.swift */,
+				C1F67CA721BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift */,
+				C1F67D2D21BFA7DA00CDC2ED /* Secret.swift */,
+				C1F67CB121BF67AE00CDC2ED /* SnakePageControl.swift */,
+				C1F67CE521BF6FDC00CDC2ED /* TermLabel.swift */,
+				C1F67D2921BFA79300CDC2ED /* TextViewer.swift */,
+				C1F67CAF21BF67AE00CDC2ED /* TransitionSubmitButton.swift */,
+				C1F67C9D21BF67AE00CDC2ED /* UIImage+Gif.swift */,
+				C1F67C9721BF67AE00CDC2ED /* WebBrowser.swift */,
+				C1F67CA821BF67AE00CDC2ED /* ZFRippleButton.swift */,
 			);
 			path = controls;
 			sourceTree = "<group>";
@@ -425,7 +423,6 @@
 		C1F67CF121BF73FC00CDC2ED /* workers */ = {
 			isa = PBXGroup;
 			children = (
-				C1F67D5921BFC10600CDC2ED /* FirebaseUploader.swift */,
 				C1F67CF221BF73FC00CDC2ED /* GeocodingWorker.swift */,
 				C1F67CF821BF73FC00CDC2ED /* GoogleLocationManager.swift */,
 				C1F67CF921BF73FC00CDC2ED /* LocationWorker.swift */,
@@ -612,7 +609,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F67D2421BFA6C100CDC2ED /* PINController.swift in Sources */,
 				C1F67CC421BF67AE00CDC2ED /* UIImage+Gif.swift in Sources */,
 				C1F67D3F21BFB75300CDC2ED /* Vocabulary.swift in Sources */,
 				C1F67CDF21BF67AE00CDC2ED /* GradientView.swift in Sources */,
@@ -670,6 +666,7 @@
 				C1F67D3E21BFB75300CDC2ED /* Recorder.swift in Sources */,
 				C1F67CE421BF67AE00CDC2ED /* knGistTextField.swift in Sources */,
 				C1F67C7D21BE713A00CDC2ED /* UIViewExtension.swift in Sources */,
+				C1FDDE9B21C759C500EEC160 /* PINController.swift in Sources */,
 				C1F67D6721C066C500CDC2ED /* BottomSheet.swift in Sources */,
 				C1F67D6221BFC28800CDC2ED /* AddMethodDelegate.swift in Sources */,
 				C1F67CC721BF67AE00CDC2ED /* knDateDialog.swift in Sources */,
@@ -720,7 +717,6 @@
 				C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */,
 				C1F67CCD21BF67AE00CDC2ED /* knTwoColumnsController.swift in Sources */,
 				C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */,
-				C1F67D5A21BFC10700CDC2ED /* FirebaseUploader.swift in Sources */,
 				C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */,
 				C1F67D4E21BFBE7A00CDC2ED /* AvatarGenerator.swift in Sources */,
 				C1F67D1821BFA00200CDC2ED /* AnnouncementView.swift in Sources */,

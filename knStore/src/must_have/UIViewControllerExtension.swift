@@ -66,6 +66,10 @@ extension UIViewController {
         pop()
     }
     
+    func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func present(_ controller: UIViewController) {
         present(controller, animated: true)
     }

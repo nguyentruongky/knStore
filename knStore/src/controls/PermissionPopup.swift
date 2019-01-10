@@ -84,7 +84,7 @@ class knPermissionPopup: knView {
         closeButton.centerX(toView: container)
         closeButton.centerX(toView: container)
         
-        container.setRoundCorner(8)
+        container.setCorner(radius: 8)
         
         dismissButton.backgroundColor = UIColor.black.alpha(0.5)
         addSubviews(views: dismissButton, container)

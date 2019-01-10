@@ -85,8 +85,8 @@ class UIMaker {
         button.setBackground(color: background.withAlphaComponent(0.5), forState: .disabled)
         
         button.titleLabel?.font = font
-        button.setRoundCorner(cornerRadius)
-        button.createBorder(borderWidth, color: borderColor)
+        button.setCorner(radius: cornerRadius)
+        button.setBorder(borderWidth, color: borderColor)
         return button
     }
     
@@ -124,7 +124,7 @@ class UIMaker {
         button.setBackground(color: bgColor.alpha(0.5), forState: .disabled)
         button.rippleBackgroundColor = bgColor.adjustBrightness(1.5)
         button.rippleColor = bgColor.adjustBrightness(0.9)
-        button.setRoundCorner(7)
+        button.setCorner(radius: 7)
         
         button.height(56)
         return button

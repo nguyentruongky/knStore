@@ -33,7 +33,7 @@ class knPopup: knView {
         button.setTitle("OK", for: .normal)
         button.backgroundColor = UIColor(r: 71, g: 204, b: 54)
         button.height(54)
-        button.setRoundCorner(27)
+        button.setCorner(radius: 27)
         return button
     }()
     

@@ -9,9 +9,9 @@
 import UIKit
 
 enum knState: String {
-    case good
+    case success
     case noInternet
-    case serverError, empty, loading
+    case error, empty, loading
 }
 
 class knOffineView: knView {
@@ -65,7 +65,7 @@ class knStateView: knView {
         self.state = state
     }
     
-    var state = knState.good {
+    var state = knState.success {
         didSet {
             guard state != oldValue else { return }
             currentView?.removeFromSuperview()
@@ -77,7 +77,7 @@ class knStateView: knView {
             }
             
             switch state {
-            case .good:
+            case .success:
                 removeFromSuperview()
                 
             case .noInternet:
@@ -85,7 +85,7 @@ class knStateView: knView {
                     title: "Oops, no connection",
                     content: "The internet connection appears to be offline.")
                 
-            case .serverError:
+            case .error:
                 set(icon: UIImage(named: "generic_error"),
                     title: "There's an error",
                     content: "There was an error. Please try again later.")

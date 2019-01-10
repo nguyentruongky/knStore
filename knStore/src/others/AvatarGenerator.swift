@@ -28,7 +28,7 @@ struct knAvatarGenerator {
         let factor: CGFloat = hasNotch() ? 3 : (DeviceType.IS_IPHONE_6P ? 2.5 : 2)
         label.frame.size.width *= factor
         label.frame.size.height = label.frame.size.width
-        label.setRoundCorner(label.frame.size.height / 2)
+        label.setCorner(radius: label.frame.size.height / 2)
         return label.createImage()
     }
     

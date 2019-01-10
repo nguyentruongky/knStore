@@ -14,7 +14,7 @@ class knListCell<U>: knTableCell {
 
 class knListView<C: knListCell<U>, U>: knView, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
-    fileprivate let cellId = "cellId"
+    fileprivate let cellId = String(describing: C.self)
     var rowHeight: CGFloat = UITableView.automaticDimension
     
     lazy var tableView: UITableView = { [weak self] in
@@ -84,7 +84,7 @@ class knStaticListView: knView, UITableViewDataSource, UITableViewDelegate {
 
 class knListController<C: knListCell<U>, U>: knController, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
-    fileprivate let cellId = "cellId"
+    fileprivate let cellId = String(describing: C.self)
     var rowHeight = UITableView.automaticDimension
     var contentInset: UIEdgeInsets?
     
@@ -177,7 +177,12 @@ class knStaticListController: knController, UITableViewDelegate, UITableViewData
         print("Deinit \(NSStringFromClass(type(of: self)))")
         removeKeyboardNotificationListeners()
     }
-    
+    func wrapToCell(view: UIView) -> knTableCell {
+        let cell = knTableCell()
+        cell.addSubview(view)
+        view.fill(toView: cell)
+        return cell
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datasource.count }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

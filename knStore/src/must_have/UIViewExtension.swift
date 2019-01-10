@@ -9,12 +9,12 @@
 import UIKit
 
 extension UIView {
-    func createBorder(_ width: CGFloat, color: UIColor) {
+    func setBorder(_ width: CGFloat, color: UIColor) {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
     
-    @objc func setRoundCorner(_ radius: CGFloat) {
+    @objc func setCorner(radius: CGFloat) {
         layer.cornerRadius = radius
         clipsToBounds = true
     }
@@ -86,7 +86,7 @@ extension UIView {
      - parameter corners: Corners to round
      - parameter radius:  Radius to round to
      */
-    func createRoundCorners(corners: UIRectCorner, radius: CGFloat) {
+    func setRoundCorners(corners: UIRectCorner, radius: CGFloat) {
         _ = _round(corners: corners, radius: radius)
     }
     
@@ -98,7 +98,7 @@ extension UIView {
      - parameter borderColor: The border color
      - parameter borderWidth: The border width
      */
-    func createRoundCorners(corners: UIRectCorner, radius: CGFloat, borderColor: UIColor, borderWidth: CGFloat) {
+    func setRoundCorners(corners: UIRectCorner, radius: CGFloat, borderColor: UIColor, borderWidth: CGFloat) {
         let mask = _round(corners: corners, radius: radius)
         addBorder(mask: mask, borderColor: borderColor, borderWidth: borderWidth)
     }

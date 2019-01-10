@@ -78,8 +78,8 @@ class knOTPView: knView {
         let view = UIMaker.makeView()
         view.addSubview(label)
         label.fill(toView: view)
-        view.setRoundCorner(5)
-        view.createBorder(0.5, color: UIColor(value: 102))
+        view.setCorner(radius: 5)
+        view.setBorder(0.5, color: UIColor(value: 102))
         
         addSubview(view)
         view.vertical(toView: self)
@@ -145,13 +145,13 @@ extension knOTPView: UITextFieldDelegate {
     }
     
     func setCode(at index: Int, active: Bool) {
-        boxes[index].createBorder(active ? 1 : 0.5,
+        boxes[index].setBorder(active ? 1 : 0.5,
                                   color: active ? UIColor(r: 69, g: 125, b: 245) : UIColor(value: 102))
     }
     
     func setCodeError() {
         for i in 0 ..< digitCount {
-            boxes[i].createBorder(0.5, color: UIColor(r: 253, g: 102, b: 127))
+            boxes[i].setBorder(0.5, color: UIColor(r: 253, g: 102, b: 127))
             labels[i].textColor = UIColor(r: 253, g: 102, b: 127)
         }
     }
