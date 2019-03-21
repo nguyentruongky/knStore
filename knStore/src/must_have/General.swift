@@ -58,19 +58,6 @@ func openUrlInSafari(_ url: String) {
     UIApplication.shared.openURL(link)
 }
 
-struct knError {
-    var code: String = "unknown"
-    var message: String?
-    var data: AnyObject?
-    
-    init() {}
-    init(code: String, message: String? = nil, data: AnyObject? = nil) {
-        self.code = code
-        self.message = message
-        self.data = data
-    }
-}
-
 let isSimulator: Bool = {
     #if arch(i386) || arch(x86_64)
     return true

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26B74FE121F07CCC0005BA27 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FE021F07CCC0005BA27 /* Login.swift */; };
+		26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FF321F175FD0005BA27 /* StripeWrapper.swift */; };
 		7321F2D0AAE4CCE5C7DC47EB /* Pods_knStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E314C17B2F2D391633D2A07C /* Pods_knStore.framework */; };
 		C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C4A21BE6F4800CDC2ED /* AppDelegate.swift */; };
 		C1F67C4D21BE6F4800CDC2ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C4C21BE6F4800CDC2ED /* ViewController.swift */; };
@@ -126,6 +128,8 @@
 
 /* Begin PBXFileReference section */
 		0FF667B7CD5F736E0DD97499 /* Pods-knStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-knStore/Pods-knStore.release.xcconfig"; sourceTree = "<group>"; };
+		26B74FE021F07CCC0005BA27 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		26B74FF321F175FD0005BA27 /* StripeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeWrapper.swift; sourceTree = "<group>"; };
 		9BC6340EF2B88E2815965290 /* Pods-knStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-knStore/Pods-knStore.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F67C4721BE6F4800CDC2ED /* knStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = knStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F67C4A21BE6F4800CDC2ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -365,6 +369,8 @@
 		C1F67C9621BF67AE00CDC2ED /* controls */ = {
 			isa = PBXGroup;
 			children = (
+				26B74FF321F175FD0005BA27 /* StripeWrapper.swift */,
+				26B74FE021F07CCC0005BA27 /* Login.swift */,
 				C1F67D1721BFA00200CDC2ED /* AnnouncementView.swift */,
 				C1F67D1321BF7B5200CDC2ED /* Boss.swift */,
 				C1F67D6621C066C500CDC2ED /* BottomSheet.swift */,
@@ -570,7 +576,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-knStore/Pods-knStore-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
@@ -581,7 +587,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-knStore/Pods-knStore-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D26071F4EEFDDA4A994A4343 /* [CP] Check Pods Manifest.lock */ = {
@@ -629,6 +635,7 @@
 				C1F67D5521BFC02D00CDC2ED /* ConfirmationBox.swift in Sources */,
 				C1F67D4221BFB75300CDC2ED /* Analyser.swift in Sources */,
 				C1F67C8521BE713A00CDC2ED /* UIImageExtension.swift in Sources */,
+				26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */,
 				C1F67CE321BF67AE00CDC2ED /* PlacePickerView.swift in Sources */,
 				C1F67D6321BFC28800CDC2ED /* GetExpireDateWorker.swift in Sources */,
 				C1F67D2621BFA6D100CDC2ED /* PhotoThumbView.swift in Sources */,
@@ -672,6 +679,7 @@
 				C1F67CC721BF67AE00CDC2ED /* knDateDialog.swift in Sources */,
 				C1F67CFD21BF73FC00CDC2ED /* RequestLocationWorker.swift in Sources */,
 				C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */,
+				26B74FE121F07CCC0005BA27 /* Login.swift in Sources */,
 				C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */,
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
 				C1F67D5C21BFC1CF00CDC2ED /* DateView.swift in Sources */,

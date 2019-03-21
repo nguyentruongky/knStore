@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Stripe
+//import Stripe
 
 
 struct StripeWrapper {
@@ -21,29 +21,29 @@ struct StripeWrapper {
         self.authKey = authKey
         self.secretKey = secretKey
         self.publicKey = publicKey
-        STPPaymentConfiguration.shared().publishableKey = publicKey
+//        STPPaymentConfiguration.shared().publishableKey = publicKey
     }
 
     func createCard(card: Card,
                     successAction: @escaping (_ cardToken: String) -> Void,
                     failAction: ((_ error: knError) -> Void)?) {
-        let cardParams = STPCardParams()
-        cardParams.number = card.number.remove("-")
-        cardParams.expMonth = UInt(card.expMonth) ?? 1
-        cardParams.expYear = UInt(card.expYear) ?? 2020
-        cardParams.cvc = card.cvc
-        STPAPIClient.shared().createToken(withCard: cardParams) { (token, err) in
-            if let err = err {
-                let error = knError(code: "create_card_fail",
-                                    message: err.localizedDescription)
-                failAction?(error)
-                return
-            }
-
-            if let cardToken = token?.tokenId {
-                successAction(cardToken)
-            }
-        }
+//        let cardParams = STPCardParams()
+//        cardParams.number = card.number.remove("-")
+//        cardParams.expMonth = UInt(card.expMonth) ?? 1
+//        cardParams.expYear = UInt(card.expYear) ?? 2020
+//        cardParams.cvc = card.cvc
+//        STPAPIClient.shared().createToken(withCard: cardParams) { (token, err) in
+//            if let err = err {
+//                let error = knError(code: "create_card_fail",
+//                                    message: err.localizedDescription)
+//                failAction?(error)
+//                return
+//            }
+//
+//            if let cardToken = token?.tokenId {
+//                successAction(cardToken)
+//            }
+//        }
     }
 
     func charge(amountInSmallestUnit amount: Double,
@@ -65,7 +65,7 @@ struct StripeWrapper {
 
         let api = "https://api.stripe.com/v1/charges"
         let header = [
-            "Authorization": appSetting.stripeKey,
+            "Authorization": authKey,
             "Content-Type": "application/x-www-form-urlencoded"
         ]
         let params = [
@@ -75,7 +75,7 @@ struct StripeWrapper {
             "description": "transaction_id \(transactionId)",
             ] as [String : Any]
 
-        ServiceConnector.post(api, params: params, headers: header,
+        ApiConnector.post(api, params: params, headers: header,
                               success: successResponse, fail: { err in failAction?(err) })
     }
 
@@ -96,11 +96,11 @@ struct StripeWrapper {
 
         let api = "https://api.stripe.com/v1/customers"
         let header = [
-            "Authorization": appSetting.stripeKey,
+            "Authorization": authKey,
             "Content-Type": "application/x-www-form-urlencoded"
         ]
 
-        ServiceConnector.post(api, headers: header, success: successResponse, fail: failAction)
+        ApiConnector.post(api, headers: header, success: successResponse, fail: failAction)
     }
 }
 

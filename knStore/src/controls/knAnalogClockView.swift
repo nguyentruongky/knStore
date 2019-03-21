@@ -15,6 +15,7 @@ extension NSObject {
     
     func performBlockOnMainQueue(_ block: @escaping ()->(), afterDelay: Double) {
         performBlock(block, onQueue: DispatchQueue.main, afterDelay: afterDelay)
+        
     }
 }
 

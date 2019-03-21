@@ -35,6 +35,8 @@ class knMapController: knController {
         navigationController?.removeLine(color: .clear)
         view.addSubview(mapView)
         mapView.fill(toView: view)
+        
+        mapView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dropPin)))
     }
 
     override func fetchData() {
@@ -53,6 +55,16 @@ class knMapController: knController {
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: true)
 
+    }
+    
+    @objc func dropPin(sender: UITapGestureRecognizer) {
+        let location = sender.location(in: mapView)
+        let myCoordinate: CLLocationCoordinate2D = mapView.convert(location, toCoordinateFrom: mapView)
+        let myPin: MKPointAnnotation = MKPointAnnotation()
+        myPin.coordinate = myCoordinate
+        myPin.title = "title"
+        myPin.subtitle = "subtitle"
+        mapView.addAnnotation(myPin)
     }
 
 }

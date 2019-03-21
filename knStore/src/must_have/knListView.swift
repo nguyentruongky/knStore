@@ -101,15 +101,16 @@ class knListController<C: knListCell<U>, U>: knController, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(C.self, forCellReuseIdentifier: cellId)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+
         setupView()
         view.backgroundColor = .white
         setupKeyboardNotifcationListenerForScrollView(scrollView: tableView)
     }
     
     override func setupView() {
-        tableView.register(C.self, forCellReuseIdentifier: cellId)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
         if let inset = contentInset {
             tableView.contentInset = inset
         }
@@ -175,7 +176,6 @@ class knStaticListController: knController, UITableViewDelegate, UITableViewData
     
     deinit {
         print("Deinit \(NSStringFromClass(type(of: self)))")
-        removeKeyboardNotificationListeners()
     }
     func wrapToCell(view: UIView) -> knTableCell {
         let cell = knTableCell()
