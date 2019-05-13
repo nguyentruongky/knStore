@@ -69,14 +69,14 @@ extension UIButton {
             isEnabled = false
             let indicator = UIActivityIndicatorView(style: style)
             indicator.translatesAutoresizingMaskIntoConstraints = false
-            indicator.tag = 10001
+            indicator.tag = 12398137
             indicator.startAnimating()
             addSubview(indicator)
             indicator.center(toView: self)
         } else {
             titleLabel?.layer.opacity = 1
             isEnabled = true
-            let indicator = viewWithTag(10001)
+            let indicator = viewWithTag(12398137)
             indicator?.removeFromSuperview()
         }
     }

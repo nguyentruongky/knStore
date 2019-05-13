@@ -12,12 +12,16 @@ import Alamofire
 struct ApiConnector {
     static fileprivate var connector = AlamofireConnector()
     static private func getHeaders() -> [String: String]? {
-        return ["Content-Type": "application/json",
-                "X-Device-Id": "mobile_app"
+        var headers = [
+            "Content-Type": "application/json"
         ]
+        if let token = UserDefaults.standard.object(forKey: "AutherizationId") as? String {
+            headers["Authorization"] = token
+        }
+        return headers
     }
     private static func getUrl(from api: String) -> URL? {
-        let baseUrl = "your_root_url"
+        let baseUrl = Settings.baseUrl
         let apiUrl = api.contains("http") ? api : baseUrl + api
         return URL(string: apiUrl)
     }
@@ -25,7 +29,7 @@ struct ApiConnector {
     static private func request(_ api: String,
                                 method: HTTPMethod,
                                 params: [String: Any]? = nil,
-                                headers: [String: String]?,
+                                headers: [String: String]? = nil,
                                 success: @escaping (_ result: AnyObject) -> Void,
                                 fail: ((_ error: knError) -> Void)? = nil) {
         let finalHeaders = headers ?? getHeaders()
@@ -41,7 +45,7 @@ struct ApiConnector {
     static private func request(_ api: String,
                                 method: HTTPMethod,
                                 params: [String: Any]? = nil,
-                                headers: [String: String]?,
+                                headers: [String: String]? = nil,
                                 returnData: @escaping (Data) -> Void,
                                 fail: ((_ error: knError) -> Void)? = nil) {
         let finalHeaders = headers ?? getHeaders()
@@ -57,7 +61,7 @@ struct ApiConnector {
 
     static func get(_ api: String,
                     params: [String: Any]? = nil,
-                    headers: [String: String]?,
+                    headers: [String: String]? = nil,
                     success: @escaping (_ result: AnyObject) -> Void,
                     fail: ((_ error: knError) -> Void)? = nil) {
         request(api,
@@ -70,7 +74,7 @@ struct ApiConnector {
 
     static func get(_ api: String,
                     params: [String: Any]? = nil,
-                    headers: [String: String]?,
+                    headers: [String: String]? = nil,
                     returnData: @escaping (Data) -> Void,
                     fail: ((_ error: knError) -> Void)? = nil) {
         request(api, method: .get,
@@ -83,7 +87,7 @@ struct ApiConnector {
 
     static func put(_ api: String,
                     params: [String: Any]? = nil,
-                    headers: [String: String]?,
+                    headers: [String: String]? = nil,
                     success: @escaping (_ result: AnyObject) -> Void,
                     fail: ((_ error: knError) -> Void)? = nil) {
         request(api,
@@ -96,7 +100,7 @@ struct ApiConnector {
 
     static func put(_ api: String,
                     params: [String: Any]? = nil,
-                    headers: [String: String]?,
+                    headers: [String: String]? = nil,
                     returnData: @escaping (Data) -> Void,
                     fail: ((_ error: knError) -> Void)? = nil) {
         request(api,
@@ -110,7 +114,7 @@ struct ApiConnector {
 
     static func post(_ api: String,
                      params: [String: Any]? = nil,
-                     headers: [String: String]?,
+                     headers: [String: String]? = nil,
                      success: @escaping (_ result: AnyObject) -> Void,
                      fail: ((_ error: knError) -> Void)? = nil) {
         request(api,
@@ -123,7 +127,7 @@ struct ApiConnector {
 
     static func post(_ api: String,
                      params: [String: Any]? = nil,
-                     headers: [String: String]?,
+                     headers: [String: String]? = nil,
                      returnData: @escaping (Data) -> Void,
                      fail: ((_ error: knError) -> Void)? = nil) {
         request(api,
@@ -136,7 +140,7 @@ struct ApiConnector {
 
     static func delete(_ api: String,
                        params: [String: Any]? = nil,
-                       headers: [String: String]?,
+                       headers: [String: String]? = nil,
                        success: @escaping (_ result: AnyObject) -> Void,
                        fail: ((_ error: knError) -> Void)? = nil) {
         request(api, method: .delete, params: params, headers: headers, success: success, fail: fail)
@@ -144,7 +148,7 @@ struct ApiConnector {
 
     static func delete(_ api: String,
                        params: [String: Any]? = nil,
-                       headers: [String: String]?,
+                       headers: [String: String]? = nil,
                        returnData: @escaping (Data) -> Void,
                        fail: ((_ error: knError) -> Void)? = nil) {
         request(api,

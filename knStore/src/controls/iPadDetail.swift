@@ -74,15 +74,3 @@ class coiniPadDetailManager: NSObject {
         addPage(controller, to: mainController, at: newRect!)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import func AVFoundation.AVMakeRect
 
 extension UIImageView {
     func downloadImage(from url: String?, placeholder: UIImage? = nil) {
@@ -191,3 +192,39 @@ extension UIImage {
         return image
     }
 }
+
+
+extension UIImage {
+    static func loadImage(byName name: String, aspectFitRect rect: CGRect) -> UIImage? {
+        guard let image = UIImage(named: name) else { return nil }
+        return image.resizeImage(aspectFitInRect: rect)
+    }
+
+    func resizeImage(aspectFitInRect rect: CGRect) -> UIImage? {
+        let rect = AVMakeRect(aspectRatio: size, insideRect: rect)
+        let renderer = UIGraphicsImageRenderer(size: rect.size)
+        return renderer.image { (context) in
+            self.draw(in: CGRect(origin: .zero, size: rect.size))
+        }
+    }
+
+    static func loadImage(atUrl: String, for size: CGSize, completion: @escaping (UIImage) -> Void) {
+        let options: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageIfAbsent: true,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceShouldCacheImmediately: true,
+            kCGImageSourceThumbnailMaxPixelSize: max(size.width, size.height)
+        ]
+
+        guard let url = NSURL(string: atUrl) else { return }
+        DispatchQueue.global(qos: .background).async {
+            guard let imageSource = CGImageSourceCreateWithURL(url, nil),
+                let image = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, options as CFDictionary)
+                else { return }
+            DispatchQueue.main.async {
+                completion(UIImage(cgImage: image))
+            }
+        }
+    }
+}
+
