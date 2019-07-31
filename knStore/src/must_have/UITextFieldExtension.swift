@@ -12,14 +12,14 @@ extension UITextField {
     enum ViewType {
         case left, right
     }
-    
+
     @discardableResult
     func setView(_ view: ViewType, space: CGFloat) -> UIView {
         let spaceView = UIView(frame: CGRect(x: 0, y: 0, width: space, height: 1))
         setView(view, with: spaceView)
         return spaceView
     }
-    
+
     func setView(_ type: ViewType, with view: UIView) {
         if type == ViewType.left {
             leftView = view
@@ -29,38 +29,37 @@ extension UITextField {
             rightViewMode = .always
         }
     }
-    
+
     @discardableResult
-    func setView(_ view: ViewType, title: String) -> UIButton {
-        let button = UIButton()
-        button.frame = CGRect(x: 0, y: 0, width: 50, height: 100)
+    func setView(_ view: ViewType, title: String, space: CGFloat = 0) -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: frame.height))
         button.setTitle(title, for: UIControl.State())
+        button.contentEdgeInsets = UIEdgeInsets(top: 4, left: space, bottom: 4, right: space)
         button.sizeToFit()
         setView(view, with: button)
         return button
     }
-    
+
     @discardableResult
-    func setView(_ view: ViewType, image: UIImage?) -> UIButton {
-        let button = UIButton()
-        button.frame = CGRect(x: 0, y: 0, width: 50, height: 100)
-        button.setImage(image, for: UIControl.State())
-        button.imageView!.contentMode = UIView.ContentMode.scaleAspectFit
+    func setView(_ view: ViewType, image: UIImage?, width: CGFloat = 50) -> UIButton {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: frame.height))
+        button.setImage(image, for: .normal)
+        button.imageView!.contentMode = .scaleAspectFit
         setView(view, with: button)
         return button
     }
-    
+
     func setPlaceholderColor(_ color: UIColor) {
         guard let placeholder = placeholder else { return }
         let attributes = [NSAttributedString.Key.foregroundColor: color]
         attributedPlaceholder = NSAttributedString(string: placeholder,
                                                    attributes: attributes)
     }
-    
+
     func toggleSecure() {
         isSecureTextEntry = !isSecureTextEntry
     }
-    
+
     func selectAllText() {
         selectedTextRange = textRange(from: beginningOfDocument, to: endOfDocument)
     }

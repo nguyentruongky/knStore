@@ -13,8 +13,13 @@ extension UIView {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
+
+    func circleCorner() {
+        superview?.layoutIfNeeded()
+        setCorner(radius: frame.width / 2)
+    }
     
-    @objc func setCorner(radius: CGFloat) {
+    func setCorner(radius: CGFloat) {
         layer.cornerRadius = radius
         clipsToBounds = true
     }
