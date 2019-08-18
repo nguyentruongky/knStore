@@ -29,7 +29,7 @@ class knComposerView : UIView {
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.font = UIFont.systemFont(ofSize: 14)
         tv.textColor = UIColor(value: 127)
-        tv.setBorder(1, color: UIColor(value: 218))
+        tv.setBorder(width: 1, color: UIColor(value: 218))
         tv.setCorner(radius: 3)
         tv.autocorrectionType = .no
         tv.spellCheckingType = .no

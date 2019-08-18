@@ -3,15 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		26212A562269CBD500A2B658 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26212A552269CBD500A2B658 /* BadgeView.swift */; };
-		262B71E32260A0D50085DB18 /* changePass in Resources */ = {isa = PBXBuildFile; fileRef = 262B71E22260A0D50085DB18 /* changePass */; };
+		262357E42309C1A900DC4466 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E32309C1A900DC4466 /* FileStorage.swift */; };
+		262357E72309C1F900DC4466 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E52309C1F800DC4466 /* FirebaseAuth.swift */; };
+		262357E82309C1F900DC4466 /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E62309C1F900DC4466 /* Firestore.swift */; };
+		262357F72309C21400DC4466 /* LoginInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357EA2309C21300DC4466 /* LoginInteraction.swift */; };
+		262357F82309C21400DC4466 /* LoginUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357EB2309C21300DC4466 /* LoginUI.swift */; };
+		262357F92309C21400DC4466 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357EC2309C21300DC4466 /* LoginController.swift */; };
+		262357FA2309C21400DC4466 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357ED2309C21300DC4466 /* LoginWorker.swift */; };
+		262357FB2309C21400DC4466 /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357EF2309C21400DC4466 /* RegisterWorker.swift */; };
+		262357FC2309C21400DC4466 /* RegisterInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F02309C21400DC4466 /* RegisterInteraction.swift */; };
+		262357FD2309C21400DC4466 /* RegisterUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F12309C21400DC4466 /* RegisterUI.swift */; };
+		262357FE2309C21400DC4466 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F22309C21400DC4466 /* RegisterController.swift */; };
+		262357FF2309C21400DC4466 /* ChangePasswordWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F42309C21400DC4466 /* ChangePasswordWorker.swift */; };
+		262358002309C21400DC4466 /* ChangePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F52309C21400DC4466 /* ChangePass.swift */; };
+		262358012309C21400DC4466 /* ChangePass.UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F62309C21400DC4466 /* ChangePass.UI.swift */; };
 		262B72252265C6C60085DB18 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 262B72242265C6C60085DB18 /* loading.gif */; };
-		2680CF2A225DA2DF00693692 /* Login in Resources */ = {isa = PBXBuildFile; fileRef = 2680CF28225DA2DF00693692 /* Login */; };
-		2680CF2B225DA2DF00693692 /* Register in Resources */ = {isa = PBXBuildFile; fileRef = 2680CF29225DA2DF00693692 /* Register */; };
+		26762FF022FEE3C300C77895 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26762FEF22FEE3C300C77895 /* Messenger.swift */; };
 		26B74FE121F07CCC0005BA27 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FE021F07CCC0005BA27 /* Login.swift */; };
 		26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FF321F175FD0005BA27 /* StripeWrapper.swift */; };
 		26C2813822AF5BBE0058910B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 26C2813722AF5BBE0058910B /* Fonts */; };
@@ -136,10 +148,22 @@
 /* Begin PBXFileReference section */
 		0FF667B7CD5F736E0DD97499 /* Pods-knStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-knStore/Pods-knStore.release.xcconfig"; sourceTree = "<group>"; };
 		26212A552269CBD500A2B658 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
-		262B71E22260A0D50085DB18 /* changePass */ = {isa = PBXFileReference; lastKnownFileType = folder; path = changePass; sourceTree = "<group>"; };
+		262357E32309C1A900DC4466 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		262357E52309C1F800DC4466 /* FirebaseAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		262357E62309C1F900DC4466 /* Firestore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
+		262357EA2309C21300DC4466 /* LoginInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteraction.swift; sourceTree = "<group>"; };
+		262357EB2309C21300DC4466 /* LoginUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUI.swift; sourceTree = "<group>"; };
+		262357EC2309C21300DC4466 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		262357ED2309C21300DC4466 /* LoginWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		262357EF2309C21400DC4466 /* RegisterWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
+		262357F02309C21400DC4466 /* RegisterInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterInteraction.swift; sourceTree = "<group>"; };
+		262357F12309C21400DC4466 /* RegisterUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUI.swift; sourceTree = "<group>"; };
+		262357F22309C21400DC4466 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		262357F42309C21400DC4466 /* ChangePasswordWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordWorker.swift; sourceTree = "<group>"; };
+		262357F52309C21400DC4466 /* ChangePass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePass.swift; sourceTree = "<group>"; };
+		262357F62309C21400DC4466 /* ChangePass.UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePass.UI.swift; sourceTree = "<group>"; };
 		262B72242265C6C60085DB18 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
-		2680CF28225DA2DF00693692 /* Login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Login; sourceTree = "<group>"; };
-		2680CF29225DA2DF00693692 /* Register */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Register; sourceTree = "<group>"; };
+		26762FEF22FEE3C300C77895 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		26B74FE021F07CCC0005BA27 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		26B74FF321F175FD0005BA27 /* StripeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeWrapper.swift; sourceTree = "<group>"; };
 		26C2813722AF5BBE0058910B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
@@ -276,6 +300,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		262357E92309C21300DC4466 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				262357EA2309C21300DC4466 /* LoginInteraction.swift */,
+				262357EB2309C21300DC4466 /* LoginUI.swift */,
+				262357EC2309C21300DC4466 /* LoginController.swift */,
+				262357ED2309C21300DC4466 /* LoginWorker.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		262357EE2309C21400DC4466 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				262357EF2309C21400DC4466 /* RegisterWorker.swift */,
+				262357F02309C21400DC4466 /* RegisterInteraction.swift */,
+				262357F12309C21400DC4466 /* RegisterUI.swift */,
+				262357F22309C21400DC4466 /* RegisterController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		262357F32309C21400DC4466 /* changePass */ = {
+			isa = PBXGroup;
+			children = (
+				262357F42309C21400DC4466 /* ChangePasswordWorker.swift */,
+				262357F52309C21400DC4466 /* ChangePass.swift */,
+				262357F62309C21400DC4466 /* ChangePass.UI.swift */,
+			);
+			path = changePass;
+			sourceTree = "<group>";
+		};
 		AA73B0443194979186E006C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +396,7 @@
 		C1F67C5E21BE712600CDC2ED /* must_have */ = {
 			isa = PBXGroup;
 			children = (
+				C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */,
 				C1F67C6821BE713900CDC2ED /* 1.Setting.swift */,
 				C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */,
 				C1F67C7221BE713A00CDC2ED /* DateExtension.swift */,
@@ -365,6 +422,7 @@
 				C1F67C8B21BEFEA100CDC2ED /* knListView.swift */,
 				C1F67C6A21BE713900CDC2ED /* knUIMaker.swift */,
 				C1F67C6521BE713900CDC2ED /* knView.swift */,
+				26762FEF22FEE3C300C77895 /* Messenger.swift */,
 			);
 			path = must_have;
 			sourceTree = "<group>";
@@ -372,13 +430,15 @@
 		C1F67C8F21BF65C100CDC2ED /* assistants */ = {
 			isa = PBXGroup;
 			children = (
-				262B71E22260A0D50085DB18 /* changePass */,
-				2680CF28225DA2DF00693692 /* Login */,
-				2680CF29225DA2DF00693692 /* Register */,
+				262357F32309C21400DC4466 /* changePass */,
+				262357E92309C21300DC4466 /* Login */,
+				262357EE2309C21400DC4466 /* Register */,
 				C1F67D5D21BFC28800CDC2ED /* addCard */,
 				C1F67D3121BFB75200CDC2ED /* voice_assistant */,
-				C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */,
 				C1F67C9121BF65C100CDC2ED /* Localization.swift */,
+				262357E32309C1A900DC4466 /* FileStorage.swift */,
+				262357E52309C1F800DC4466 /* FirebaseAuth.swift */,
+				262357E62309C1F900DC4466 /* Firestore.swift */,
 			);
 			path = assistants;
 			sourceTree = "<group>";
@@ -534,6 +594,7 @@
 				C1F67C4421BE6F4800CDC2ED /* Frameworks */,
 				C1F67C4521BE6F4800CDC2ED /* Resources */,
 				B91A3F2C1BED70FD4D513312 /* [CP] Embed Pods Frameworks */,
+				E61E6A7B305928A8E9047D5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -583,12 +644,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F67C5521BE6F4900CDC2ED /* LaunchScreen.storyboard in Resources */,
-				262B71E32260A0D50085DB18 /* changePass in Resources */,
 				C1F67C5221BE6F4900CDC2ED /* Assets.xcassets in Resources */,
-				2680CF2A225DA2DF00693692 /* Login in Resources */,
 				262B72252265C6C60085DB18 /* loading.gif in Resources */,
 				C1F67C5021BE6F4800CDC2ED /* Main.storyboard in Resources */,
-				2680CF2B225DA2DF00693692 /* Register in Resources */,
 				26C2813822AF5BBE0058910B /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,15 +659,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -634,6 +689,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E61E6A7B305928A8E9047D5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-knStore/Pods-knStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -644,10 +716,12 @@
 				C1F67CC421BF67AE00CDC2ED /* UIImage+Gif.swift in Sources */,
 				C1F67D3F21BFB75300CDC2ED /* Vocabulary.swift in Sources */,
 				C1F67CDF21BF67AE00CDC2ED /* GradientView.swift in Sources */,
+				262357F82309C21400DC4466 /* LoginUI.swift in Sources */,
 				C1F67CD621BF67AE00CDC2ED /* TransitionSubmitButton.swift in Sources */,
 				C1F67C9521BF65C100CDC2ED /* DeviceType.swift in Sources */,
 				C1F67CC521BF67AE00CDC2ED /* RecordView.swift in Sources */,
 				C1F67D4021BFB75300CDC2ED /* Speaker.swift in Sources */,
+				262357FF2309C21400DC4466 /* ChangePasswordWorker.swift in Sources */,
 				C1F67CC321BF67AE00CDC2ED /* knComposerView.swift in Sources */,
 				C1F67CCE21BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */,
 				C1F67D3021BFA90500CDC2ED /* UIViewControllerExtension.swift in Sources */,
@@ -656,7 +730,9 @@
 				C1F67C7421BE713A00CDC2ED /* UISearchBarExtension.swift in Sources */,
 				C1F67C8621BE713A00CDC2ED /* DateExtension.swift in Sources */,
 				26C8B54122B20F7300D83413 /* FacebookLoginWorker.swift in Sources */,
+				262357FD2309C21400DC4466 /* RegisterUI.swift in Sources */,
 				C1F67D1E21BFA1FD00CDC2ED /* Camera.swift in Sources */,
+				262357F92309C21400DC4466 /* LoginController.swift in Sources */,
 				C1F67CC821BF67AE00CDC2ED /* MapController.swift in Sources */,
 				C1F67D2221BFA66900CDC2ED /* OTPView.swift in Sources */,
 				C1F67D5521BFC02D00CDC2ED /* ConfirmationBox.swift in Sources */,
@@ -685,9 +761,11 @@
 				C1F67C8421BE713A00CDC2ED /* IntExtension.swift in Sources */,
 				C1F67D6421BFC28800CDC2ED /* AddCard.swift in Sources */,
 				C1F67CEC21BF6FF600CDC2ED /* knStateview.swift in Sources */,
+				262357FB2309C21400DC4466 /* RegisterWorker.swift in Sources */,
 				C1F67C7B21BE713A00CDC2ED /* UIColorExtension.swift in Sources */,
 				C1F67D4321BFB75300CDC2ED /* Assistant.swift in Sources */,
 				C1F67CBE21BF67AE00CDC2ED /* WebBrowser.swift in Sources */,
+				262357E82309C1F900DC4466 /* Firestore.swift in Sources */,
 				C1F67CE921BF6FDD00CDC2ED /* knTabController.swift in Sources */,
 				C1F67CEE21BF705600CDC2ED /* knSectionList.swift in Sources */,
 				C1F67CFE21BF73FC00CDC2ED /* UploadWorker.swift in Sources */,
@@ -696,13 +774,16 @@
 				C1F67C7721BE713A00CDC2ED /* knConstraints.swift in Sources */,
 				C1F67C7E21BE713A00CDC2ED /* knUIMaker.swift in Sources */,
 				C1F67D5821BFC0F100CDC2ED /* SystemSetting.swift in Sources */,
+				262358012309C21400DC4466 /* ChangePass.UI.swift in Sources */,
 				C1F67CC621BF67AE00CDC2ED /* knDotLoadingIndicator.swift in Sources */,
 				C1F67CE821BF6FDD00CDC2ED /* TermLabel.swift in Sources */,
+				262357E72309C1F900DC4466 /* FirebaseAuth.swift in Sources */,
 				C1F67D3E21BFB75300CDC2ED /* Recorder.swift in Sources */,
 				C1F67CE421BF67AE00CDC2ED /* knGistTextField.swift in Sources */,
 				C1F67C7D21BE713A00CDC2ED /* UIViewExtension.swift in Sources */,
 				C1FDDE9B21C759C500EEC160 /* PINController.swift in Sources */,
 				C1F67D6721C066C500CDC2ED /* BottomSheet.swift in Sources */,
+				262357FE2309C21400DC4466 /* RegisterController.swift in Sources */,
 				C1F67D6221BFC28800CDC2ED /* AddMethodDelegate.swift in Sources */,
 				C1F67CC721BF67AE00CDC2ED /* knDateDialog.swift in Sources */,
 				C1F67CFD21BF73FC00CDC2ED /* RequestLocationWorker.swift in Sources */,
@@ -711,6 +792,7 @@
 				C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */,
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
 				C1F67D5C21BFC1CF00CDC2ED /* DateView.swift in Sources */,
+				262357FA2309C21400DC4466 /* LoginWorker.swift in Sources */,
 				C1F67D4521BFB75300CDC2ED /* ReceiveSpeechOrder.swift in Sources */,
 				C1F67CDD21BF67AE00CDC2ED /* QRCode.swift in Sources */,
 				C1F67C7321BE713A00CDC2ED /* General.swift in Sources */,
@@ -727,8 +809,10 @@
 				C1F67CCC21BF67AE00CDC2ED /* knAnalogClockView.swift in Sources */,
 				C1F67D0221BF73FC00CDC2ED /* GoogleLocationManager.swift in Sources */,
 				C1F67D2821BFA6FE00CDC2ED /* Reachability.swift in Sources */,
+				262358002309C21400DC4466 /* ChangePass.swift in Sources */,
 				C1F67D2A21BFA79300CDC2ED /* TextViewer.swift in Sources */,
 				C1F67CD921BF67AE00CDC2ED /* knBarButtonNumber.swift in Sources */,
+				262357F72309C21400DC4466 /* LoginInteraction.swift in Sources */,
 				C1F67D2E21BFA7DA00CDC2ED /* Secret.swift in Sources */,
 				C1F67D4C21BFB7F800CDC2ED /* knPopup.swift in Sources */,
 				C1F67D4821BFB75300CDC2ED /* SpeechModel.swift in Sources */,
@@ -744,12 +828,15 @@
 				C1F67D4121BFB75300CDC2ED /* Texter.swift in Sources */,
 				C1F67CFC21BF73FC00CDC2ED /* GeocodingWorker.swift in Sources */,
 				C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */,
+				26762FF022FEE3C300C77895 /* Messenger.swift in Sources */,
 				C1F67C7821BE713A00CDC2ED /* UIFontExtension.swift in Sources */,
 				C1F67CF021BF711F00CDC2ED /* knExpandList.swift in Sources */,
 				C1F67CDE21BF67AE00CDC2ED /* knDraggableViewCollection.swift in Sources */,
 				C1F67D4621BFB75300CDC2ED /* SellSpeechOrder.swift in Sources */,
 				C1F67C7C21BE713A00CDC2ED /* 1.Setting.swift in Sources */,
+				262357FC2309C21400DC4466 /* RegisterInteraction.swift in Sources */,
 				C1F67C8321BE713A00CDC2ED /* OtherExtensions.swift in Sources */,
+				262357E42309C1A900DC4466 /* FileStorage.swift in Sources */,
 				C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */,
 				C1F67CCD21BF67AE00CDC2ED /* knTwoColumnsController.swift in Sources */,
 				C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */,

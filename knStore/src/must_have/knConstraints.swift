@@ -9,9 +9,10 @@
 import UIKit
 
 extension UIView {
-
-    func addConstraint(attribute: NSLayoutConstraint.Attribute, equalTo view: UIView, toAttribute: NSLayoutConstraint.Attribute, multiplier: CGFloat = 1, constant: CGFloat = 0) -> NSLayoutConstraint {
+    @discardableResult
+    func addConstraint(attribute: NSLayoutConstraint.Attribute, equalTo view: UIView, toAttribute: NSLayoutConstraint.Attribute, multiplier: CGFloat = 1, constant: CGFloat = 0, isActive: Bool = true) -> NSLayoutConstraint {
         let myConstraint = NSLayoutConstraint(item: self, attribute: attribute, relatedBy: .equal, toItem: view, attribute: toAttribute, multiplier: multiplier, constant: constant)
+        myConstraint.isActive = isActive
         return myConstraint
     }
 
@@ -248,10 +249,16 @@ extension UIView {
         return constraint
     }
 
-    public func center(toView view: UIView, spaceX: CGFloat = 0,
+    public func center(toView view: UIView,
+                       spaceX: CGFloat = 0,
                        spaceY: CGFloat = 0){
         centerX(toView: view, space: spaceX)
         centerY(toView: view, space: spaceY)
+    }
+    public func centerSuperView(spaceX: CGFloat = 0,
+                                spaceY: CGFloat = 0){
+        guard let superView = superview else { return }
+        center(toView: superView, spaceX: spaceX, spaceY: spaceY)
     }
 
     @discardableResult
@@ -283,7 +290,7 @@ extension UIView {
     public func horizontalSuperview(space: CGFloat = 0, isActive: Bool = true) ->
         (left: NSLayoutConstraint, right: NSLayoutConstraint)? {
             guard let view = superview else { return nil }
-            return horizontal(toView: view)
+            return horizontal(toView: view, space: space)
     }
 
     @discardableResult
@@ -310,7 +317,7 @@ extension UIView {
     public func verticalSuperview(space: CGFloat = 0, isActive: Bool = true)
         -> (top: NSLayoutConstraint, bottom: NSLayoutConstraint)? {
             guard let view = superview else { return nil }
-            return vertical(toView: view)
+            return vertical(toView: view, space: space, isActive: isActive)
     }
 
     @discardableResult

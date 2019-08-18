@@ -11,6 +11,10 @@ import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
+class Reader {
+    
+}
+
 class FacebookLoginWorker {
     weak var host: UIViewController?
     var permission: [String]
@@ -56,26 +60,23 @@ class FacebookLoginWorker {
     }
     
     private func didLoginSuccess(user: User) {
-        let myself = Reader(user: user)
-        DB().getCollection(.users)
-            .document(myself.id)
-            .setData(myself.toDict())
-        appSetting.userId = myself.id
-        appSetting.myself = myself
-        successAction?(myself)
+//        let myself = Reader()
+        // save to db
+        // save token to setting
         
-        if let url = myself.avatar {
-            UIImageView.downloadImage(from: url, completion: { image in
-                guard let image = image else { return }
-                FileStorage()
-                    .upload(image: image,
-                            to: .users,
-                            completion: { myUrl in
-                                DB().getCollection(.users)
-                                    .document(myself.id)
-                                    .setData(["avatar": myUrl ?? url], merge: true)
-                    })
-            })
-        }
+        guard var avatar = user.photoURL?.absoluteString else { return }
+        avatar = avatar + "?type=large"
+        UIImageView.downloadImage(from: avatar, completion: { image in
+            guard let image = image else { return }
+            FileStorage()
+                .upload(image: image,
+                        to: "users",
+                        completion: { myUrl in
+//                            set avatar to db
+//                            DB().getCollection(.users)
+//                                .document(myself.id)
+//                                .setData(["avatar": myUrl ?? url], merge: true)
+                })
+        })
     }
 }

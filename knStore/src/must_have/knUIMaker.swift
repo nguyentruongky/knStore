@@ -87,7 +87,7 @@ class UIMaker {
 
         button.titleLabel?.font = font
         button.setCorner(radius: cornerRadius)
-        button.setBorder(borderWidth, color: borderColor)
+        button.setBorder(width: borderWidth, color: borderColor)
         return button
     }
 

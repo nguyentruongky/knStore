@@ -21,7 +21,7 @@ struct ApiConnector {
         return headers
     }
     private static func getUrl(from api: String) -> URL? {
-        let baseUrl = Settings.baseUrl
+        let baseUrl = appSetting.baseUrl
         let apiUrl = api.contains("http") ? api : baseUrl + api
         return URL(string: apiUrl)
     }
@@ -261,7 +261,7 @@ struct AlamofireConnector {
 
 }
 
-struct knError {
+class knError {
     var code: String = "unknown"
     var message: String?
     var data: AnyObject?
@@ -274,3 +274,11 @@ struct knError {
     }
 }
 
+
+class knAuthError: knError {
+    convenience init(message: String) {
+        self.init()
+        code = "auth_fail"
+        self.message = message
+    }
+}

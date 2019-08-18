@@ -46,7 +46,7 @@ extension LoginCtr {
             tf.setView(.left, space: 16)
             tf.height(48)
             tf.setCorner(radius: 5)
-            tf.setBorder(1, color: UIColor.lightGray)
+            tf.setBorder(width: 1, color: UIColor.lightGray)
             return tf
         }
     }

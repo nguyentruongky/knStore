@@ -19,6 +19,14 @@ func run(_ action: @escaping () -> Void, after second: Double) {
     DispatchQueue.main.asyncAfter(deadline: triggerTime) { action() }
 }
 
+extension AppDelegate {
+    @objc func hideKeyboard() {
+    UIApplication.shared.sendAction(
+        #selector(UIResponder.resignFirstResponder),
+        to: nil, from: nil, for: nil)
+    }
+}
+
 func hideKeyboard() {
     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 }

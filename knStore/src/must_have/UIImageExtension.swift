@@ -16,6 +16,13 @@ extension UIImageView {
         kf.setImage(with: ImageResource(downloadURL: nsurl), placeholder: placeholder)
     }
     
+    static func downloadImage(from url: String?, completion: ((UIImage?) -> Void)?) {
+        guard let url = url, let nsurl = URL(string: url) else { return }
+        ImageDownloader.default.downloadImage(with: nsurl) { (image, error, _url, data) in
+            completion?(image)
+        }
+    }
+    
     func blur() {
         layoutIfNeeded()
         let darkBlur = UIBlurEffect(style: UIBlurEffect.Style.dark)

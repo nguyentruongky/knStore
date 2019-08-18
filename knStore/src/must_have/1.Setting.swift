@@ -10,6 +10,7 @@ import Foundation
 
 var appSetting = AppSetting()
 struct AppSetting {
+    let baseUrl = ""
     var token: String? {
         get { return UserDefaults.get(key: "token") as String? }
         set {

@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import WebKit
 class knWebBrowserController: knController {
     var url: String?
     
-    let webview: UIWebView = {
-        let view = UIWebView()
+    let webview: WKWebView = {
+        let view = WKWebView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isUserInteractionEnabled = true
         return view
@@ -50,6 +51,6 @@ class knWebBrowserController: knController {
     
     override func fetchData() {
         guard let url = url, let link = URL(string: url) else { return }
-        webview.loadRequest(URLRequest(url: link))
+        webview.load(URLRequest(url: link))
     }
 }

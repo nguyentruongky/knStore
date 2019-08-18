@@ -29,7 +29,7 @@ class PINController: knController, coinProtector {
         let button = UIMaker.makeButton(title: title, titleColor: .white, font: UIFont.main(size: 25))
         button.square(edge: 60)
         button.setCorner(radius: 30)
-        button.setBorder(1, color: .white)
+        button.setBorder(width: 1, color: .white)
         button.addTarget(self, action: #selector(didTapButton))
         return button
     }
@@ -118,7 +118,7 @@ class PINController: knController, coinProtector {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setCorner(radius: 7)
         view.square(edge: 14)
-        view.setBorder(1, color: .white)
+        view.setBorder(width: 1, color: .white)
         return view
     }
     

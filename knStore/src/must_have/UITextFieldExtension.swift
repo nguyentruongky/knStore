@@ -63,4 +63,9 @@ extension UITextField {
     func selectAllText() {
         selectedTextRange = textRange(from: beginningOfDocument, to: endOfDocument)
     }
+    
+    func replace(string: String, atRange range: NSRange) -> String {
+        if text == nil { return string }
+        return (text! as NSString).replacingCharacters(in: range, with: string)
+    }
 }
