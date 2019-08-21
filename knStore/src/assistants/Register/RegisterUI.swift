@@ -24,18 +24,18 @@ extension RegisterController {
         func makeSigninButton() -> UIButton {
             let strongText = "Sign In"
             let button = UIMaker.makeButton(title: "Already have an account? \(strongText)",
-                titleColor: UIColor.c_163_169_175,
+                titleColor: UIColor(r: 163, g: 169, b: 175),
                 font: UIFont.main(size: 13))
             button.titleLabel?.formatText(boldStrings: [strongText],
                                           boldFont: UIFont.main(size: 13),
-                                          boldColor: UIColor.c19)
+                                          boldColor: UIColor(value: 19))
             button.titleLabel?.underline(string: strongText)
             return button
         }
         lazy var termLabel: knTermLabel = {
             let label = knTermLabel()
             let font = UIFont.main(size: 11)
-            let color = UIColor.c_163_169_175
+            let color = UIColor(r: 163, g: 169, b: 175)
             let strongText = "Terms and Conditions."
             label.formatText(fullText: "By signing up you agree with our \(strongText)",
                 boldTexts: [strongText],
@@ -54,7 +54,7 @@ extension RegisterController {
         func makeCell(tf: UITextField) -> knTableCell {
             let cell = knTableCell()
             cell.addSubviews(views: tf)
-            tf.fill(toView: cell, space: UIEdgeInsets(left: gap, bottom: 16, right: gap))
+            tf.fill(toView: cell, space: UIEdgeInsets(left: space, bottom: 16, right: space))
             tf.height(50)
             return cell
         }
@@ -96,7 +96,7 @@ extension RegisterController {
             view.addSubviews(views: registerButton, signinButton, termLabel)
             view.addConstraints(withFormat: "V:|-24-[v0]-25-[v1]-16-[v2]",
                                 views: registerButton, signinButton, termLabel)
-            registerButton.horizontal(toView: view, space: gap)
+            registerButton.horizontal(toView: view, space: space)
             signinButton.centerX(toView: view)
             signinButton.height(24)
             termLabel.horizontal(toView: view)

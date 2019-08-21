@@ -20,7 +20,7 @@ extension snChangePassCtr {
         let saveButton = UIMaker.makeMainButton(title: "SAVE MY NEW PASSWORD")
         
         func makePassword(placeholder: String, tag: Int) -> UITextField {
-            let tf = UIMaker.makeTextField(placeholder: placeholder,
+            let tf = Common.makeTextField(placeholder: placeholder,
                                            icon: UIImage(named: "password"))
             tf.isSecureTextEntry = true
             tf.returnKeyType = .next
@@ -53,9 +53,8 @@ extension snChangePassCtr {
             confirmPassTextField.delegate = self
             
             let note = "Your new password must be at least 8 characters, 1 uppercase letter and 1 number."
-            let label = UIMaker.makeLabel(font: UIFont.main(size: 11),
-                                          color: .s_163_169_175,
-                                          text: note, numberOfLines: 0)
+            let label = UIMaker.makeLabel(text: note, font: UIFont.main(size: 11),
+                                          color: UIColor(r: 163, g: 169, b: 175), numberOfLines: 0)
             label.setLineSpacing()
             let noteCell = knTableCell()
             noteCell.addSubviews(views: label)

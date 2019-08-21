@@ -14,7 +14,7 @@ class snChangePassCtr: knStaticListController {
     
     override func setupView() {
         title = "CHANGE PASSWORD"
-        addBackButton(tintColor: .s_29)
+        addBackButton(tintColor: UIColor(value: 29))
         
         navigationController?.hideBar(false)
         super.setupView()
@@ -38,7 +38,7 @@ class snChangePassCtr: knStaticListController {
         validation.confirmPass = ui.confirmPassTextField.text
         let result = validation.validate()
         if result.isValid == false {
-            snMessage.showError(result.error!)
+            Messenger.showError(result.error!)
             return
         }
         
@@ -50,12 +50,12 @@ class snChangePassCtr: knStaticListController {
 extension snChangePassCtr {
     func didChange(message: String) {
         ui.saveButton.setProcess(visible: false)
-        snMessage.showSuccess(message)
+        Messenger.showMessage(message)
     }
     
     func didChangeFail(_ err: knError) {
         ui.saveButton.setProcess(visible: false)
-        snMessage.showError(err.message ?? snMessage.defaultErrorMessage)
+        Messenger.showError(err.message ?? Messenger.defaultError)
     }
     
     class Validation {
@@ -71,7 +71,7 @@ extension snChangePassCtr {
             if confirmPass == nil || confirmPass?.isEmpty == true  {
                 return (false, String(format: emptyMessage, "Confirm New Password")) }
             
-            let passwordCheck = snPasswordValidation()
+            let passwordCheck = knPasswordValidation()
             let upperRule = "%@ must have at least 1 Uppercase character"
             let digitRule = "%@ must have at least 1 digit"
             
@@ -99,7 +99,7 @@ extension snChangePassCtr {
 extension snChangePassCtr {
     class Interactor {
         func updatePass(old: String, new: String, confirm: String) {
-            snChangePassWorker(oldPass: old, newPass: new, confirmPass: confirm, success: output?.didChange, fail: output?.didChangeFail).execute()
+            knChangePassWorker(oldPass: old, newPass: new, confirmPass: confirm, success: output?.didChange, fail: output?.didChangeFail).execute()
         }
         
         private weak var output: Controller?

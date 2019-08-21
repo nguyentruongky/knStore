@@ -17,7 +17,7 @@ extension LoginController {
     }
 
     func didLoginFail(err: knError) {
-//        snMessage.showError(err.message ?? "Login failed")
+//        knMessageHub.showError(err.message ?? "Login failed")
         ui.loginButton.setProcess(visible: false)
     }
 

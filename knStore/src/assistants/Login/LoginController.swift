@@ -54,7 +54,7 @@ class LoginController: knStaticListController {
         validation.password = ui.passwordTextField.text
         let (valid, message) = validation.validate()
         if valid == false {
-//            snMessage.showError(message ?? "", inSeconds: 5)
+//            knMessageHub.showError(message ?? "", inSeconds: 5)
             return
         }
 

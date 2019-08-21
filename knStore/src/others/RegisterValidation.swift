@@ -32,7 +32,7 @@ extension RegisterCtr {
             if email?.isValidEmail() == false {
                 return (false, "Invalid email") }
 
-            let passwordCheck = snPasswordValidation()
+            let passwordCheck = knPasswordValidation()
             if passwordCheck.checkCharCount(password!) == false {
                 return (false, "Password has at least 8 characters") }
             if passwordCheck.checkUpperCase(password!) == false {

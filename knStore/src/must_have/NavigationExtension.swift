@@ -55,6 +55,10 @@ extension UINavigationController {
         let image = gradientLayer.renderImage()
         navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
     }
+    
+    func setControllers(_ controllers: [UIViewController]) {
+        setViewControllers(controllers, animated: true)
+    }
 }
 
 /// Extend navigation bar height

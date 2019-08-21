@@ -15,10 +15,10 @@ class RegisterController: knStaticListController {
 
     override func setupView() {
         title = "Join shopmate"
-        tableView.contentInset = UIEdgeInsets(top: gap)
+        tableView.contentInset = UIEdgeInsets(top: space)
         let closeButton = UIBarButtonItem(image: UIImage(named: "close"),
                                           style: .done, target: self, action: #selector(close))
-        hideNavBar(false)
+        navigationController?.hideBar(true)
         navigationItem.leftBarButtonItem = closeButton
         super.setupView()
         datasource = ui.setupView()
@@ -42,7 +42,7 @@ class RegisterController: knStaticListController {
         validation.password = ui.passwordTextField.text
         let (result, error) = validation.validate()
         if result == false {
-//            snMessage.showError(error ?? "", inSeconds: 5)
+            Messenger.showError(error ?? "")
             return
         }
         ui.registerButton.setProcess(visible: true)
@@ -50,8 +50,8 @@ class RegisterController: knStaticListController {
     }
 
     @objc func showSignin() {
-        hideNavBar(true)
-        setControllers([LoginController()])
+        navigationController?.hideBar(true)
+        navigationController?.setControllers([LoginController()])
     }
 
     @objc func close() { dismiss() }

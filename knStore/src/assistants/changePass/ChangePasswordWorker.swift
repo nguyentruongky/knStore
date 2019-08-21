@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct snChangePassWorker: knWorker {
+struct knChangePassWorker {
     private let api = "/users/me/"
     var oldPass: String
     var newPass: String
@@ -30,7 +30,7 @@ struct snChangePassWorker: knWorker {
             "new_password": newPass,
             "confirm_password": confirmPass
         ]
-        ServiceConnector.patch(api, params: params, success: successResponse, fail: failResponse)
+        ApiConnector.put(api, params: params, success: successResponse, fail: failResponse)
     }
     
     private func successResponse(returnData: AnyObject) {

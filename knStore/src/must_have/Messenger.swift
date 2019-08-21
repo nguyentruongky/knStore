@@ -10,6 +10,7 @@ import UIKit
 import SwiftyDrop
 
 struct Messenger {
+    static let defaultError = "Something went wrong"
     static func getMessage(_ message: String?, title: String?,
                             cancelActionName: String? = "OK") -> UIAlertController {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)

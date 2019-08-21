@@ -18,7 +18,7 @@ extension RegisterController {
 
     func didRegisterFail(_ err: knError) {
         ui.registerButton.setProcess(visible: false)
-//        snMessage.showError(err.message ?? "Can't register at this time", inSeconds: 5)
+//        knMessageHub.showError(err.message ?? "Can't register at this time", inSeconds: 5)
     }
 }
 

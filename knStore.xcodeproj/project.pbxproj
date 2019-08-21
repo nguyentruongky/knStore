@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1847E844230D40FB00958875 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847E843230D40FB00958875 /* Notification.swift */; };
 		26212A562269CBD500A2B658 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26212A552269CBD500A2B658 /* BadgeView.swift */; };
 		262357E42309C1A900DC4466 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E32309C1A900DC4466 /* FileStorage.swift */; };
 		262357E72309C1F900DC4466 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E52309C1F800DC4466 /* FirebaseAuth.swift */; };
@@ -104,7 +105,6 @@
 		C1F67D0A21BF74D800CDC2ED /* SearchHistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0921BF74D800CDC2ED /* SearchHistoryWorker.swift */; };
 		C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */; };
 		C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */; };
-		C1F67D1021BF78E100CDC2ED /* MessageHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0F21BF78E100CDC2ED /* MessageHub.swift */; };
 		C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */; };
 		C1F67D1421BF7B5200CDC2ED /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1321BF7B5200CDC2ED /* Boss.swift */; };
 		C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */; };
@@ -147,6 +147,7 @@
 
 /* Begin PBXFileReference section */
 		0FF667B7CD5F736E0DD97499 /* Pods-knStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-knStore/Pods-knStore.release.xcconfig"; sourceTree = "<group>"; };
+		1847E843230D40FB00958875 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		26212A552269CBD500A2B658 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		262357E32309C1A900DC4466 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		262357E52309C1F800DC4466 /* FirebaseAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
@@ -246,7 +247,6 @@
 		C1F67D0921BF74D800CDC2ED /* SearchHistoryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryWorker.swift; sourceTree = "<group>"; };
 		C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExtension.swift; sourceTree = "<group>"; };
 		C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
-		C1F67D0F21BF78E100CDC2ED /* MessageHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHub.swift; sourceTree = "<group>"; };
 		C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.StartPoint.swift; sourceTree = "<group>"; };
 		C1F67D1321BF7B5200CDC2ED /* Boss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
 		C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidation.swift; sourceTree = "<group>"; };
@@ -527,11 +527,11 @@
 				C1F67D0621BF740200CDC2ED /* AnimateItemCollectionLayout.swift */,
 				C1F67D1B21BFA17600CDC2ED /* Authentication.swift */,
 				C1F67D4D21BFBE7A00CDC2ED /* AvatarGenerator.swift */,
-				C1F67D0F21BF78E100CDC2ED /* MessageHub.swift */,
 				C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */,
 				C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */,
 				C1F67D5721BFC0F100CDC2ED /* SystemSetting.swift */,
 				262B72242265C6C60085DB18 /* loading.gif */,
+				1847E843230D40FB00958875 /* Notification.swift */,
 			);
 			path = others;
 			sourceTree = "<group>";
@@ -790,6 +790,7 @@
 				C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */,
 				26B74FE121F07CCC0005BA27 /* Login.swift in Sources */,
 				C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */,
+				1847E844230D40FB00958875 /* Notification.swift in Sources */,
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
 				C1F67D5C21BFC1CF00CDC2ED /* DateView.swift in Sources */,
 				262357FA2309C21400DC4466 /* LoginWorker.swift in Sources */,
@@ -821,7 +822,6 @@
 				C1F67C9421BF65C100CDC2ED /* Localization.swift in Sources */,
 				C1F67D0321BF73FC00CDC2ED /* LocationWorker.swift in Sources */,
 				C1F67D4421BFB75300CDC2ED /* SendSpeechOrder.swift in Sources */,
-				C1F67D1021BF78E100CDC2ED /* MessageHub.swift in Sources */,
 				C1F67D0721BF740200CDC2ED /* AnimateItemCollectionLayout.swift in Sources */,
 				C1F67D0A21BF74D800CDC2ED /* SearchHistoryWorker.swift in Sources */,
 				C1F67CD421BF67AE00CDC2ED /* knUnderlineTextField.swift in Sources */,

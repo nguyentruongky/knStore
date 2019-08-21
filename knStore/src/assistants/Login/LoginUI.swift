@@ -17,18 +17,18 @@ extension LoginController {
                                                       icon: UIImage(named: "password"))
         var revealButton: UIButton!
         let forgotButton = UIMaker.makeButton(title: "Forgot password?",
-                                              titleColor: UIColor.c_163_169_175,
+                                              titleColor: UIColor(r: 163, g: 169, b: 175),
                                               font: UIFont.main(size: 13))
         let closeButton = UIMaker.makeButton(image: UIImage(named: "close"))
         let loginButton = UIMaker.makeMainButton(title: "SIGN IN")
         lazy var registerButton = makeRegisterButton()
         func makeRegisterButton() -> UIButton {
             let button = UIMaker.makeButton(title: "Don't have an account? Join Us",
-                                            titleColor: UIColor.c_163_169_175,
+                                            titleColor: UIColor(r: 163, g: 169, b: 175),
                                             font: UIFont.main(size: 13))
             button.titleLabel?.formatText(boldStrings: ["Join Us"],
                                           boldFont: UIFont.main(size: 13),
-                                          boldColor: UIColor.c19)
+                                          boldColor: UIColor(value: 29))
             return button
         }
 

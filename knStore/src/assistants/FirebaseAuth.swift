@@ -9,6 +9,6 @@
 import Foundation
 import FirebaseAuth
 
-struct Authentication {
+struct knAuthentication {
     static let myId = Auth.auth().currentUser?.uid
 }
