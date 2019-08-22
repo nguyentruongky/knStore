@@ -14,9 +14,42 @@ class knView : UIView {
         translatesAutoresizingMaskIntoConstraints = false
         setupView()
     }
-    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+        xibSetup()
+    }
+    
     func setupView() { }
 }
+
+extension UIView {
+    func xibSetup() {
+        backgroundColor = UIColor.clear
+        guard let view = loadNib() else { return }
+        view.frame = bounds
+        addSubview(view)
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
+                                                      options: [],
+                                                      metrics: nil,
+                                                      views: ["childView": view]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
+                                                      options: [],
+                                                      metrics: nil,
+                                                      views: ["childView": view]))
+    }
+    
+    func loadNib() -> UIView? {
+        let bundle = Bundle(for: type(of: self))
+        let nibName = type(of: self).description().components(separatedBy: ".").last!
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil).first as? UIView
+    }
+}
+
 
 class knCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {

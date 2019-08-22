@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import FirebaseMessaging
 import CoreLocation
 
 struct knNotification {
@@ -151,18 +152,52 @@ extension knNotificationCenter: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        // TODO: Handle here
+        handleForegroundNotification(notification)
         completionHandler([.alert, .sound, .badge])
+    }
+    
+    func handleForegroundNotification(_ notification: UNNotification) {
+        
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
+        handleNotificationResponse(response)
+        completionHandler()
+    }
+    
+    func handleNotificationResponse(_ response: UNNotificationResponse) {
         // TODO: Handle here
         if response.notification.request.identifier == "Local Notification" {
             print("Handling notifications with the Local Notification Identifier")
         }
+    }
+}
+
+
+// MARK: REMOTE NOTIFICATION
+extension AppDelegate {
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        handleRemoteNotification(userInfo: userInfo)
+    }
+    
+    func handleRemoteNotification(userInfo: [AnyHashable: Any]) {
         
-        completionHandler()
+    }
+}
+
+
+class RemoteNotification: NSObject, MessagingDelegate {
+    func setup() {
+        Messaging.messaging().delegate = self
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        
+    }
+    
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        
     }
 }

@@ -7,6 +7,7 @@ target 'knStore' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
