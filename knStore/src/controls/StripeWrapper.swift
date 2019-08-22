@@ -18,17 +18,9 @@ struct StripeWrapper {
     private let publicKey: String
     private let applePayID: String? = "merchant.com.oxtrux.oxtrux"
 
-    init(userId: String, authKey: String, secretKey: String, publicKey: String) {
+    init(userId: String? = nil, secretKey: String, publicKey: String) {
         self.userId = userId
-        self.authKey = authKey
-        self.secretKey = secretKey
-        self.publicKey = publicKey
-        config()
-    }
-
-    init(authKey: String, secretKey: String, publicKey: String) {
-        userId = nil
-        self.authKey = authKey
+        authKey = "Bearer " + secretKey
         self.secretKey = secretKey
         self.publicKey = publicKey
         config()

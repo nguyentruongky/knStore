@@ -15,6 +15,13 @@ struct knNotification {
     var body: String
     var sound = UNNotificationSound.default
     var badge = 0
+    
+    init(title: String, body: String, sound: UNNotificationSound = .default, badge: Int = 0) {
+        self.title = title
+        self.body = body
+        self.sound = sound
+        self.badge = badge
+    }
 }
 
 class knNotificationCenter: NSObject {
@@ -37,13 +44,13 @@ class knNotificationCenter: NSObject {
 
 
 class LocalNotification {
-    func createNotificationRequest(content: UNNotificationContent, trigger: UNNotificationTrigger) -> UNNotificationRequest {
+    static fileprivate func createNotificationRequest(content: UNNotificationContent, trigger: UNNotificationTrigger) -> UNNotificationRequest {
         let identifier = UUID().uuidString
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         return request
     }
     
-    func createNotificationContent(data: knNotification) -> UNMutableNotificationContent {
+    static func createNotificationContent(data: knNotification) -> UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
         content.title = data.title
         content.body = data.body
@@ -52,26 +59,37 @@ class LocalNotification {
         return content
     }
     
-    func addActionsToNotification(actions: [UNNotificationAction], content: UNMutableNotificationContent) {
+    static func addActionsToNotification(actions: [UNNotificationAction], content: UNMutableNotificationContent) {
         let categoryId = UUID().uuidString
         let category = UNNotificationCategory(identifier: categoryId, actions: actions, intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
         content.categoryIdentifier = categoryId
     }
     
-    func createAction(id: String, title: String, options: UNNotificationActionOptions = []) -> UNNotificationAction {
+    static func createAction(id: String, title: String, options: UNNotificationActionOptions = []) -> UNNotificationAction {
         return UNNotificationAction(identifier: id, title: title, options: options)
+    }
+    
+    static func shoot(data: knNotification, trigger: UNNotificationTrigger, actions: [UNNotificationAction]) {
+        let content = LocalNotification.createNotificationContent(data: data)
+        addActionsToNotification(actions: actions, content: content)
+        let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+            }
+        }
     }
 }
 
 
-class SecondsNotification: LocalNotification {
-    func scheduleNotification(delaySeconds: Double,
-                              repeats: Bool = false,
-                              data: knNotification) {
-        let content = createNotificationContent(data: data)
+class SecondsNotification {
+    func shoot(delaySeconds: Double,
+               repeats: Bool = false,
+               data: knNotification) {
+        let content = LocalNotification.createNotificationContent(data: data)
         let trigger = triggerInSeconds(delaySeconds, doesRepeat: repeats)
-        let request = createNotificationRequest(content: content, trigger: trigger)
+        let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
@@ -80,20 +98,22 @@ class SecondsNotification: LocalNotification {
         }
     }
     
-    func triggerInSeconds(_ seconds: Double, doesRepeat: Bool = false) -> UNCalendarNotificationTrigger {
-        let date = Date(timeIntervalSinceNow: seconds)
-        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: doesRepeat)
+    func triggerInSeconds(_ seconds: Double, doesRepeat: Bool = false) -> UNNotificationTrigger {
+        if doesRepeat && seconds < 60 {
+            fatalError("time interval must be at least 60 if repeating")
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: doesRepeat)
         return trigger
     }
 }
 
 
-class LocationNotification: LocalNotification {
+class LocationNotification {
     func shoot(inRegion region: CLRegion, repeats: Bool = false, data: knNotification) {
-        let content = createNotificationContent(data: data)
+        let content = LocalNotification.createNotificationContent(data: data)
         let trigger = UNLocationNotificationTrigger(region: region, repeats: repeats)
-        let request = createNotificationRequest(content: content, trigger: trigger)
+        let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
@@ -104,13 +124,13 @@ class LocationNotification: LocalNotification {
 }
 
 
-class DateNotification: LocalNotification {
-    func scheduleNotification(at date: Date,
-                              repeats: Bool = false,
-                              data: knNotification) {
-        let content = createNotificationContent(data: data)
+class DateNotification {
+    func shoot(at date: Date,
+               repeats: Bool = false,
+               data: knNotification) {
+        let content = LocalNotification.createNotificationContent(data: data)
         let trigger = triggerAtDate(date, doesRepeat: repeats)
-        let request = createNotificationRequest(content: content, trigger: trigger)
+        let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
