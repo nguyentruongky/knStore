@@ -361,7 +361,15 @@ extension UIView {
     @discardableResult
     func topSuperView(space: CGFloat = 0, isActive: Bool = true) -> NSLayoutConstraint? {
         guard let view = superview else { return nil }
-        return top(toView: view, space: space)
+        return top(toView: view, space: space, isActive: isActive)
+    }
+    
+    @discardableResult
+    func top(toSafeAreaWithSpace space: CGFloat = 0, isActive: Bool = true) -> NSLayoutConstraint? {
+        guard let superview = superview else { return nil }
+        let constraint = topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: space)
+        constraint.isActive = isActive
+        return constraint
     }
 
     @discardableResult

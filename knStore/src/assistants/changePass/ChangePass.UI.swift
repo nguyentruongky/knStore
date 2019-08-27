@@ -20,7 +20,7 @@ extension snChangePassCtr {
         let saveButton = UIMaker.makeMainButton(title: "SAVE MY NEW PASSWORD")
         
         func makePassword(placeholder: String, tag: Int) -> UITextField {
-            let tf = Common.makeTextField(placeholder: placeholder,
+            let tf = UIMaker.makeTextField(placeholder: placeholder,
                                            icon: UIImage(named: "password"))
             tf.isSecureTextEntry = true
             tf.returnKeyType = .next

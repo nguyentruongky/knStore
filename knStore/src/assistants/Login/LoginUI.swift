@@ -11,9 +11,9 @@ import UIKit
 extension LoginController {
     class UI {
         let coverImgView = UIMaker.makeImageView(image: UIImage(named: "login_cover"), contentMode: .scaleAspectFill)
-        let emailTextField = Common.makeTextField(placeholder: "Email",
+        let emailTextField = UIMaker.makeTextField(placeholder: "Email",
                                                    icon: UIImage(named: "email"))
-        let passwordTextField = Common.makeTextField(placeholder: "Password",
+        let passwordTextField = UIMaker.makeTextField(placeholder: "Password",
                                                       icon: UIImage(named: "password"))
         var revealButton: UIButton!
         let forgotButton = UIMaker.makeButton(title: "Forgot password?",
@@ -65,15 +65,16 @@ extension LoginController {
         }
 
         func makeHeader() -> UIView {
-            let headerCell = UIMaker.makeView()
-            headerCell.addSubviews(views: coverImgView)
-            coverImgView.fill(toView: headerCell)
+            let headerView = UIMaker.makeView()
+            headerView.addSubviews(views: coverImgView)
+            coverImgView.fill(toView: headerView)
 
             closeButton.square(edge: 44)
-            headerCell.addSubviews(views: closeButton)
-            closeButton.topLeft(toView: headerCell, top: 16, left: 8)
+            headerView.addSubviews(views: closeButton)
+            closeButton.topLeft(toView: headerView, top: 16, left: 8)
 
-            return headerCell
+            headerView.backgroundColor = .blue
+            return headerView
         }
 
     }

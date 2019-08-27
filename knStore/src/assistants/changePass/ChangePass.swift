@@ -19,7 +19,9 @@ class snChangePassCtr: knStaticListController {
         navigationController?.hideBar(false)
         super.setupView()
         view.addSubviews(views: tableView)
-        tableView.fill(toView: view, space: UIEdgeInsets(top: 54))
+        tableView.horizontalSuperview()
+        tableView.top(toSafeAreaWithSpace: 32)
+        tableView.bottomSuperView()
         datasource = ui.setupView()
         
         view.addSubviews(views: ui.saveButton)

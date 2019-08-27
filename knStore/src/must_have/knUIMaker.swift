@@ -52,6 +52,24 @@ class UIMaker {
         iv.clipsToBounds = true
         return iv
     }
+    
+    static func makeTextField(placeholder: String, icon: UIImage? = nil) -> UITextField {
+        let tf = UIMaker.makeTextField(placeholder: placeholder,
+                                       font: UIFont.main(.medium, size: 14),
+                                       color: UIColor.black)
+        
+        tf.setPlaceholderColor(UIColor(r: 163, g: 169, b: 175))
+        tf.setCorner(radius: 7.5)
+        tf.setBorder(width: 1, color: UIColor(r: 230, g: 232, b: 234))
+        
+        if let icon = icon {
+            let leftView = tf.setView(.left, image: icon)
+            leftView.imageView?.changeColor(to: UIColor.lightGray)
+        } else {
+            tf.setView(.left, space: 20)
+        }
+        return tf
+    }
 
     static func makeTextField(text: String? = nil,
                               placeholder: String? = nil,

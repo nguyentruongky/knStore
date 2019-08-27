@@ -32,7 +32,7 @@ extension UITextField {
 
     @discardableResult
     func setView(_ view: ViewType, title: String, space: CGFloat = 0) -> UIButton {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: frame.height))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         button.setTitle(title, for: UIControl.State())
         button.contentEdgeInsets = UIEdgeInsets(top: 4, left: space, bottom: 4, right: space)
         button.sizeToFit()
@@ -42,7 +42,7 @@ extension UITextField {
 
     @discardableResult
     func setView(_ view: ViewType, image: UIImage?, width: CGFloat = 50) -> UIButton {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: frame.height))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: width))
         button.setImage(image, for: .normal)
         button.imageView!.contentMode = .scaleAspectFit
         setView(view, with: button)

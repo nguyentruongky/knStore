@@ -10,13 +10,13 @@ import UIKit
 
 extension RegisterController {
     class UI: NSObject {
-        let firstNameTextField = Common.makeTextField(placeholder: "First Name",
+        let firstNameTextField = UIMaker.makeTextField(placeholder: "First Name",
                                                        icon: UIImage(named: "profile"))
-        let lastNameTextField = Common.makeTextField(placeholder: "Last Name",
+        let lastNameTextField = UIMaker.makeTextField(placeholder: "Last Name",
                                                       icon: UIImage(named: "profile"))
-        let emailTextField = Common.makeTextField(placeholder: "Email",
+        let emailTextField = UIMaker.makeTextField(placeholder: "Email",
                                                    icon: UIImage(named: "email"))
-        let passwordTextField = Common.makeTextField(placeholder: "Password",
+        let passwordTextField = UIMaker.makeTextField(placeholder: "Password",
                                                       icon: UIImage(named: "password"))
         let registerButton = UIMaker.makeMainButton(title: "CREATE ACCOUNT ")
         lazy var signinButton = makeSigninButton()
