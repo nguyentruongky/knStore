@@ -105,7 +105,15 @@ extension UIViewController {
     }
 }
 
-
-
-
-
+extension UIViewController {
+    class func create() -> Self {
+        return createFromStoryboard()
+    }
+    
+    private class func createFromStoryboard<T>() -> T {
+        let name = String(describing: self)
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! T
+        return controller
+    }
+}
