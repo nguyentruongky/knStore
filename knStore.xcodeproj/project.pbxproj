@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1847E844230D40FB00958875 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847E843230D40FB00958875 /* Notification.swift */; };
+		260CECA4237BB25800CBA10B /* FundSourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECA3237BB25800CBA10B /* FundSourcesView.swift */; };
 		26212A562269CBD500A2B658 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26212A552269CBD500A2B658 /* BadgeView.swift */; };
 		262357E42309C1A900DC4466 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E32309C1A900DC4466 /* FileStorage.swift */; };
 		262357E72309C1F900DC4466 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E52309C1F800DC4466 /* FirebaseAuth.swift */; };
@@ -148,6 +149,7 @@
 /* Begin PBXFileReference section */
 		0FF667B7CD5F736E0DD97499 /* Pods-knStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-knStore/Pods-knStore.release.xcconfig"; sourceTree = "<group>"; };
 		1847E843230D40FB00958875 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		260CECA3237BB25800CBA10B /* FundSourcesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundSourcesView.swift; sourceTree = "<group>"; };
 		26212A552269CBD500A2B658 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		262357E32309C1A900DC4466 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		262357E52309C1F800DC4466 /* FirebaseAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				262357EE2309C21400DC4466 /* Register */,
 				C1F67D5D21BFC28800CDC2ED /* addCard */,
 				C1F67D3121BFB75200CDC2ED /* voice_assistant */,
+				260CECA3237BB25800CBA10B /* FundSourcesView.swift */,
 				C1F67C9121BF65C100CDC2ED /* Localization.swift */,
 				262357E32309C1A900DC4466 /* FileStorage.swift */,
 				262357E52309C1F800DC4466 /* FirebaseAuth.swift */,
@@ -790,6 +793,7 @@
 				C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */,
 				26B74FE121F07CCC0005BA27 /* Login.swift in Sources */,
 				C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */,
+				260CECA4237BB25800CBA10B /* FundSourcesView.swift in Sources */,
 				1847E844230D40FB00958875 /* Notification.swift in Sources */,
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
 				C1F67D5C21BFC1CF00CDC2ED /* DateView.swift in Sources */,
