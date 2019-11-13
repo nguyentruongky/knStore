@@ -32,7 +32,7 @@ extension UITextField {
 
     @discardableResult
     func setView(_ view: ViewType, title: String, space: CGFloat = 0) -> UIButton {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: frame.height))
         button.setTitle(title, for: UIControl.State())
         button.contentEdgeInsets = UIEdgeInsets(top: 4, left: space, bottom: 4, right: space)
         button.sizeToFit()
@@ -41,11 +41,13 @@ extension UITextField {
     }
 
     @discardableResult
-    func setView(_ view: ViewType, image: UIImage?, width: CGFloat = 50) -> UIButton {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: width, height: width))
-        button.setImage(image, for: .normal)
-        button.imageView!.contentMode = .scaleAspectFit
-        setView(view, with: button)
+    func setView(_ view: ViewType, image: UIImage?) -> UIButton {
+        let wrapper = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 100))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 100))
+        button.setImage(image, for: UIControl.State())
+        button.imageView!.contentMode = UIView.ContentMode.scaleAspectFit
+        wrapper.addSubview(button)
+        setView(view, with: wrapper)
         return button
     }
 
@@ -62,10 +64,5 @@ extension UITextField {
 
     func selectAllText() {
         selectedTextRange = textRange(from: beginningOfDocument, to: endOfDocument)
-    }
-    
-    func replace(string: String, atRange range: NSRange) -> String {
-        if text == nil { return string }
-        return (text! as NSString).replacingCharacters(in: range, with: string)
     }
 }

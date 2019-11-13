@@ -9,6 +9,30 @@
 /* Begin PBXBuildFile section */
 		1847E844230D40FB00958875 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847E843230D40FB00958875 /* Notification.swift */; };
 		260CECA4237BB25800CBA10B /* FundSourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECA3237BB25800CBA10B /* FundSourcesView.swift */; };
+		260CECA6237BB51C00CBA10B /* FavoriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECA5237BB51C00CBA10B /* FavoriteManager.swift */; };
+		260CECBF237BB69300CBA10B /* SpreadsheetView+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECA8237BB69300CBA10B /* SpreadsheetView+UIScrollView.swift */; };
+		260CECC0237BB69300CBA10B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECA9237BB69300CBA10B /* Location.swift */; };
+		260CECC1237BB69300CBA10B /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECAA237BB69300CBA10B /* Address.swift */; };
+		260CECC2237BB69300CBA10B /* CircularScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECAB237BB69300CBA10B /* CircularScrolling.swift */; };
+		260CECC3237BB69300CBA10B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECAC237BB69300CBA10B /* Cell.swift */; };
+		260CECC4237BB69300CBA10B /* SpreadsheetViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECAD237BB69300CBA10B /* SpreadsheetViewDataSource.swift */; };
+		260CECC5237BB69300CBA10B /* Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECAE237BB69300CBA10B /* Borders.swift */; };
+		260CECC6237BB69300CBA10B /* Array+BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECAF237BB69300CBA10B /* Array+BinarySearch.swift */; };
+		260CECC7237BB69300CBA10B /* ScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB0237BB69300CBA10B /* ScrollPosition.swift */; };
+		260CECC8237BB69300CBA10B /* SpreadsheetView+UIViewHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB1237BB69300CBA10B /* SpreadsheetView+UIViewHierarchy.swift */; };
+		260CECC9237BB69300CBA10B /* CellRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB2237BB69300CBA10B /* CellRange.swift */; };
+		260CECCA237BB69300CBA10B /* LayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB3237BB69300CBA10B /* LayoutEngine.swift */; };
+		260CECCB237BB69300CBA10B /* IndexPath+Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB4237BB69300CBA10B /* IndexPath+Column.swift */; };
+		260CECCC237BB69300CBA10B /* SpreadsheetView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB5237BB69300CBA10B /* SpreadsheetView+Layout.swift */; };
+		260CECCD237BB69300CBA10B /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB6237BB69300CBA10B /* ScrollView.swift */; };
+		260CECCE237BB69300CBA10B /* SpreadsheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB7237BB69300CBA10B /* SpreadsheetView.swift */; };
+		260CECCF237BB69300CBA10B /* SpreadsheetView+UISnapshotting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB8237BB69300CBA10B /* SpreadsheetView+UISnapshotting.swift */; };
+		260CECD0237BB69300CBA10B /* Gridlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECB9237BB69300CBA10B /* Gridlines.swift */; };
+		260CECD1237BB69300CBA10B /* SpreadsheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECBA237BB69300CBA10B /* SpreadsheetViewDelegate.swift */; };
+		260CECD2237BB69300CBA10B /* ReuseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECBB237BB69300CBA10B /* ReuseQueue.swift */; };
+		260CECD3237BB69300CBA10B /* SpreadsheetView+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECBC237BB69300CBA10B /* SpreadsheetView+Touches.swift */; };
+		260CECD4237BB69300CBA10B /* SpreadsheetView+CirclularScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECBD237BB69300CBA10B /* SpreadsheetView+CirclularScrolling.swift */; };
+		260CECD5237BB69300CBA10B /* SpreadsheetView+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260CECBE237BB69300CBA10B /* SpreadsheetView+UIScrollViewDelegate.swift */; };
 		26212A562269CBD500A2B658 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26212A552269CBD500A2B658 /* BadgeView.swift */; };
 		262357E42309C1A900DC4466 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E32309C1A900DC4466 /* FileStorage.swift */; };
 		262357E72309C1F900DC4466 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357E52309C1F800DC4466 /* FirebaseAuth.swift */; };
@@ -150,6 +174,30 @@
 		0FF667B7CD5F736E0DD97499 /* Pods-knStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-knStore/Pods-knStore.release.xcconfig"; sourceTree = "<group>"; };
 		1847E843230D40FB00958875 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		260CECA3237BB25800CBA10B /* FundSourcesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundSourcesView.swift; sourceTree = "<group>"; };
+		260CECA5237BB51C00CBA10B /* FavoriteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteManager.swift; sourceTree = "<group>"; };
+		260CECA8237BB69300CBA10B /* SpreadsheetView+UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpreadsheetView+UIScrollView.swift"; sourceTree = "<group>"; };
+		260CECA9237BB69300CBA10B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		260CECAA237BB69300CBA10B /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		260CECAB237BB69300CBA10B /* CircularScrolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularScrolling.swift; sourceTree = "<group>"; };
+		260CECAC237BB69300CBA10B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		260CECAD237BB69300CBA10B /* SpreadsheetViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetViewDataSource.swift; sourceTree = "<group>"; };
+		260CECAE237BB69300CBA10B /* Borders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Borders.swift; sourceTree = "<group>"; };
+		260CECAF237BB69300CBA10B /* Array+BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+BinarySearch.swift"; sourceTree = "<group>"; };
+		260CECB0237BB69300CBA10B /* ScrollPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollPosition.swift; sourceTree = "<group>"; };
+		260CECB1237BB69300CBA10B /* SpreadsheetView+UIViewHierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpreadsheetView+UIViewHierarchy.swift"; sourceTree = "<group>"; };
+		260CECB2237BB69300CBA10B /* CellRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellRange.swift; sourceTree = "<group>"; };
+		260CECB3237BB69300CBA10B /* LayoutEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutEngine.swift; sourceTree = "<group>"; };
+		260CECB4237BB69300CBA10B /* IndexPath+Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Column.swift"; sourceTree = "<group>"; };
+		260CECB5237BB69300CBA10B /* SpreadsheetView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpreadsheetView+Layout.swift"; sourceTree = "<group>"; };
+		260CECB6237BB69300CBA10B /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		260CECB7237BB69300CBA10B /* SpreadsheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetView.swift; sourceTree = "<group>"; };
+		260CECB8237BB69300CBA10B /* SpreadsheetView+UISnapshotting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpreadsheetView+UISnapshotting.swift"; sourceTree = "<group>"; };
+		260CECB9237BB69300CBA10B /* Gridlines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gridlines.swift; sourceTree = "<group>"; };
+		260CECBA237BB69300CBA10B /* SpreadsheetViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpreadsheetViewDelegate.swift; sourceTree = "<group>"; };
+		260CECBB237BB69300CBA10B /* ReuseQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseQueue.swift; sourceTree = "<group>"; };
+		260CECBC237BB69300CBA10B /* SpreadsheetView+Touches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpreadsheetView+Touches.swift"; sourceTree = "<group>"; };
+		260CECBD237BB69300CBA10B /* SpreadsheetView+CirclularScrolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpreadsheetView+CirclularScrolling.swift"; sourceTree = "<group>"; };
+		260CECBE237BB69300CBA10B /* SpreadsheetView+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpreadsheetView+UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		26212A552269CBD500A2B658 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		262357E32309C1A900DC4466 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		262357E52309C1F800DC4466 /* FirebaseAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
@@ -302,6 +350,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260CECA7237BB69300CBA10B /* Spreadsheet */ = {
+			isa = PBXGroup;
+			children = (
+				260CECA8237BB69300CBA10B /* SpreadsheetView+UIScrollView.swift */,
+				260CECA9237BB69300CBA10B /* Location.swift */,
+				260CECAA237BB69300CBA10B /* Address.swift */,
+				260CECAB237BB69300CBA10B /* CircularScrolling.swift */,
+				260CECAC237BB69300CBA10B /* Cell.swift */,
+				260CECAD237BB69300CBA10B /* SpreadsheetViewDataSource.swift */,
+				260CECAE237BB69300CBA10B /* Borders.swift */,
+				260CECAF237BB69300CBA10B /* Array+BinarySearch.swift */,
+				260CECB0237BB69300CBA10B /* ScrollPosition.swift */,
+				260CECB1237BB69300CBA10B /* SpreadsheetView+UIViewHierarchy.swift */,
+				260CECB2237BB69300CBA10B /* CellRange.swift */,
+				260CECB3237BB69300CBA10B /* LayoutEngine.swift */,
+				260CECB4237BB69300CBA10B /* IndexPath+Column.swift */,
+				260CECB5237BB69300CBA10B /* SpreadsheetView+Layout.swift */,
+				260CECB6237BB69300CBA10B /* ScrollView.swift */,
+				260CECB7237BB69300CBA10B /* SpreadsheetView.swift */,
+				260CECB8237BB69300CBA10B /* SpreadsheetView+UISnapshotting.swift */,
+				260CECB9237BB69300CBA10B /* Gridlines.swift */,
+				260CECBA237BB69300CBA10B /* SpreadsheetViewDelegate.swift */,
+				260CECBB237BB69300CBA10B /* ReuseQueue.swift */,
+				260CECBC237BB69300CBA10B /* SpreadsheetView+Touches.swift */,
+				260CECBD237BB69300CBA10B /* SpreadsheetView+CirclularScrolling.swift */,
+				260CECBE237BB69300CBA10B /* SpreadsheetView+UIScrollViewDelegate.swift */,
+			);
+			path = Spreadsheet;
+			sourceTree = "<group>";
+		};
 		262357E92309C21300DC4466 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +510,8 @@
 		C1F67C8F21BF65C100CDC2ED /* assistants */ = {
 			isa = PBXGroup;
 			children = (
+				260CECA5237BB51C00CBA10B /* FavoriteManager.swift */,
+				260CECA7237BB69300CBA10B /* Spreadsheet */,
 				262357F32309C21400DC4466 /* changePass */,
 				262357E92309C21300DC4466 /* Login */,
 				262357EE2309C21400DC4466 /* Register */,
@@ -717,6 +797,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F67CC421BF67AE00CDC2ED /* UIImage+Gif.swift in Sources */,
+				260CECCA237BB69300CBA10B /* LayoutEngine.swift in Sources */,
 				C1F67D3F21BFB75300CDC2ED /* Vocabulary.swift in Sources */,
 				C1F67CDF21BF67AE00CDC2ED /* GradientView.swift in Sources */,
 				262357F82309C21400DC4466 /* LoginUI.swift in Sources */,
@@ -728,10 +809,13 @@
 				C1F67CC321BF67AE00CDC2ED /* knComposerView.swift in Sources */,
 				C1F67CCE21BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */,
 				C1F67D3021BFA90500CDC2ED /* UIViewControllerExtension.swift in Sources */,
+				260CECC3237BB69300CBA10B /* Cell.swift in Sources */,
 				C1F67D1C21BFA17600CDC2ED /* Authentication.swift in Sources */,
 				C1F67C8221BE713A00CDC2ED /* UIButtonExtension.swift in Sources */,
+				260CECC7237BB69300CBA10B /* ScrollPosition.swift in Sources */,
 				C1F67C7421BE713A00CDC2ED /* UISearchBarExtension.swift in Sources */,
 				C1F67C8621BE713A00CDC2ED /* DateExtension.swift in Sources */,
+				260CECC0237BB69300CBA10B /* Location.swift in Sources */,
 				26C8B54122B20F7300D83413 /* FacebookLoginWorker.swift in Sources */,
 				262357FD2309C21400DC4466 /* RegisterUI.swift in Sources */,
 				C1F67D1E21BFA1FD00CDC2ED /* Camera.swift in Sources */,
@@ -742,7 +826,9 @@
 				C1F67D4221BFB75300CDC2ED /* Analyser.swift in Sources */,
 				C1F67C8521BE713A00CDC2ED /* UIImageExtension.swift in Sources */,
 				26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */,
+				260CECC4237BB69300CBA10B /* SpreadsheetViewDataSource.swift in Sources */,
 				26C8B54322B20F9200D83413 /* KMPlaceholderTextView.swift in Sources */,
+				260CECA6237BB51C00CBA10B /* FavoriteManager.swift in Sources */,
 				C1F67CE321BF67AE00CDC2ED /* PlacePickerView.swift in Sources */,
 				C1F67D6321BFC28800CDC2ED /* GetExpireDateWorker.swift in Sources */,
 				C1F67D2621BFA6D100CDC2ED /* PhotoThumbView.swift in Sources */,
@@ -764,7 +850,9 @@
 				C1F67C8421BE713A00CDC2ED /* IntExtension.swift in Sources */,
 				C1F67D6421BFC28800CDC2ED /* AddCard.swift in Sources */,
 				C1F67CEC21BF6FF600CDC2ED /* knStateview.swift in Sources */,
+				260CECCB237BB69300CBA10B /* IndexPath+Column.swift in Sources */,
 				262357FB2309C21400DC4466 /* RegisterWorker.swift in Sources */,
+				260CECCF237BB69300CBA10B /* SpreadsheetView+UISnapshotting.swift in Sources */,
 				C1F67C7B21BE713A00CDC2ED /* UIColorExtension.swift in Sources */,
 				C1F67D4321BFB75300CDC2ED /* Assistant.swift in Sources */,
 				C1F67CBE21BF67AE00CDC2ED /* WebBrowser.swift in Sources */,
@@ -773,9 +861,11 @@
 				C1F67CEE21BF705600CDC2ED /* knSectionList.swift in Sources */,
 				C1F67CFE21BF73FC00CDC2ED /* UploadWorker.swift in Sources */,
 				C1F67D5621BFC02D00CDC2ED /* PermissionPopup.swift in Sources */,
+				260CECD4237BB69300CBA10B /* SpreadsheetView+CirclularScrolling.swift in Sources */,
 				C1F67CD321BF67AE00CDC2ED /* knPagerController.swift in Sources */,
 				C1F67C7721BE713A00CDC2ED /* knConstraints.swift in Sources */,
 				C1F67C7E21BE713A00CDC2ED /* knUIMaker.swift in Sources */,
+				260CECD2237BB69300CBA10B /* ReuseQueue.swift in Sources */,
 				C1F67D5821BFC0F100CDC2ED /* SystemSetting.swift in Sources */,
 				262358012309C21400DC4466 /* ChangePass.UI.swift in Sources */,
 				C1F67CC621BF67AE00CDC2ED /* knDotLoadingIndicator.swift in Sources */,
@@ -784,11 +874,15 @@
 				C1F67D3E21BFB75300CDC2ED /* Recorder.swift in Sources */,
 				C1F67CE421BF67AE00CDC2ED /* knGistTextField.swift in Sources */,
 				C1F67C7D21BE713A00CDC2ED /* UIViewExtension.swift in Sources */,
+				260CECC6237BB69300CBA10B /* Array+BinarySearch.swift in Sources */,
 				C1FDDE9B21C759C500EEC160 /* PINController.swift in Sources */,
 				C1F67D6721C066C500CDC2ED /* BottomSheet.swift in Sources */,
 				262357FE2309C21400DC4466 /* RegisterController.swift in Sources */,
 				C1F67D6221BFC28800CDC2ED /* AddMethodDelegate.swift in Sources */,
 				C1F67CC721BF67AE00CDC2ED /* knDateDialog.swift in Sources */,
+				260CECCC237BB69300CBA10B /* SpreadsheetView+Layout.swift in Sources */,
+				260CECBF237BB69300CBA10B /* SpreadsheetView+UIScrollView.swift in Sources */,
+				260CECD3237BB69300CBA10B /* SpreadsheetView+Touches.swift in Sources */,
 				C1F67CFD21BF73FC00CDC2ED /* RequestLocationWorker.swift in Sources */,
 				C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */,
 				26B74FE121F07CCC0005BA27 /* Login.swift in Sources */,
@@ -798,7 +892,9 @@
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
 				C1F67D5C21BFC1CF00CDC2ED /* DateView.swift in Sources */,
 				262357FA2309C21400DC4466 /* LoginWorker.swift in Sources */,
+				260CECCD237BB69300CBA10B /* ScrollView.swift in Sources */,
 				C1F67D4521BFB75300CDC2ED /* ReceiveSpeechOrder.swift in Sources */,
+				260CECC9237BB69300CBA10B /* CellRange.swift in Sources */,
 				C1F67CDD21BF67AE00CDC2ED /* QRCode.swift in Sources */,
 				C1F67C7321BE713A00CDC2ED /* General.swift in Sources */,
 				C1F67CCF21BF67AE00CDC2ED /* ZFRippleButton.swift in Sources */,
@@ -812,23 +908,29 @@
 				C1F67D2C21BFA7C000CDC2ED /* iPadDetail.swift in Sources */,
 				C1F67D4721BFB75300CDC2ED /* BuySpeechOrder.swift in Sources */,
 				C1F67CCC21BF67AE00CDC2ED /* knAnalogClockView.swift in Sources */,
+				260CECC1237BB69300CBA10B /* Address.swift in Sources */,
 				C1F67D0221BF73FC00CDC2ED /* GoogleLocationManager.swift in Sources */,
 				C1F67D2821BFA6FE00CDC2ED /* Reachability.swift in Sources */,
 				262358002309C21400DC4466 /* ChangePass.swift in Sources */,
 				C1F67D2A21BFA79300CDC2ED /* TextViewer.swift in Sources */,
 				C1F67CD921BF67AE00CDC2ED /* knBarButtonNumber.swift in Sources */,
+				260CECD0237BB69300CBA10B /* Gridlines.swift in Sources */,
 				262357F72309C21400DC4466 /* LoginInteraction.swift in Sources */,
 				C1F67D2E21BFA7DA00CDC2ED /* Secret.swift in Sources */,
 				C1F67D4C21BFB7F800CDC2ED /* knPopup.swift in Sources */,
+				260CECC2237BB69300CBA10B /* CircularScrolling.swift in Sources */,
+				260CECD5237BB69300CBA10B /* SpreadsheetView+UIScrollViewDelegate.swift in Sources */,
 				C1F67D4821BFB75300CDC2ED /* SpeechModel.swift in Sources */,
 				26212A562269CBD500A2B658 /* BadgeView.swift in Sources */,
 				C1F67C9321BF65C100CDC2ED /* Controller+Keyboard.swift in Sources */,
 				C1F67C9421BF65C100CDC2ED /* Localization.swift in Sources */,
+				260CECD1237BB69300CBA10B /* SpreadsheetViewDelegate.swift in Sources */,
 				C1F67D0321BF73FC00CDC2ED /* LocationWorker.swift in Sources */,
 				C1F67D4421BFB75300CDC2ED /* SendSpeechOrder.swift in Sources */,
 				C1F67D0721BF740200CDC2ED /* AnimateItemCollectionLayout.swift in Sources */,
 				C1F67D0A21BF74D800CDC2ED /* SearchHistoryWorker.swift in Sources */,
 				C1F67CD421BF67AE00CDC2ED /* knUnderlineTextField.swift in Sources */,
+				260CECCE237BB69300CBA10B /* SpreadsheetView.swift in Sources */,
 				C1F67D4121BFB75300CDC2ED /* Texter.swift in Sources */,
 				C1F67CFC21BF73FC00CDC2ED /* GeocodingWorker.swift in Sources */,
 				C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */,
@@ -836,12 +938,14 @@
 				C1F67C7821BE713A00CDC2ED /* UIFontExtension.swift in Sources */,
 				C1F67CF021BF711F00CDC2ED /* knExpandList.swift in Sources */,
 				C1F67CDE21BF67AE00CDC2ED /* knDraggableViewCollection.swift in Sources */,
+				260CECC5237BB69300CBA10B /* Borders.swift in Sources */,
 				C1F67D4621BFB75300CDC2ED /* SellSpeechOrder.swift in Sources */,
 				C1F67C7C21BE713A00CDC2ED /* 1.Setting.swift in Sources */,
 				262357FC2309C21400DC4466 /* RegisterInteraction.swift in Sources */,
 				C1F67C8321BE713A00CDC2ED /* OtherExtensions.swift in Sources */,
 				262357E42309C1A900DC4466 /* FileStorage.swift in Sources */,
 				C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */,
+				260CECC8237BB69300CBA10B /* SpreadsheetView+UIViewHierarchy.swift in Sources */,
 				C1F67CCD21BF67AE00CDC2ED /* knTwoColumnsController.swift in Sources */,
 				C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */,
 				C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */,

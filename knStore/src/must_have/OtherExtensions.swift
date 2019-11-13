@@ -151,6 +151,11 @@ extension UITableView {
         return dequeueReusableCell(withIdentifier: id, for: indexPath)
     }
     
+    func dequeue<T>(at indexPath: IndexPath) -> T {
+        let cell = dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as! T
+        return cell
+    }
+    
     func setFooter(_ footer: UIView, height: CGFloat) {
         footer.height(height)
         tableFooterView = UIView()
