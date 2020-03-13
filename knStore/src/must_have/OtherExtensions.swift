@@ -139,6 +139,13 @@ extension UIScrollView {
     }
 }
 
+extension UICollectionView {
+    func dequeue<T>(at indexPath: IndexPath) -> T {
+        let cell = dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as! T
+        return cell
+    }
+}
+
 extension UITableView {
     func resizeTableHeaderView(toSize size: CGSize) {
         guard let headerView = tableHeaderView else { return }

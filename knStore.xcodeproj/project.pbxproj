@@ -49,7 +49,9 @@
 		262358002309C21400DC4466 /* ChangePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F52309C21400DC4466 /* ChangePass.swift */; };
 		262358012309C21400DC4466 /* ChangePass.UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F62309C21400DC4466 /* ChangePass.UI.swift */; };
 		262B72252265C6C60085DB18 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 262B72242265C6C60085DB18 /* loading.gif */; };
+		265F60142396FBFA0032DACD /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F60132396FBFA0032DACD /* SignInWithApple.swift */; };
 		26762FF022FEE3C300C77895 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26762FEF22FEE3C300C77895 /* Messenger.swift */; };
+		26971D3F238E705D003E60CE /* CenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26971D3E238E705D003E60CE /* CenterCollectionViewLayout.swift */; };
 		26B74FE121F07CCC0005BA27 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FE021F07CCC0005BA27 /* Login.swift */; };
 		26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FF321F175FD0005BA27 /* StripeWrapper.swift */; };
 		26C2813822AF5BBE0058910B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 26C2813722AF5BBE0058910B /* Fonts */; };
@@ -214,7 +216,9 @@
 		262357F52309C21400DC4466 /* ChangePass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePass.swift; sourceTree = "<group>"; };
 		262357F62309C21400DC4466 /* ChangePass.UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePass.UI.swift; sourceTree = "<group>"; };
 		262B72242265C6C60085DB18 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		265F60132396FBFA0032DACD /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
 		26762FEF22FEE3C300C77895 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		26971D3E238E705D003E60CE /* CenterCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCollectionViewLayout.swift; sourceTree = "<group>"; };
 		26B74FE021F07CCC0005BA27 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		26B74FF321F175FD0005BA27 /* StripeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeWrapper.swift; sourceTree = "<group>"; };
 		26C2813722AF5BBE0058910B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
@@ -387,6 +391,7 @@
 				262357EB2309C21300DC4466 /* LoginUI.swift */,
 				262357EC2309C21300DC4466 /* LoginController.swift */,
 				262357ED2309C21300DC4466 /* LoginWorker.swift */,
+				265F60132396FBFA0032DACD /* SignInWithApple.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				262357E32309C1A900DC4466 /* FileStorage.swift */,
 				262357E52309C1F800DC4466 /* FirebaseAuth.swift */,
 				262357E62309C1F900DC4466 /* Firestore.swift */,
+				26971D3E238E705D003E60CE /* CenterCollectionViewLayout.swift */,
 			);
 			path = assistants;
 			sourceTree = "<group>";
@@ -796,6 +802,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265F60142396FBFA0032DACD /* SignInWithApple.swift in Sources */,
 				C1F67CC421BF67AE00CDC2ED /* UIImage+Gif.swift in Sources */,
 				260CECCA237BB69300CBA10B /* LayoutEngine.swift in Sources */,
 				C1F67D3F21BFB75300CDC2ED /* Vocabulary.swift in Sources */,
@@ -934,6 +941,7 @@
 				C1F67D4121BFB75300CDC2ED /* Texter.swift in Sources */,
 				C1F67CFC21BF73FC00CDC2ED /* GeocodingWorker.swift in Sources */,
 				C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */,
+				26971D3F238E705D003E60CE /* CenterCollectionViewLayout.swift in Sources */,
 				26762FF022FEE3C300C77895 /* Messenger.swift in Sources */,
 				C1F67C7821BE713A00CDC2ED /* UIFontExtension.swift in Sources */,
 				C1F67CF021BF711F00CDC2ED /* knExpandList.swift in Sources */,

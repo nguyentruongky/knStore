@@ -52,7 +52,10 @@ extension UINavigationController {
         gradientLayer.colors = colors
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint
-        let image = gradientLayer.renderImage()
+        let render = UIGraphicsImageRenderer(bounds: navigationBar.frame)
+        let image  = render.image { (context) in
+            gradientLayer.render(in: context.cgContext)
+        }
         navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
     }
     
