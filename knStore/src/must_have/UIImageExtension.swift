@@ -11,7 +11,6 @@ import Kingfisher
 import func AVFoundation.AVMakeRect
 
 extension UIImageView {
-    //testing
     func downloadImage(from url: String?, placeholder: UIImage? = nil) {
         guard let url = url, let nsurl = URL(string: url) else { return }
         kf.setImage(with: ImageResource(downloadURL: nsurl), placeholder: placeholder)
