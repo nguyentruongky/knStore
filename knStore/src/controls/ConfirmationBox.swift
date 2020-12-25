@@ -13,7 +13,7 @@ protocol knConfirmationDelegate: class {
     func didConfirm()
 }
 
-class knConfirmationBoxView: knView {
+class knConfirmationBoxView: KNView {
     private let titleLabel = UIMaker.makeLabel(font: UIFont.main(.medium, size: 25),
                                                    color: UIColor(value: 34),
                                                    numberOfLines: 0,

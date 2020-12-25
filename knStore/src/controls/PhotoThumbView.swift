@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knPhotoThumbView: knView {
+class knPhotoThumbView: KNView {
     let padding: CGFloat = 24
     var datasource = [UIImage]() { didSet { collectionView.reloadData() }}
     

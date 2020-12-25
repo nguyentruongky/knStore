@@ -34,7 +34,7 @@ class knDNSErrorStepCell: knListCell<knInstruction> {
     
 }
 
-class knDNSErrorView: knView {
+class knDNSErrorView: KNView {
     private let dismissButton = UIMaker.makeButton()
     private let messageLabel = UIMaker.makeLabel(font: UIFont.main(),
                                                    color: UIColor.darkGray,

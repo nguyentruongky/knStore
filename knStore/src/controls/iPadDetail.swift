@@ -14,7 +14,7 @@ class coiniPadDetailManager: NSObject {
     
     let instructionView = UIMaker.makeView()
     
-    weak var guest: knController?
+    weak var guest: KNController?
     weak var host: UIViewController?
     
     override init() { super.init() }
@@ -24,7 +24,7 @@ class coiniPadDetailManager: NSObject {
         self.host = host
     }
     
-    func addPage(_ page: knController,
+    func addPage(_ page: KNController,
                  to controller: UIViewController,
                  at frame: CGRect) {
         controller.view.addSubview(page.view)
@@ -59,8 +59,8 @@ class coiniPadDetailManager: NSObject {
         return clazzName == currentClazzName ? false : true
     }
     
-    func showController(controller: knController,
-                        in mainController: knController,
+    func showController(controller: KNController,
+                        in mainController: KNController,
                         rect: CGRect? = nil) {
         var newRect = rect
         if rect == nil {

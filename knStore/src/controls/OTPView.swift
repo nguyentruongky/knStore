@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knOTPView: knView {
+class knOTPView: KNView {
     let padding: CGFloat = 24
     let hiddenTextField = UIMaker.makeTextField(font: UIFont.main(), color: UIColor(value: 85))
     var labels = [UILabel]()

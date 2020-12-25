@@ -12,7 +12,7 @@ class knListCell<U>: knTableCell {
     var data: U?
 }
 
-class knListView<C: knListCell<U>, U>: knView, UITableViewDataSource, UITableViewDelegate {
+class knListView<C: knListCell<U>, U>: KNView, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
     fileprivate let cellId = String(describing: C.self)
     var rowHeight: CGFloat = UITableView.automaticDimension
@@ -49,7 +49,7 @@ class knListView<C: knListCell<U>, U>: knView, UITableViewDataSource, UITableVie
     func didSelectRow(at indexPath: IndexPath) { }
 }
 
-class knStaticListView: knView, UITableViewDataSource, UITableViewDelegate {
+class knStaticListView: KNView, UITableViewDataSource, UITableViewDelegate {
     var datasource = [knTableCell]() { didSet { tableView.reloadData() }}
     var rowHeight = UITableView.automaticDimension
     
@@ -82,7 +82,7 @@ class knStaticListView: knView, UITableViewDataSource, UITableViewDelegate {
 }
 
 
-class knListController<C: knListCell<U>, U>: knController, UITableViewDataSource, UITableViewDelegate {
+class knListController<C: knListCell<U>, U>: KNController, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
     fileprivate let cellId = String(describing: C.self)
     var rowHeight = UITableView.automaticDimension
@@ -139,7 +139,7 @@ class knListController<C: knListCell<U>, U>: knController, UITableViewDataSource
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat { return 0 }
 }
 
-class knStaticListController: knController, UITableViewDelegate, UITableViewDataSource {
+class knStaticListController: KNController, UITableViewDelegate, UITableViewDataSource {
     var datasource = [UITableViewCell]() { didSet { tableView.reloadData() }}
     var rowHeight = UITableView.automaticDimension
     var contentInset: UIEdgeInsets?

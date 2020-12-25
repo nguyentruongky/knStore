@@ -17,7 +17,7 @@ protocol knRecordViewDelegate: class {
     
 }
 
-class knRecordView: knView {
+class knRecordView: KNView {
     
     struct knFonts {
         

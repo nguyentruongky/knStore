@@ -9,7 +9,7 @@
 import UIKit
 
 
-class knTwoColumnsController: knController {
+class knTwoColumnsController: KNController {
     let cellId = "cellId"
     
     var layout : knTwoColumnsCollectionViewLayout!

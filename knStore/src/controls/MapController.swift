@@ -13,7 +13,7 @@ struct knLocation {
     var lat: Double
     var long: Double
 }
-class knMapController: knController {
+class knMapController: KNController {
     var location: knLocation?
 
     lazy var mapView: MKMapView = { [weak self] in

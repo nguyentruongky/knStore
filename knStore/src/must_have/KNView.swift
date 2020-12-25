@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knView : UIView {
+class KNView : UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false

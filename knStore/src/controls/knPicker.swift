@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class knPickerView: knView {
+class knPickerView: KNView {
     private let animationDuration: Double = 0.3
     let contentHeight: CGFloat = 250
     let headerHeight: CGFloat = 50

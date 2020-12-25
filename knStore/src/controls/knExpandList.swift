@@ -16,7 +16,7 @@ class knExpandItem<U> {
 }
 
 class knExpandItemCell<U>: knListCell<U> { }
-class knExpandList<Cell: knExpandItemCell<U>, Item: knExpandItem<U>, U>: knController, UITableViewDelegate, UITableViewDataSource {
+class knExpandList<Cell: knExpandItemCell<U>, Item: knExpandItem<U>, U>: KNController, UITableViewDelegate, UITableViewDataSource {
     
     var sections = [String]()
     var rowHeight: CGFloat = 48

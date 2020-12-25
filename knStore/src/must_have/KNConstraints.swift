@@ -349,7 +349,7 @@ extension UIView {
                                       priority: priority,
                                       isActive: isActive)
             let bottomConstraint = bottom(toViewSafeArea: view,
-                                        space: space,
+                                        space: -space,
                                         priority: UILayoutPriority(rawValue: priority.rawValue - 1),
                                         isActive: isActive)
             return (topConstraint, bottomConstraint)
@@ -427,15 +427,39 @@ extension UIView {
             let bottomCons = bottom(toView: view, space: -space.bottom, priority: priority, isActive: isActive)
             return (leftCons, topCons, rightCons, bottomCons)
     }
+    
+    @discardableResult
+    public func fillViewSafeArea(toView view: UIView,
+                     space: UIEdgeInsets = .zero,
+                     priority: UILayoutPriority = .required,
+                     isActive: Bool = true)
+        -> (left: NSLayoutConstraint, top: NSLayoutConstraint,
+        right: NSLayoutConstraint, bottom: NSLayoutConstraint) {
+            let leftCons = left(toViewSafeArea: view, space: space.left, priority: priority, isActive: isActive)
+            let rightCons = right(toViewSafeArea: view, space: -space.right, priority: priority, isActive: isActive)
+            let topCons = top(toViewSafeArea: view, space: space.top, priority: priority, isActive: isActive)
+            let bottomCons = bottom(toViewSafeArea: view, space: -space.bottom, priority: priority, isActive: isActive)
+            return (leftCons, topCons, rightCons, bottomCons)
+    }
 
     @discardableResult
-    func fillSuperview(space: UIEdgeInsets = .zero,
+    func fillSuperView(space: UIEdgeInsets = .zero,
                        priority: UILayoutPriority = .required,
                        isActive: Bool = true)
     -> (left: NSLayoutConstraint, top: NSLayoutConstraint,
     right: NSLayoutConstraint, bottom: NSLayoutConstraint)? {
         guard let view = superview else { return nil }
-        return fill(toView: view, space: space)
+        return fill(toView: view, space: space, priority: priority)
+    }
+    
+    @discardableResult
+    func fillSuperviewSafeArea(space: UIEdgeInsets = .zero,
+                                 priority: UILayoutPriority = .required,
+                                 isActive: Bool = true)
+    -> (left: NSLayoutConstraint, top: NSLayoutConstraint,
+    right: NSLayoutConstraint, bottom: NSLayoutConstraint)? {
+        guard let view = superview else { return nil }
+        return fillViewSafeArea(toView: view)
     }
 }
 
@@ -461,6 +485,16 @@ extension UIView {
     }
     
     @discardableResult
+    func topLeftToSuperView(topSpace: CGFloat = 0,
+                    leftSpace: CGFloat = 0,
+                    priority: UILayoutPriority = .required,
+                    isActive: Bool = true)
+    -> (top: NSLayoutConstraint, left: NSLayoutConstraint) {
+        guard let view = superview else { fatalError() }
+        return topLeft(toView: view, topSpace: topSpace, leftSpace: leftSpace, priority: priority, isActive: isActive)
+    }
+    
+    @discardableResult
     public func topRight(toView view: UIView,
                          topSpace: CGFloat = 0,
                          rightSpace: CGFloat = 0,
@@ -476,6 +510,16 @@ extension UIView {
                                         priority: priority,
                                         isActive: isActive)
             return (topConstraint, rightConstraint)
+    }
+    
+    @discardableResult
+    func topRightToSuperView(topSpace: CGFloat = 0,
+                    rightSpace: CGFloat = 0,
+                    priority: UILayoutPriority = .required,
+                    isActive: Bool = true)
+    -> (top: NSLayoutConstraint, right: NSLayoutConstraint) {
+        guard let view = superview else { fatalError() }
+        return topRight(toView: view, topSpace: topSpace, rightSpace: rightSpace, priority: priority, isActive: isActive)
     }
     
     @discardableResult
@@ -547,7 +591,7 @@ extension UIView {
                                   priority: UILayoutPriority = .required,
                                   isActive: Bool = true) -> NSLayoutConstraint {
         return right(toAnchor: view.leftAnchor,
-                     space: space,
+                     space: -space,
                      priority: priority,
                      isActive: isActive)
     }
@@ -906,6 +950,7 @@ extension UIView {
     
     func addSubviews(views: UIView...) {
         for view in views {
+            view.translatesAutoresizingMaskIntoConstraints = false
             addSubview(view)
         }
     }

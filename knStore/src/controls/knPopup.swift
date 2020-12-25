@@ -12,7 +12,7 @@ protocol knPopupDelegate: class {
     func didSelectOK()
 }
 
-class knPopup: knView {
+class knPopup: KNView {
     weak var delegate: knPopupDelegate?
     
     let blackView: UIButton = {

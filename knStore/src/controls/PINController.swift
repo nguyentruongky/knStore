@@ -18,7 +18,7 @@ enum PINUsage {
     case setup, authenticate, confirm, tradingAuthenticate
 }
 
-class PINController: knController, coinProtector {
+class PINController: KNController, coinProtector {
     var loginAuthenticate: Bool = false
     var successAction: (() -> ())?
     

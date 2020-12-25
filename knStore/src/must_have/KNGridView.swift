@@ -12,7 +12,7 @@ class knGridCell<U>: knCollectionCell {
     var data: U?
 }
 
-class knGridView<C: knGridCell<U>, U>: knView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class knGridView<C: knGridCell<U>, U>: KNView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var datasource = [U]() { didSet { collectionView.reloadData() }}
     fileprivate let cellId = String(describing: C.self)
     var collectionView: UICollectionView!
@@ -61,7 +61,7 @@ class knGridView<C: knGridCell<U>, U>: knView, UICollectionViewDelegate, UIColle
     func didSelectItem(at indexPath: IndexPath) {}
 }
 
-class GridController<C: knGridCell<U>, U>: knController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class GridController<C: knGridCell<U>, U>: KNController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var datasource = [U]() { didSet {
         collectionView.reloadData() }}
     fileprivate let cellId = String(describing: C.self)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knSectionList<C: knListCell<U>, U>: knController, UITableViewDelegate, UITableViewDataSource {
+class knSectionList<C: knListCell<U>, U>: KNController, UITableViewDelegate, UITableViewDataSource {
     var sections = [String]()
     var datasource = [String: [U]]() { didSet { tableView.reloadData() }}
     var rowHeight = UITableView.automaticDimension

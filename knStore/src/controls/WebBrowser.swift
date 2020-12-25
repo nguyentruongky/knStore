@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-class knWebBrowserController: knController {
+class knWebBrowserController: KNController {
     var url: String?
     
     let webview: WKWebView = {

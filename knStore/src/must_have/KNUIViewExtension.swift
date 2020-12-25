@@ -159,3 +159,17 @@ extension UIView {
     }
     
 }
+
+extension UIStackView {
+    func addViews(_ views: UIView...) {
+        for v in views {
+            addArrangedSubview(v)
+        }
+    }
+    
+    func addViews(_ views: [UIView]) {
+        for v in views {
+            addArrangedSubview(v)
+        }
+    }
+}

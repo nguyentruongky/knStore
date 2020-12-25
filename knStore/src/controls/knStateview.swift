@@ -15,13 +15,13 @@ enum knState: String {
     case unknown
 }
 
-class knOffineView: knView {
+class knOffineView: KNView {
     var retry: (() -> Void)?
 }
 
 
 
-class knStateView: knView {
+class knStateView: KNView {
     struct StateContent {
         var icon: UIImage?
         var title: String?

@@ -50,43 +50,47 @@
 		262358012309C21400DC4466 /* ChangePass.UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262357F62309C21400DC4466 /* ChangePass.UI.swift */; };
 		262B72252265C6C60085DB18 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 262B72242265C6C60085DB18 /* loading.gif */; };
 		265F60142396FBFA0032DACD /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F60132396FBFA0032DACD /* SignInWithApple.swift */; };
-		26762FF022FEE3C300C77895 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26762FEF22FEE3C300C77895 /* Messenger.swift */; };
+		2670F4A9242FCD4400E8416C /* KNTDTouchableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670F4A8242FCD4400E8416C /* KNTDTouchableView.swift */; };
+		2671A1EA2443B7000013ED49 /* KNTableViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2671A1E92443B7000013ED49 /* KNTableViewControllerExtension.swift */; };
+		26762FF022FEE3C300C77895 /* KNMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26762FEF22FEE3C300C77895 /* KNMessenger.swift */; };
 		26971D3F238E705D003E60CE /* CenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26971D3E238E705D003E60CE /* CenterCollectionViewLayout.swift */; };
 		26B74FE121F07CCC0005BA27 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FE021F07CCC0005BA27 /* Login.swift */; };
 		26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FF321F175FD0005BA27 /* StripeWrapper.swift */; };
 		26C2813822AF5BBE0058910B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 26C2813722AF5BBE0058910B /* Fonts */; };
 		26C8B54122B20F7300D83413 /* FacebookLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8B54022B20F7300D83413 /* FacebookLoginWorker.swift */; };
 		26C8B54322B20F9200D83413 /* KMPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8B54222B20F9200D83413 /* KMPlaceholderTextView.swift */; };
+		26F46C0224A00C0B0036A66C /* PulseEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F46C0024A00C0B0036A66C /* PulseEffect.swift */; };
+		26F46C0324A00C0B0036A66C /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F46C0124A00C0B0036A66C /* ShimmerEffect.swift */; };
 		7321F2D0AAE4CCE5C7DC47EB /* Pods_knStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E314C17B2F2D391633D2A07C /* Pods_knStore.framework */; };
 		C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C4A21BE6F4800CDC2ED /* AppDelegate.swift */; };
 		C1F67C4D21BE6F4800CDC2ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C4C21BE6F4800CDC2ED /* ViewController.swift */; };
 		C1F67C5021BE6F4800CDC2ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F67C4E21BE6F4800CDC2ED /* Main.storyboard */; };
 		C1F67C5221BE6F4900CDC2ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F67C5121BE6F4900CDC2ED /* Assets.xcassets */; };
 		C1F67C5521BE6F4900CDC2ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F67C5321BE6F4900CDC2ED /* LaunchScreen.storyboard */; };
-		C1F67C7321BE713A00CDC2ED /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C5F21BE713900CDC2ED /* General.swift */; };
-		C1F67C7421BE713A00CDC2ED /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6021BE713900CDC2ED /* UISearchBarExtension.swift */; };
-		C1F67C7521BE713A00CDC2ED /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6121BE713900CDC2ED /* StringExtension.swift */; };
-		C1F67C7621BE713A00CDC2ED /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6221BE713900CDC2ED /* UITextFieldExtension.swift */; };
-		C1F67C7721BE713A00CDC2ED /* knConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6321BE713900CDC2ED /* knConstraints.swift */; };
-		C1F67C7821BE713A00CDC2ED /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6421BE713900CDC2ED /* UIFontExtension.swift */; };
-		C1F67C7921BE713A00CDC2ED /* knView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6521BE713900CDC2ED /* knView.swift */; };
-		C1F67C7A21BE713A00CDC2ED /* knController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6621BE713900CDC2ED /* knController.swift */; };
-		C1F67C7B21BE713A00CDC2ED /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6721BE713900CDC2ED /* UIColorExtension.swift */; };
-		C1F67C7C21BE713A00CDC2ED /* 1.Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6821BE713900CDC2ED /* 1.Setting.swift */; };
-		C1F67C7D21BE713A00CDC2ED /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6921BE713900CDC2ED /* UIViewExtension.swift */; };
-		C1F67C7E21BE713A00CDC2ED /* knUIMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6A21BE713900CDC2ED /* knUIMaker.swift */; };
-		C1F67C7F21BE713A00CDC2ED /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6B21BE713A00CDC2ED /* ApiConnector.swift */; };
-		C1F67C8021BE713A00CDC2ED /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6C21BE713A00CDC2ED /* UIApplicationExtension.swift */; };
-		C1F67C8221BE713A00CDC2ED /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6E21BE713A00CDC2ED /* UIButtonExtension.swift */; };
-		C1F67C8321BE713A00CDC2ED /* OtherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6F21BE713A00CDC2ED /* OtherExtensions.swift */; };
-		C1F67C8421BE713A00CDC2ED /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7021BE713A00CDC2ED /* IntExtension.swift */; };
-		C1F67C8521BE713A00CDC2ED /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7121BE713A00CDC2ED /* UIImageExtension.swift */; };
-		C1F67C8621BE713A00CDC2ED /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7221BE713A00CDC2ED /* DateExtension.swift */; };
-		C1F67C8D21BEFEA100CDC2ED /* knListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C8B21BEFEA100CDC2ED /* knListView.swift */; };
-		C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C8C21BEFEA100CDC2ED /* knGridView.swift */; };
-		C1F67C9321BF65C100CDC2ED /* Controller+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */; };
+		C1F67C7321BE713A00CDC2ED /* KNGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C5F21BE713900CDC2ED /* KNGeneral.swift */; };
+		C1F67C7421BE713A00CDC2ED /* KNUISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6021BE713900CDC2ED /* KNUISearchBarExtension.swift */; };
+		C1F67C7521BE713A00CDC2ED /* KNStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6121BE713900CDC2ED /* KNStringExtension.swift */; };
+		C1F67C7621BE713A00CDC2ED /* KNUITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6221BE713900CDC2ED /* KNUITextFieldExtension.swift */; };
+		C1F67C7721BE713A00CDC2ED /* KNConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6321BE713900CDC2ED /* KNConstraints.swift */; };
+		C1F67C7821BE713A00CDC2ED /* KNUIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6421BE713900CDC2ED /* KNUIFontExtension.swift */; };
+		C1F67C7921BE713A00CDC2ED /* KNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6521BE713900CDC2ED /* KNView.swift */; };
+		C1F67C7A21BE713A00CDC2ED /* KNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6621BE713900CDC2ED /* KNController.swift */; };
+		C1F67C7B21BE713A00CDC2ED /* KNUIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6721BE713900CDC2ED /* KNUIColorExtension.swift */; };
+		C1F67C7C21BE713A00CDC2ED /* 1.KNSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6821BE713900CDC2ED /* 1.KNSetting.swift */; };
+		C1F67C7D21BE713A00CDC2ED /* KNUIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6921BE713900CDC2ED /* KNUIViewExtension.swift */; };
+		C1F67C7E21BE713A00CDC2ED /* KNUIMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6A21BE713900CDC2ED /* KNUIMaker.swift */; };
+		C1F67C7F21BE713A00CDC2ED /* KNApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6B21BE713A00CDC2ED /* KNApiConnector.swift */; };
+		C1F67C8021BE713A00CDC2ED /* KNUIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6C21BE713A00CDC2ED /* KNUIApplicationExtension.swift */; };
+		C1F67C8221BE713A00CDC2ED /* KNUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6E21BE713A00CDC2ED /* KNUIButtonExtension.swift */; };
+		C1F67C8321BE713A00CDC2ED /* KNOtherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C6F21BE713A00CDC2ED /* KNOtherExtensions.swift */; };
+		C1F67C8421BE713A00CDC2ED /* KNIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7021BE713A00CDC2ED /* KNIntExtension.swift */; };
+		C1F67C8521BE713A00CDC2ED /* KNUIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7121BE713A00CDC2ED /* KNUIImageExtension.swift */; };
+		C1F67C8621BE713A00CDC2ED /* KNDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C7221BE713A00CDC2ED /* KNDateExtension.swift */; };
+		C1F67C8D21BEFEA100CDC2ED /* KNListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C8B21BEFEA100CDC2ED /* KNListView.swift */; };
+		C1F67C8E21BEFEA100CDC2ED /* KNGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C8C21BEFEA100CDC2ED /* KNGridView.swift */; };
+		C1F67C9321BF65C100CDC2ED /* KNController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9021BF65C100CDC2ED /* KNController+Keyboard.swift */; };
 		C1F67C9421BF65C100CDC2ED /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9121BF65C100CDC2ED /* Localization.swift */; };
-		C1F67C9521BF65C100CDC2ED /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9221BF65C100CDC2ED /* DeviceType.swift */; };
+		C1F67C9521BF65C100CDC2ED /* KNDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9221BF65C100CDC2ED /* KNDeviceType.swift */; };
 		C1F67CBE21BF67AE00CDC2ED /* WebBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9721BF67AE00CDC2ED /* WebBrowser.swift */; };
 		C1F67CC021BF67AE00CDC2ED /* knImageSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9921BF67AE00CDC2ED /* knImageSlideView.swift */; };
 		C1F67CC321BF67AE00CDC2ED /* knComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67C9C21BF67AE00CDC2ED /* knComposerView.swift */; };
@@ -130,9 +134,9 @@
 		C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67CFB21BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift */; };
 		C1F67D0721BF740200CDC2ED /* AnimateItemCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0621BF740200CDC2ED /* AnimateItemCollectionLayout.swift */; };
 		C1F67D0A21BF74D800CDC2ED /* SearchHistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0921BF74D800CDC2ED /* SearchHistoryWorker.swift */; };
-		C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */; };
+		C1F67D0C21BF75F300CDC2ED /* KNNavigationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0B21BF75F300CDC2ED /* KNNavigationExtension.swift */; };
 		C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */; };
-		C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */; };
+		C1F67D1221BF792100CDC2ED /* 1.KNStartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1121BF792100CDC2ED /* 1.KNStartPoint.swift */; };
 		C1F67D1421BF7B5200CDC2ED /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1321BF7B5200CDC2ED /* Boss.swift */; };
 		C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */; };
 		C1F67D1821BFA00200CDC2ED /* AnnouncementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D1721BFA00200CDC2ED /* AnnouncementView.swift */; };
@@ -146,7 +150,7 @@
 		C1F67D2A21BFA79300CDC2ED /* TextViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2921BFA79300CDC2ED /* TextViewer.swift */; };
 		C1F67D2C21BFA7C000CDC2ED /* iPadDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2B21BFA7C000CDC2ED /* iPadDetail.swift */; };
 		C1F67D2E21BFA7DA00CDC2ED /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2D21BFA7DA00CDC2ED /* Secret.swift */; };
-		C1F67D3021BFA90500CDC2ED /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2F21BFA90500CDC2ED /* UIViewControllerExtension.swift */; };
+		C1F67D3021BFA90500CDC2ED /* KNUIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D2F21BFA90500CDC2ED /* KNUIViewControllerExtension.swift */; };
 		C1F67D3E21BFB75300CDC2ED /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3221BFB75200CDC2ED /* Recorder.swift */; };
 		C1F67D3F21BFB75300CDC2ED /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3321BFB75300CDC2ED /* Vocabulary.swift */; };
 		C1F67D4021BFB75300CDC2ED /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F67D3421BFB75300CDC2ED /* Speaker.swift */; };
@@ -217,13 +221,17 @@
 		262357F62309C21400DC4466 /* ChangePass.UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePass.UI.swift; sourceTree = "<group>"; };
 		262B72242265C6C60085DB18 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		265F60132396FBFA0032DACD /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
-		26762FEF22FEE3C300C77895 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		2670F4A8242FCD4400E8416C /* KNTDTouchableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNTDTouchableView.swift; sourceTree = "<group>"; };
+		2671A1E92443B7000013ED49 /* KNTableViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNTableViewControllerExtension.swift; sourceTree = "<group>"; };
+		26762FEF22FEE3C300C77895 /* KNMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNMessenger.swift; sourceTree = "<group>"; };
 		26971D3E238E705D003E60CE /* CenterCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCollectionViewLayout.swift; sourceTree = "<group>"; };
 		26B74FE021F07CCC0005BA27 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		26B74FF321F175FD0005BA27 /* StripeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeWrapper.swift; sourceTree = "<group>"; };
 		26C2813722AF5BBE0058910B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		26C8B54022B20F7300D83413 /* FacebookLoginWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginWorker.swift; sourceTree = "<group>"; };
 		26C8B54222B20F9200D83413 /* KMPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPlaceholderTextView.swift; sourceTree = "<group>"; };
+		26F46C0024A00C0B0036A66C /* PulseEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseEffect.swift; sourceTree = "<group>"; };
+		26F46C0124A00C0B0036A66C /* ShimmerEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
 		9BC6340EF2B88E2815965290 /* Pods-knStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-knStore/Pods-knStore.debug.xcconfig"; sourceTree = "<group>"; };
 		C1F67C4721BE6F4800CDC2ED /* knStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = knStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F67C4A21BE6F4800CDC2ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -232,30 +240,30 @@
 		C1F67C5121BE6F4900CDC2ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1F67C5421BE6F4900CDC2ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1F67C5621BE6F4900CDC2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1F67C5F21BE713900CDC2ED /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
-		C1F67C6021BE713900CDC2ED /* UISearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
-		C1F67C6121BE713900CDC2ED /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		C1F67C6221BE713900CDC2ED /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
-		C1F67C6321BE713900CDC2ED /* knConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knConstraints.swift; sourceTree = "<group>"; };
-		C1F67C6421BE713900CDC2ED /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
-		C1F67C6521BE713900CDC2ED /* knView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knView.swift; sourceTree = "<group>"; };
-		C1F67C6621BE713900CDC2ED /* knController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knController.swift; sourceTree = "<group>"; };
-		C1F67C6721BE713900CDC2ED /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		C1F67C6821BE713900CDC2ED /* 1.Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1.Setting.swift; sourceTree = "<group>"; };
-		C1F67C6921BE713900CDC2ED /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		C1F67C6A21BE713900CDC2ED /* knUIMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knUIMaker.swift; sourceTree = "<group>"; };
-		C1F67C6B21BE713A00CDC2ED /* ApiConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
-		C1F67C6C21BE713A00CDC2ED /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
-		C1F67C6E21BE713A00CDC2ED /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
-		C1F67C6F21BE713A00CDC2ED /* OtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherExtensions.swift; sourceTree = "<group>"; };
-		C1F67C7021BE713A00CDC2ED /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
-		C1F67C7121BE713A00CDC2ED /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		C1F67C7221BE713A00CDC2ED /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		C1F67C8B21BEFEA100CDC2ED /* knListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knListView.swift; sourceTree = "<group>"; };
-		C1F67C8C21BEFEA100CDC2ED /* knGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knGridView.swift; sourceTree = "<group>"; };
-		C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Keyboard.swift"; sourceTree = "<group>"; };
+		C1F67C5F21BE713900CDC2ED /* KNGeneral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNGeneral.swift; sourceTree = "<group>"; };
+		C1F67C6021BE713900CDC2ED /* KNUISearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUISearchBarExtension.swift; sourceTree = "<group>"; };
+		C1F67C6121BE713900CDC2ED /* KNStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNStringExtension.swift; sourceTree = "<group>"; };
+		C1F67C6221BE713900CDC2ED /* KNUITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUITextFieldExtension.swift; sourceTree = "<group>"; };
+		C1F67C6321BE713900CDC2ED /* KNConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNConstraints.swift; sourceTree = "<group>"; };
+		C1F67C6421BE713900CDC2ED /* KNUIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIFontExtension.swift; sourceTree = "<group>"; };
+		C1F67C6521BE713900CDC2ED /* KNView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNView.swift; sourceTree = "<group>"; };
+		C1F67C6621BE713900CDC2ED /* KNController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNController.swift; sourceTree = "<group>"; };
+		C1F67C6721BE713900CDC2ED /* KNUIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIColorExtension.swift; sourceTree = "<group>"; };
+		C1F67C6821BE713900CDC2ED /* 1.KNSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1.KNSetting.swift; sourceTree = "<group>"; };
+		C1F67C6921BE713900CDC2ED /* KNUIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIViewExtension.swift; sourceTree = "<group>"; };
+		C1F67C6A21BE713900CDC2ED /* KNUIMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIMaker.swift; sourceTree = "<group>"; };
+		C1F67C6B21BE713A00CDC2ED /* KNApiConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNApiConnector.swift; sourceTree = "<group>"; };
+		C1F67C6C21BE713A00CDC2ED /* KNUIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIApplicationExtension.swift; sourceTree = "<group>"; };
+		C1F67C6E21BE713A00CDC2ED /* KNUIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIButtonExtension.swift; sourceTree = "<group>"; };
+		C1F67C6F21BE713A00CDC2ED /* KNOtherExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNOtherExtensions.swift; sourceTree = "<group>"; };
+		C1F67C7021BE713A00CDC2ED /* KNIntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNIntExtension.swift; sourceTree = "<group>"; };
+		C1F67C7121BE713A00CDC2ED /* KNUIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNUIImageExtension.swift; sourceTree = "<group>"; };
+		C1F67C7221BE713A00CDC2ED /* KNDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNDateExtension.swift; sourceTree = "<group>"; };
+		C1F67C8B21BEFEA100CDC2ED /* KNListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNListView.swift; sourceTree = "<group>"; };
+		C1F67C8C21BEFEA100CDC2ED /* KNGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNGridView.swift; sourceTree = "<group>"; };
+		C1F67C9021BF65C100CDC2ED /* KNController+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KNController+Keyboard.swift"; sourceTree = "<group>"; };
 		C1F67C9121BF65C100CDC2ED /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
-		C1F67C9221BF65C100CDC2ED /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		C1F67C9221BF65C100CDC2ED /* KNDeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNDeviceType.swift; sourceTree = "<group>"; };
 		C1F67C9721BF67AE00CDC2ED /* WebBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowser.swift; sourceTree = "<group>"; };
 		C1F67C9921BF67AE00CDC2ED /* knImageSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knImageSlideView.swift; sourceTree = "<group>"; };
 		C1F67C9C21BF67AE00CDC2ED /* knComposerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = knComposerView.swift; sourceTree = "<group>"; };
@@ -299,9 +307,9 @@
 		C1F67CFB21BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDeviceTokenWorker.swift; sourceTree = "<group>"; };
 		C1F67D0621BF740200CDC2ED /* AnimateItemCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateItemCollectionLayout.swift; sourceTree = "<group>"; };
 		C1F67D0921BF74D800CDC2ED /* SearchHistoryWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryWorker.swift; sourceTree = "<group>"; };
-		C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExtension.swift; sourceTree = "<group>"; };
+		C1F67D0B21BF75F300CDC2ED /* KNNavigationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNNavigationExtension.swift; sourceTree = "<group>"; };
 		C1F67D0D21BF783E00CDC2ED /* PasswordValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidation.swift; sourceTree = "<group>"; };
-		C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.StartPoint.swift; sourceTree = "<group>"; };
+		C1F67D1121BF792100CDC2ED /* 1.KNStartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.KNStartPoint.swift; sourceTree = "<group>"; };
 		C1F67D1321BF7B5200CDC2ED /* Boss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
 		C1F67D1521BF835B00CDC2ED /* RegisterValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidation.swift; sourceTree = "<group>"; };
 		C1F67D1721BFA00200CDC2ED /* AnnouncementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementView.swift; sourceTree = "<group>"; };
@@ -315,7 +323,7 @@
 		C1F67D2921BFA79300CDC2ED /* TextViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewer.swift; sourceTree = "<group>"; };
 		C1F67D2B21BFA7C000CDC2ED /* iPadDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPadDetail.swift; sourceTree = "<group>"; };
 		C1F67D2D21BFA7DA00CDC2ED /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
-		C1F67D2F21BFA90500CDC2ED /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		C1F67D2F21BFA90500CDC2ED /* KNUIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNUIViewControllerExtension.swift; sourceTree = "<group>"; };
 		C1F67D3221BFB75200CDC2ED /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		C1F67D3321BFB75300CDC2ED /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		C1F67D3421BFB75300CDC2ED /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
@@ -481,33 +489,35 @@
 		C1F67C5E21BE712600CDC2ED /* must_have */ = {
 			isa = PBXGroup;
 			children = (
-				C1F67C9021BF65C100CDC2ED /* Controller+Keyboard.swift */,
-				C1F67C6821BE713900CDC2ED /* 1.Setting.swift */,
-				C1F67D1121BF792100CDC2ED /* 1.StartPoint.swift */,
-				C1F67C7221BE713A00CDC2ED /* DateExtension.swift */,
-				C1F67C9221BF65C100CDC2ED /* DeviceType.swift */,
-				C1F67C5F21BE713900CDC2ED /* General.swift */,
-				C1F67C7021BE713A00CDC2ED /* IntExtension.swift */,
-				C1F67D0B21BF75F300CDC2ED /* NavigationExtension.swift */,
-				C1F67C6F21BE713A00CDC2ED /* OtherExtensions.swift */,
-				C1F67C6B21BE713A00CDC2ED /* ApiConnector.swift */,
-				C1F67C6121BE713900CDC2ED /* StringExtension.swift */,
-				C1F67C6C21BE713A00CDC2ED /* UIApplicationExtension.swift */,
-				C1F67C6E21BE713A00CDC2ED /* UIButtonExtension.swift */,
-				C1F67C6721BE713900CDC2ED /* UIColorExtension.swift */,
-				C1F67C6421BE713900CDC2ED /* UIFontExtension.swift */,
-				C1F67C7121BE713A00CDC2ED /* UIImageExtension.swift */,
-				C1F67C6021BE713900CDC2ED /* UISearchBarExtension.swift */,
-				C1F67C6221BE713900CDC2ED /* UITextFieldExtension.swift */,
-				C1F67D2F21BFA90500CDC2ED /* UIViewControllerExtension.swift */,
-				C1F67C6921BE713900CDC2ED /* UIViewExtension.swift */,
-				C1F67C6321BE713900CDC2ED /* knConstraints.swift */,
-				C1F67C6621BE713900CDC2ED /* knController.swift */,
-				C1F67C8C21BEFEA100CDC2ED /* knGridView.swift */,
-				C1F67C8B21BEFEA100CDC2ED /* knListView.swift */,
-				C1F67C6A21BE713900CDC2ED /* knUIMaker.swift */,
-				C1F67C6521BE713900CDC2ED /* knView.swift */,
-				26762FEF22FEE3C300C77895 /* Messenger.swift */,
+				C1F67C6821BE713900CDC2ED /* 1.KNSetting.swift */,
+				C1F67D1121BF792100CDC2ED /* 1.KNStartPoint.swift */,
+				C1F67C6B21BE713A00CDC2ED /* KNApiConnector.swift */,
+				C1F67C9021BF65C100CDC2ED /* KNController+Keyboard.swift */,
+				C1F67C7221BE713A00CDC2ED /* KNDateExtension.swift */,
+				C1F67C9221BF65C100CDC2ED /* KNDeviceType.swift */,
+				C1F67C5F21BE713900CDC2ED /* KNGeneral.swift */,
+				C1F67C7021BE713A00CDC2ED /* KNIntExtension.swift */,
+				C1F67C6321BE713900CDC2ED /* KNConstraints.swift */,
+				C1F67C6621BE713900CDC2ED /* KNController.swift */,
+				2670F4A8242FCD4400E8416C /* KNTDTouchableView.swift */,
+				C1F67C8C21BEFEA100CDC2ED /* KNGridView.swift */,
+				C1F67C8B21BEFEA100CDC2ED /* KNListView.swift */,
+				C1F67C6A21BE713900CDC2ED /* KNUIMaker.swift */,
+				C1F67C6521BE713900CDC2ED /* KNView.swift */,
+				26762FEF22FEE3C300C77895 /* KNMessenger.swift */,
+				C1F67D0B21BF75F300CDC2ED /* KNNavigationExtension.swift */,
+				C1F67C6F21BE713A00CDC2ED /* KNOtherExtensions.swift */,
+				C1F67C6121BE713900CDC2ED /* KNStringExtension.swift */,
+				C1F67C6C21BE713A00CDC2ED /* KNUIApplicationExtension.swift */,
+				C1F67C6E21BE713A00CDC2ED /* KNUIButtonExtension.swift */,
+				C1F67C6721BE713900CDC2ED /* KNUIColorExtension.swift */,
+				C1F67C6421BE713900CDC2ED /* KNUIFontExtension.swift */,
+				C1F67C7121BE713A00CDC2ED /* KNUIImageExtension.swift */,
+				C1F67C6021BE713900CDC2ED /* KNUISearchBarExtension.swift */,
+				C1F67C6221BE713900CDC2ED /* KNUITextFieldExtension.swift */,
+				C1F67D2F21BFA90500CDC2ED /* KNUIViewControllerExtension.swift */,
+				C1F67C6921BE713900CDC2ED /* KNUIViewExtension.swift */,
+				2671A1E92443B7000013ED49 /* KNTableViewControllerExtension.swift */,
 			);
 			path = must_have;
 			sourceTree = "<group>";
@@ -535,6 +545,8 @@
 		C1F67C9621BF67AE00CDC2ED /* controls */ = {
 			isa = PBXGroup;
 			children = (
+				26F46C0024A00C0B0036A66C /* PulseEffect.swift */,
+				26F46C0124A00C0B0036A66C /* ShimmerEffect.swift */,
 				26C8B54222B20F9200D83413 /* KMPlaceholderTextView.swift */,
 				26B74FF321F175FD0005BA27 /* StripeWrapper.swift */,
 				26B74FE021F07CCC0005BA27 /* Login.swift */,
@@ -802,6 +814,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2671A1EA2443B7000013ED49 /* KNTableViewControllerExtension.swift in Sources */,
 				265F60142396FBFA0032DACD /* SignInWithApple.swift in Sources */,
 				C1F67CC421BF67AE00CDC2ED /* UIImage+Gif.swift in Sources */,
 				260CECCA237BB69300CBA10B /* LayoutEngine.swift in Sources */,
@@ -809,19 +822,19 @@
 				C1F67CDF21BF67AE00CDC2ED /* GradientView.swift in Sources */,
 				262357F82309C21400DC4466 /* LoginUI.swift in Sources */,
 				C1F67CD621BF67AE00CDC2ED /* TransitionSubmitButton.swift in Sources */,
-				C1F67C9521BF65C100CDC2ED /* DeviceType.swift in Sources */,
+				C1F67C9521BF65C100CDC2ED /* KNDeviceType.swift in Sources */,
 				C1F67CC521BF67AE00CDC2ED /* RecordView.swift in Sources */,
 				C1F67D4021BFB75300CDC2ED /* Speaker.swift in Sources */,
 				262357FF2309C21400DC4466 /* ChangePasswordWorker.swift in Sources */,
 				C1F67CC321BF67AE00CDC2ED /* knComposerView.swift in Sources */,
 				C1F67CCE21BF67AE00CDC2ED /* RSKCollectionViewRetractableFirstItemLayout.swift in Sources */,
-				C1F67D3021BFA90500CDC2ED /* UIViewControllerExtension.swift in Sources */,
+				C1F67D3021BFA90500CDC2ED /* KNUIViewControllerExtension.swift in Sources */,
 				260CECC3237BB69300CBA10B /* Cell.swift in Sources */,
 				C1F67D1C21BFA17600CDC2ED /* Authentication.swift in Sources */,
-				C1F67C8221BE713A00CDC2ED /* UIButtonExtension.swift in Sources */,
+				C1F67C8221BE713A00CDC2ED /* KNUIButtonExtension.swift in Sources */,
 				260CECC7237BB69300CBA10B /* ScrollPosition.swift in Sources */,
-				C1F67C7421BE713A00CDC2ED /* UISearchBarExtension.swift in Sources */,
-				C1F67C8621BE713A00CDC2ED /* DateExtension.swift in Sources */,
+				C1F67C7421BE713A00CDC2ED /* KNUISearchBarExtension.swift in Sources */,
+				C1F67C8621BE713A00CDC2ED /* KNDateExtension.swift in Sources */,
 				260CECC0237BB69300CBA10B /* Location.swift in Sources */,
 				26C8B54122B20F7300D83413 /* FacebookLoginWorker.swift in Sources */,
 				262357FD2309C21400DC4466 /* RegisterUI.swift in Sources */,
@@ -830,8 +843,9 @@
 				C1F67CC821BF67AE00CDC2ED /* MapController.swift in Sources */,
 				C1F67D2221BFA66900CDC2ED /* OTPView.swift in Sources */,
 				C1F67D5521BFC02D00CDC2ED /* ConfirmationBox.swift in Sources */,
+				26F46C0324A00C0B0036A66C /* ShimmerEffect.swift in Sources */,
 				C1F67D4221BFB75300CDC2ED /* Analyser.swift in Sources */,
-				C1F67C8521BE713A00CDC2ED /* UIImageExtension.swift in Sources */,
+				C1F67C8521BE713A00CDC2ED /* KNUIImageExtension.swift in Sources */,
 				26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */,
 				260CECC4237BB69300CBA10B /* SpreadsheetViewDataSource.swift in Sources */,
 				26C8B54322B20F9200D83413 /* KMPlaceholderTextView.swift in Sources */,
@@ -839,12 +853,12 @@
 				C1F67CE321BF67AE00CDC2ED /* PlacePickerView.swift in Sources */,
 				C1F67D6321BFC28800CDC2ED /* GetExpireDateWorker.swift in Sources */,
 				C1F67D2621BFA6D100CDC2ED /* PhotoThumbView.swift in Sources */,
-				C1F67C7921BE713A00CDC2ED /* knView.swift in Sources */,
+				C1F67C7921BE713A00CDC2ED /* KNView.swift in Sources */,
 				C1F67C4D21BE6F4800CDC2ED /* ViewController.swift in Sources */,
 				C1F67D6521BFC28800CDC2ED /* AddCard.UI.swift in Sources */,
 				C1F67D1421BF7B5200CDC2ED /* Boss.swift in Sources */,
-				C1F67C8D21BEFEA100CDC2ED /* knListView.swift in Sources */,
-				C1F67C7621BE713A00CDC2ED /* UITextFieldExtension.swift in Sources */,
+				C1F67C8D21BEFEA100CDC2ED /* KNListView.swift in Sources */,
+				C1F67C7621BE713A00CDC2ED /* KNUITextFieldExtension.swift in Sources */,
 				C1F67CDB21BF67AE00CDC2ED /* knAnimationScrollView.swift in Sources */,
 				C1F67D2021BFA2CB00CDC2ED /* DNSPopup.swift in Sources */,
 				C1F67CE221BF67AE00CDC2ED /* knTagView.swift in Sources */,
@@ -853,14 +867,14 @@
 				C1F67CC921BF67AE00CDC2ED /* knCodeView.swift in Sources */,
 				C1F67CD821BF67AE00CDC2ED /* SnakePageControl.swift in Sources */,
 				C1F67CEA21BF6FDD00CDC2ED /* knPicker.swift in Sources */,
-				C1F67C7521BE713A00CDC2ED /* StringExtension.swift in Sources */,
-				C1F67C8421BE713A00CDC2ED /* IntExtension.swift in Sources */,
+				C1F67C7521BE713A00CDC2ED /* KNStringExtension.swift in Sources */,
+				C1F67C8421BE713A00CDC2ED /* KNIntExtension.swift in Sources */,
 				C1F67D6421BFC28800CDC2ED /* AddCard.swift in Sources */,
 				C1F67CEC21BF6FF600CDC2ED /* knStateview.swift in Sources */,
 				260CECCB237BB69300CBA10B /* IndexPath+Column.swift in Sources */,
 				262357FB2309C21400DC4466 /* RegisterWorker.swift in Sources */,
 				260CECCF237BB69300CBA10B /* SpreadsheetView+UISnapshotting.swift in Sources */,
-				C1F67C7B21BE713A00CDC2ED /* UIColorExtension.swift in Sources */,
+				C1F67C7B21BE713A00CDC2ED /* KNUIColorExtension.swift in Sources */,
 				C1F67D4321BFB75300CDC2ED /* Assistant.swift in Sources */,
 				C1F67CBE21BF67AE00CDC2ED /* WebBrowser.swift in Sources */,
 				262357E82309C1F900DC4466 /* Firestore.swift in Sources */,
@@ -870,8 +884,8 @@
 				C1F67D5621BFC02D00CDC2ED /* PermissionPopup.swift in Sources */,
 				260CECD4237BB69300CBA10B /* SpreadsheetView+CirclularScrolling.swift in Sources */,
 				C1F67CD321BF67AE00CDC2ED /* knPagerController.swift in Sources */,
-				C1F67C7721BE713A00CDC2ED /* knConstraints.swift in Sources */,
-				C1F67C7E21BE713A00CDC2ED /* knUIMaker.swift in Sources */,
+				C1F67C7721BE713A00CDC2ED /* KNConstraints.swift in Sources */,
+				C1F67C7E21BE713A00CDC2ED /* KNUIMaker.swift in Sources */,
 				260CECD2237BB69300CBA10B /* ReuseQueue.swift in Sources */,
 				C1F67D5821BFC0F100CDC2ED /* SystemSetting.swift in Sources */,
 				262358012309C21400DC4466 /* ChangePass.UI.swift in Sources */,
@@ -880,7 +894,7 @@
 				262357E72309C1F900DC4466 /* FirebaseAuth.swift in Sources */,
 				C1F67D3E21BFB75300CDC2ED /* Recorder.swift in Sources */,
 				C1F67CE421BF67AE00CDC2ED /* knGistTextField.swift in Sources */,
-				C1F67C7D21BE713A00CDC2ED /* UIViewExtension.swift in Sources */,
+				C1F67C7D21BE713A00CDC2ED /* KNUIViewExtension.swift in Sources */,
 				260CECC6237BB69300CBA10B /* Array+BinarySearch.swift in Sources */,
 				C1FDDE9B21C759C500EEC160 /* PINController.swift in Sources */,
 				C1F67D6721C066C500CDC2ED /* BottomSheet.swift in Sources */,
@@ -891,7 +905,7 @@
 				260CECBF237BB69300CBA10B /* SpreadsheetView+UIScrollView.swift in Sources */,
 				260CECD3237BB69300CBA10B /* SpreadsheetView+Touches.swift in Sources */,
 				C1F67CFD21BF73FC00CDC2ED /* RequestLocationWorker.swift in Sources */,
-				C1F67C8E21BEFEA100CDC2ED /* knGridView.swift in Sources */,
+				C1F67C8E21BEFEA100CDC2ED /* KNGridView.swift in Sources */,
 				26B74FE121F07CCC0005BA27 /* Login.swift in Sources */,
 				C1F67D0E21BF783E00CDC2ED /* PasswordValidation.swift in Sources */,
 				260CECA4237BB25800CBA10B /* FundSourcesView.swift in Sources */,
@@ -899,21 +913,23 @@
 				C1F67C4B21BE6F4800CDC2ED /* AppDelegate.swift in Sources */,
 				C1F67D5C21BFC1CF00CDC2ED /* DateView.swift in Sources */,
 				262357FA2309C21400DC4466 /* LoginWorker.swift in Sources */,
+				26F46C0224A00C0B0036A66C /* PulseEffect.swift in Sources */,
 				260CECCD237BB69300CBA10B /* ScrollView.swift in Sources */,
 				C1F67D4521BFB75300CDC2ED /* ReceiveSpeechOrder.swift in Sources */,
 				260CECC9237BB69300CBA10B /* CellRange.swift in Sources */,
 				C1F67CDD21BF67AE00CDC2ED /* QRCode.swift in Sources */,
-				C1F67C7321BE713A00CDC2ED /* General.swift in Sources */,
+				C1F67C7321BE713A00CDC2ED /* KNGeneral.swift in Sources */,
 				C1F67CCF21BF67AE00CDC2ED /* ZFRippleButton.swift in Sources */,
 				C1F67CC021BF67AE00CDC2ED /* knImageSlideView.swift in Sources */,
 				C1F67D1A21BFA11600CDC2ED /* FAPaginationLayout.swift in Sources */,
 				C1F67D0121BF73FC00CDC2ED /* knPhotoSelectWorker.swift in Sources */,
 				C1F67CDA21BF67AE00CDC2ED /* PagerController.swift in Sources */,
-				C1F67C8021BE713A00CDC2ED /* UIApplicationExtension.swift in Sources */,
-				C1F67C7A21BE713A00CDC2ED /* knController.swift in Sources */,
-				C1F67C7F21BE713A00CDC2ED /* ApiConnector.swift in Sources */,
+				C1F67C8021BE713A00CDC2ED /* KNUIApplicationExtension.swift in Sources */,
+				C1F67C7A21BE713A00CDC2ED /* KNController.swift in Sources */,
+				C1F67C7F21BE713A00CDC2ED /* KNApiConnector.swift in Sources */,
 				C1F67D2C21BFA7C000CDC2ED /* iPadDetail.swift in Sources */,
 				C1F67D4721BFB75300CDC2ED /* BuySpeechOrder.swift in Sources */,
+				2670F4A9242FCD4400E8416C /* KNTDTouchableView.swift in Sources */,
 				C1F67CCC21BF67AE00CDC2ED /* knAnalogClockView.swift in Sources */,
 				260CECC1237BB69300CBA10B /* Address.swift in Sources */,
 				C1F67D0221BF73FC00CDC2ED /* GoogleLocationManager.swift in Sources */,
@@ -929,7 +945,7 @@
 				260CECD5237BB69300CBA10B /* SpreadsheetView+UIScrollViewDelegate.swift in Sources */,
 				C1F67D4821BFB75300CDC2ED /* SpeechModel.swift in Sources */,
 				26212A562269CBD500A2B658 /* BadgeView.swift in Sources */,
-				C1F67C9321BF65C100CDC2ED /* Controller+Keyboard.swift in Sources */,
+				C1F67C9321BF65C100CDC2ED /* KNController+Keyboard.swift in Sources */,
 				C1F67C9421BF65C100CDC2ED /* Localization.swift in Sources */,
 				260CECD1237BB69300CBA10B /* SpreadsheetViewDelegate.swift in Sources */,
 				C1F67D0321BF73FC00CDC2ED /* LocationWorker.swift in Sources */,
@@ -940,22 +956,22 @@
 				260CECCE237BB69300CBA10B /* SpreadsheetView.swift in Sources */,
 				C1F67D4121BFB75300CDC2ED /* Texter.swift in Sources */,
 				C1F67CFC21BF73FC00CDC2ED /* GeocodingWorker.swift in Sources */,
-				C1F67D0C21BF75F300CDC2ED /* NavigationExtension.swift in Sources */,
+				C1F67D0C21BF75F300CDC2ED /* KNNavigationExtension.swift in Sources */,
 				26971D3F238E705D003E60CE /* CenterCollectionViewLayout.swift in Sources */,
-				26762FF022FEE3C300C77895 /* Messenger.swift in Sources */,
-				C1F67C7821BE713A00CDC2ED /* UIFontExtension.swift in Sources */,
+				26762FF022FEE3C300C77895 /* KNMessenger.swift in Sources */,
+				C1F67C7821BE713A00CDC2ED /* KNUIFontExtension.swift in Sources */,
 				C1F67CF021BF711F00CDC2ED /* knExpandList.swift in Sources */,
 				C1F67CDE21BF67AE00CDC2ED /* knDraggableViewCollection.swift in Sources */,
 				260CECC5237BB69300CBA10B /* Borders.swift in Sources */,
 				C1F67D4621BFB75300CDC2ED /* SellSpeechOrder.swift in Sources */,
-				C1F67C7C21BE713A00CDC2ED /* 1.Setting.swift in Sources */,
+				C1F67C7C21BE713A00CDC2ED /* 1.KNSetting.swift in Sources */,
 				262357FC2309C21400DC4466 /* RegisterInteraction.swift in Sources */,
-				C1F67C8321BE713A00CDC2ED /* OtherExtensions.swift in Sources */,
+				C1F67C8321BE713A00CDC2ED /* KNOtherExtensions.swift in Sources */,
 				262357E42309C1A900DC4466 /* FileStorage.swift in Sources */,
 				C1F67D0521BF73FC00CDC2ED /* RegisterDeviceTokenWorker.swift in Sources */,
 				260CECC8237BB69300CBA10B /* SpreadsheetView+UIViewHierarchy.swift in Sources */,
 				C1F67CCD21BF67AE00CDC2ED /* knTwoColumnsController.swift in Sources */,
-				C1F67D1221BF792100CDC2ED /* 1.StartPoint.swift in Sources */,
+				C1F67D1221BF792100CDC2ED /* 1.KNStartPoint.swift in Sources */,
 				C1F67D1621BF835B00CDC2ED /* RegisterValidation.swift in Sources */,
 				C1F67D4E21BFBE7A00CDC2ED /* AvatarGenerator.swift in Sources */,
 				C1F67D1821BFA00200CDC2ED /* AnnouncementView.swift in Sources */,
