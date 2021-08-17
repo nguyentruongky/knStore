@@ -16,10 +16,22 @@ extension UIButton {
     }
     
     func setBackground(color: UIColor, forState: UIControl.State) {
-        let colorImage = UIImage.fromColor(color: color)
+        let colorImage = imageFromColor(color: color)
         setBackgroundImage(colorImage, for: forState)
     }
-
+    
+    private func imageFromColor(color: UIColor) -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()!
+        context.setFillColor(color.cgColor)
+        context.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    
     func animate(atPosition position: CGPoint) {
         clipsToBounds = true
         CATransaction.begin()
@@ -44,9 +56,9 @@ extension UIButton {
         
         CATransaction.commit()
     }
-
+    
     func setProcess(visible: Bool,
-                             style: UIActivityIndicatorView.Style = .white) {
+                    style: UIActivityIndicatorView.Style = .medium) {
         if visible {
             titleLabel?.layer.opacity = 0
             isEnabled = false

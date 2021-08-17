@@ -100,21 +100,6 @@ extension UIImageView {
     
 }
 extension UITextField {
-    convenience init(placeholder: String, icon: UIImage? = nil) {
-        self.init(placeholder: placeholder, font: UIFont.main(.medium, size: 14),
-                  color: .black)
-        setPlaceholderColor(UIColor(r: 163, g: 169, b: 175))
-        setCorner(radius: 7.5)
-        setBorder(width: 1, color: UIColor(r: 230, g: 232, b: 234))
-        
-        if let icon = icon {
-            let leftView = setView(.left, image: icon)
-            leftView.imageView?.changeColor(to: UIColor.lightGray)
-        } else {
-            setView(.left, space: 20)
-        }
-    }
-    
     convenience init(text: String? = nil,
                      placeholder: String? = nil,
                      font: UIFont = .systemFont(ofSize: 15),
@@ -127,7 +112,6 @@ extension UITextField {
         self.text = text
         self.placeholder = placeholder
         textAlignment = alignment
-        inputAccessoryView = UIMaker.makeKeyboardDoneView()
     }
 }
 
@@ -145,10 +129,38 @@ extension UIStackView {
     }
 }
 
-extension KNTableCell {
+extension UITableViewCell {
     convenience init(height h: CGFloat = 16, color: UIColor = .lightGray) {
         self.init()
         self.height(h)
         backgroundColor = color
+    }
+}
+
+extension UIColor {
+    
+    convenience init(value: CGFloat, a: CGFloat = 1) {
+        let c = value / 255
+        self.init(red: c, green: c, blue: c, alpha: a)
+    }
+    
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat = 1) {
+        self.init(red: r / 255, green: g / 255, blue: b / 255, alpha: a)
+    }
+    
+    convenience init?(hex: String, a: CGFloat = 1) {
+        var cString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) { return nil }
+        
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+        self.init(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+                  green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+                  blue: CGFloat(rgbValue & 0x0000FF) / 255.0, alpha: a)
     }
 }

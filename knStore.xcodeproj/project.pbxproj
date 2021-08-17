@@ -80,6 +80,7 @@
 		26916C7726CB646C00AC9436 /* KNView+KNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C5926CB646C00AC9436 /* KNView+KNController.swift */; };
 		26916C7826CB646C00AC9436 /* KNControlConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C5A26CB646C00AC9436 /* KNControlConstruction.swift */; };
 		26916C7926CB646C00AC9436 /* KNConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C5B26CB646C00AC9436 /* KNConstraints.swift */; };
+		26916C7D26CB661200AC9436 /* Fonts+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26916C7C26CB661200AC9436 /* Fonts+Colors.swift */; };
 		26971D3F238E705D003E60CE /* CenterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26971D3E238E705D003E60CE /* CenterCollectionViewLayout.swift */; };
 		26B74FE121F07CCC0005BA27 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FE021F07CCC0005BA27 /* Login.swift */; };
 		26B74FF421F175FD0005BA27 /* StripeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B74FF321F175FD0005BA27 /* StripeWrapper.swift */; };
@@ -252,6 +253,7 @@
 		26916C5926CB646C00AC9436 /* KNView+KNController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KNView+KNController.swift"; sourceTree = "<group>"; };
 		26916C5A26CB646C00AC9436 /* KNControlConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNControlConstruction.swift; sourceTree = "<group>"; };
 		26916C5B26CB646C00AC9436 /* KNConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KNConstraints.swift; sourceTree = "<group>"; };
+		26916C7C26CB661200AC9436 /* Fonts+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Colors.swift"; sourceTree = "<group>"; };
 		26971D3E238E705D003E60CE /* CenterCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCollectionViewLayout.swift; sourceTree = "<group>"; };
 		26B74FE021F07CCC0005BA27 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		26B74FF321F175FD0005BA27 /* StripeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeWrapper.swift; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 				26916C4626CB646C00AC9436 /* KNUITextFieldExtension.swift */,
 				26916C4A26CB646C00AC9436 /* KNUIViewControllerExtension.swift */,
 				26916C4926CB646C00AC9436 /* KNUIViewExtension.swift */,
+				26916C7C26CB661200AC9436 /* Fonts+Colors.swift */,
 			);
 			path = AdvancedKit;
 			sourceTree = "<group>";
@@ -949,6 +952,7 @@
 				C1F67CCF21BF67AE00CDC2ED /* ZFRippleButton.swift in Sources */,
 				C1F67CC021BF67AE00CDC2ED /* knImageSlideView.swift in Sources */,
 				C1F67D1A21BFA11600CDC2ED /* FAPaginationLayout.swift in Sources */,
+				26916C7D26CB661200AC9436 /* Fonts+Colors.swift in Sources */,
 				26916C6926CB646C00AC9436 /* KNUIViewExtension.swift in Sources */,
 				26916C7926CB646C00AC9436 /* KNConstraints.swift in Sources */,
 				C1F67D0121BF73FC00CDC2ED /* knPhotoSelectWorker.swift in Sources */,
