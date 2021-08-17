@@ -7,16 +7,16 @@
 //
 
 import Foundation
-struct knChangePassWorker {
+struct KNChangePassWorker {
     private let api = "/users/me/"
     var oldPass: String
     var newPass: String
     var confirmPass: String
     
     var success: ((String) -> Void)?
-    var fail: ((knError) -> Void)?
+    var fail: ((KNError) -> Void)?
     init(oldPass: String, newPass: String, confirmPass: String,
-         success: ((String) -> Void)?, fail: ((knError) -> Void)?) {
+         success: ((String) -> Void)?, fail: ((KNError) -> Void)?) {
         self.oldPass = oldPass
         self.newPass = newPass
         self.confirmPass = confirmPass
@@ -36,13 +36,13 @@ struct knChangePassWorker {
     private func successResponse(returnData: AnyObject) {
         print(returnData)
         if let errMessage = returnData["detail"] as? String {
-            failResponse((knError(code: "wrong_password", message: errMessage, data: nil)))
+            failResponse((KNError(code: "wrong_password", message: errMessage, data: nil)))
             return
         }
         success?("Password changed")
     }
     
-    private func failResponse(_ err: knError) {
+    private func failResponse(_ err: KNError) {
         fail?(err)
     }
 }

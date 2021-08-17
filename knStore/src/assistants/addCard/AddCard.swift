@@ -8,7 +8,7 @@
 
 import UIKit
 
-class INAddCardCtr: knStaticListController {
+class INAddCardCtr: KNStaticListController {
     let ui = UI()
     let cardHandler = snCardNumberHandler()
     let nameHandler = snNameHandler()
@@ -51,7 +51,7 @@ class INAddCardCtr: knStaticListController {
     }
 }
 
-extension INAddCardCtr: knPickerViewDelegate {
+extension INAddCardCtr: KNPickerViewDelegate {
     func didSelectText(_ text: String) {
         ui.expiryDateTextField.text = text
     }

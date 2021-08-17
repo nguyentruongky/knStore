@@ -9,7 +9,7 @@
 import UIKit
 
 private let padding: CGFloat = 24
-final class AnnouncementView: knGridView<AnnouncementItemCell, String> {
+final class AnnouncementView: KNGridView<AnnouncementItemCell, String> {
     override var datasource: [String] {
         didSet {
             if datasource.count == 1 {
@@ -35,7 +35,7 @@ final class AnnouncementView: knGridView<AnnouncementItemCell, String> {
     }
 }
 
-final class AnnouncementItemCell: knGridCell<String> {
+final class AnnouncementItemCell: KNGridCell<String> {
     override var data: String? { didSet { messageLabel.text = data }}
     let messageLabel = UIMaker.makeLabel(font: UIFont.main(.regular, size: 14),
                                              color: UIColor.white,

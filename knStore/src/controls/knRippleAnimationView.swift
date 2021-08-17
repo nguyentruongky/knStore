@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knRippleAnimationView: UIView, CAAnimationDelegate {
+class KNRippleAnimationView: UIView, CAAnimationDelegate {
     
     struct ColorPalette {
         static let green = UIColor(red:0.00, green:0.87, blue:0.71, alpha:1.0)

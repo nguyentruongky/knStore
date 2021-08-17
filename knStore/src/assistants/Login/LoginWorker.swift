@@ -46,11 +46,11 @@ struct LoginWorker {
     var email: String
     var password: String
     var success: ((smUser) -> Void)?
-    var fail: ((knError) -> Void)?
+    var fail: ((KNError) -> Void)?
 
     init(email: String, password: String,
          success: ((smUser) -> Void)?,
-         fail: ((knError) -> Void)?) {
+         fail: ((KNError) -> Void)?) {
         self.email = email
         self.password = password
         self.fail = fail
@@ -69,13 +69,13 @@ struct LoginWorker {
 
     private func successResponse(returnData: AnyObject) {
         if let message = returnData["detail"] as? String {
-            let err = knError(code: "login_fail", message: message)
+            let err = KNError(code: "login_fail", message: message)
             failResponse(err: err)
             return
         }
 
         guard let raw = returnData["user"] as? AnyObject else {
-            let err = knError(code: "no_data", message: "No user data returned")
+            let err = KNError(code: "no_data", message: "No user data returned")
             failResponse(err: err)
             return
         }
@@ -84,7 +84,7 @@ struct LoginWorker {
         success?(user)
     }
 
-    private func failResponse(err: knError) {
+    private func failResponse(err: KNError) {
         fail?(err)
     }
 }

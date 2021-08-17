@@ -1,6 +1,6 @@
 //
 //  RegisterValidation.swift
-//  knStore
+//  KNStore
 //
 //  Created by Ky Nguyen Coinhako on 12/11/18.
 //  Copyright © 2018 Ky Nguyen. All rights reserved.
@@ -32,7 +32,7 @@ extension RegisterCtr {
             if email?.isValidEmail() == false {
                 return (false, "Invalid email") }
 
-            let passwordCheck = knPasswordValidation()
+            let passwordCheck = KNPasswordValidation()
             if passwordCheck.checkCharCount(password!) == false {
                 return (false, "Password has at least 8 characters") }
             if passwordCheck.checkUpperCase(password!) == false {

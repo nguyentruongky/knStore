@@ -1,6 +1,6 @@
 //
 //  NavigationExtension.swift
-//  knStore
+//  KNStore
 //
 //  Created by Ky Nguyen Coinhako on 12/11/18.
 //  Copyright © 2018 Ky Nguyen. All rights reserved.
@@ -98,7 +98,7 @@ public extension UINavigationController {
      - parameter type:     transition animation type.
      - parameter duration: transition animation duration.
      */
-    func kn_dismiss() {
+    func KN_dismiss() {
         guard viewControllers.count >= 2 else { return }
         guard let previousView = viewControllers[0].view, let thisView = viewControllers[1].view, let screenshot = thisView.takeScreenshot() else { return }
         
@@ -126,7 +126,7 @@ public extension UINavigationController {
      - parameter type:     transition animation type.
      - parameter duration: transition animation duration.
      */
-    func kn_present(controller vc: UIViewController) {
+    func KN_present(controller vc: UIViewController) {
         guard let newView = vc.view, let thisView = viewControllers.first?.view else { return }
         
         func animate() {

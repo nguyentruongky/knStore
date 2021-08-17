@@ -1,5 +1,5 @@
 //
-//  knScreenSize.swift
+//  KNScreenSize.swift
 //  kynguyenCodebase
 //
 //  Created by Ky Nguyen on 9/22/16.

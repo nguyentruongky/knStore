@@ -7,10 +7,10 @@
 //
 
 import UIKit
-typealias knInstruction = (icon: UIImage?, title: String)
+typealias KNInstruction = (icon: UIImage?, title: String)
 private let padding: CGFloat = 24
-class knDNSErrorStepCell: knListCell<knInstruction> {
-    override var data: knInstruction? { didSet {
+class KNDNSErrorStepCell: KNListCell<KNInstruction> {
+    override var data: KNInstruction? { didSet {
         imgView.image = data?.icon
         label.text = data?.title
         
@@ -34,13 +34,13 @@ class knDNSErrorStepCell: knListCell<knInstruction> {
     
 }
 
-class knDNSErrorView: KNView {
+class KNDNSErrorView: KNView {
     private let dismissButton = UIMaker.makeButton()
     private let messageLabel = UIMaker.makeLabel(font: UIFont.main(),
                                                    color: UIColor.darkGray,
                                                    numberOfLines: 0,
                                                    alignment: .center)
-    let stepsView = knListView<knDNSErrorStepCell, knInstruction>()
+    let stepsView = KNListView<KNDNSErrorStepCell, KNInstruction>()
     let container = UIMaker.makeView(background: .white)
     
     private func setMessage() {
@@ -57,7 +57,7 @@ class knDNSErrorView: KNView {
         stepsView.datasource = [step1, step2, step3, step4, step5, step6, step7, step8]
     }
     
-    private func makeStep(icon: UIImage? = nil, text: String) -> knInstruction {
+    private func makeStep(icon: UIImage? = nil, text: String) -> KNInstruction {
         return (icon, text)
     }
     

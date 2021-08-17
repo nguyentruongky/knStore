@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FundSourcesView: knGridView<FundSourceCell, FundSource> {
+class FundSourcesView: KNGridView<FundSourceCell, FundSource> {
     func setDatasource(methods: [FundSource]) {
         let addNewItem = FundSource(type: "", number: "", holderName: "")
         datasource = methods + [addNewItem]
@@ -41,7 +41,7 @@ class FundSourcesView: knGridView<FundSourceCell, FundSource> {
     }
 }
 
-class WalletCell: knGridCell<FundSource> {
+class WalletCell: KNGridCell<FundSource> {
     private let walletLabel = UIMaker.makeLabel(
         text: "Wallet",
         font: .main(.medium, size: 20),
@@ -100,7 +100,7 @@ class WalletCell: knGridCell<FundSource> {
     }
 }
 
-class FundSourceCell: knGridCell<FundSource> {
+class FundSourceCell: KNGridCell<FundSource> {
     override func setData(data: FundSource) {
         self.data = data
         if let type = data.type {

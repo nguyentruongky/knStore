@@ -9,11 +9,11 @@
 import Foundation
 import CoreLocation
 
-struct knGeocodingWorker {
+struct KNGeocodingWorker {
     
     var location: CLLocation
     var successAction: ((_ country: String) -> Void)?
-    var failAction: ((_ err: knError) -> Void)?
+    var failAction: ((_ err: KNError) -> Void)?
     
     func execute() {
         CLGeocoder().reverseGeocodeLocation(location) { (placemarks, err) in
@@ -29,14 +29,14 @@ struct knGeocodingWorker {
             let addressComponents = results.first?.value(forKeyPath: "address_components") as? [AnyObject],
             let countryJson = addressComponents.last,
             let countryCode = countryJson.value(forKeyPath: "short_name") as? String else {
-            failResponse(err: knError(code: "not_found"))
+            failResponse(err: KNError(code: "not_found"))
             return
         }
         
         successAction?(countryCode)
     }
     
-    func failResponse(err: knError) {
+    func failResponse(err: KNError) {
         failAction?(err)
     }
 }

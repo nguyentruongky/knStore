@@ -32,8 +32,8 @@ extension RegisterController {
             button.titleLabel?.underline(string: strongText)
             return button
         }
-        lazy var termLabel: knTermLabel = {
-            let label = knTermLabel()
+        lazy var termLabel: KNTermLabel = {
+            let label = KNTermLabel()
             let font = UIFont.main(size: 11)
             let color = UIColor(r: 163, g: 169, b: 175)
             let strongText = "Terms and Conditions."
@@ -51,15 +51,15 @@ extension RegisterController {
 
         }
 
-        func makeCell(tf: UITextField) -> knTableCell {
-            let cell = knTableCell()
+        func makeCell(tf: UITextField) -> KNTableCell {
+            let cell = KNTableCell()
             cell.addSubviews(views: tf)
             tf.fill(toView: cell, space: UIEdgeInsets(left: space, bottom: 16, right: space))
             tf.height(50)
             return cell
         }
 
-        func setupView() -> [knTableCell] {
+        func setupView() -> [KNTableCell] {
             emailTextField.keyboardType = .emailAddress
             emailTextField.autocapitalizationType = .none
             emailTextField.returnKeyType = .next

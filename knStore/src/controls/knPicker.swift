@@ -1,5 +1,5 @@
 //
-//  knPicker.swift
+//  KNPicker.swift
 //  SnapShop
 //
 //  Created by Ky Nguyen Coinhako on 11/5/18.
@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class knPickerView: KNView {
+class KNPickerView: KNView {
     private let animationDuration: Double = 0.3
     let contentHeight: CGFloat = 250
     let headerHeight: CGFloat = 50
@@ -20,16 +20,16 @@ class knPickerView: KNView {
     let contentView = UIMaker.makeView(background: .white)
     let dismissButton = UIMaker.makeButton()
     let titleLabel = UIMaker.makeLabel(font: UIFont.systemFont(ofSize: 14), color: UIColor.black)
-    weak var delegate: knPickerViewDelegate?
+    weak var delegate: KNPickerViewDelegate?
 
-    static func make(startDate: Date?) -> knPickerView {
-        let dp = knDatePicker()
+    static func make(startDate: Date?) -> KNPickerView {
+        let dp = KNDatePicker()
         dp._picker.date = startDate ?? Date()
         return dp
     }
     
-    static func make(texts: [String]) -> knPickerView {
-        let dp = knTextPicker()
+    static func make(texts: [String]) -> KNPickerView {
+        let dp = KNTextPicker()
         dp.textDatasource = texts
         return dp
     }
@@ -97,18 +97,18 @@ class knPickerView: KNView {
     }
     
     func changeDateMode(mode: UIDatePicker.Mode) {
-        let picker = self as? knDatePicker
+        let picker = self as? KNDatePicker
         picker?._picker.datePickerMode = mode
     }
     
     func updateDatasource(_ texts: [String]) {
-        let picker = self as? knTextPicker
+        let picker = self as? KNTextPicker
         picker?.textDatasource = texts
         
     }
 }
 
-private class knDatePicker: knPickerView {
+private class KNDatePicker: KNPickerView {
     let _picker = UIDatePicker()
     
     override func setupView() {
@@ -126,7 +126,7 @@ private class knDatePicker: knPickerView {
     }
 }
 
-private class knTextPicker: knPickerView {
+private class KNTextPicker: KNPickerView {
     private let _picker = UIPickerView()
     var textDatasource = [String]() { didSet {
             _picker.reloadComponent(0)
@@ -152,13 +152,13 @@ private class knTextPicker: knPickerView {
     }
 }
 
-extension knTextPicker: UIPickerViewDataSource, UIPickerViewDelegate {
+extension KNTextPicker: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { return textDatasource.count }
     func numberOfComponents(in pickerView: UIPickerView) -> Int { return 1 }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? { return textDatasource[row] }
 }
 
-@objc protocol knPickerViewDelegate: class {
+@objc protocol KNPickerViewDelegate: class {
     @objc optional func didSelectDate(_ date: Date)
     @objc optional func cancel()
     @objc optional func didSelectText(_ text: String)

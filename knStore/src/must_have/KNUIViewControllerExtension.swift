@@ -1,6 +1,6 @@
 //
 //  UIViewControllerExtension.swift
-//  knStore
+//  KNStore
 //
 //  Created by Ky Nguyen Coinhako on 12/11/18.
 //  Copyright © 2018 Ky Nguyen. All rights reserved.

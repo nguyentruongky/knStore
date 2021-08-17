@@ -1,5 +1,5 @@
 //
-//  knGistTextField.swift
+//  KNGistTextField.swift
 //  Fixir
 //
 //  Created by Ky Nguyen on 3/5/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class knGistTextField: UITextField {
+class KNGistTextField: UITextField {
     
-    struct knFonts {
+    struct KNFonts {
         
         private init() { }
         static let mediumFont = UIFont.systemFont(ofSize: 15)
@@ -18,14 +18,14 @@ class knGistTextField: UITextField {
         
     }
     
-    struct knColors {
+    struct KNColors {
         private init() { }
         
-        static let kn_127 = UIColor(value: 127)
-        static let kn_229 = UIColor(value: 229)
-        static let kn_241_147_78 = UIColor(r: 241, g: 147, b: 78)
-        static let kn_133_189_175 = UIColor(r: 133, g: 189, b: 175)
-        static let kn_119_203_189 = UIColor(r: 119, g: 203, b: 189)
+        static let KN_127 = UIColor(value: 127)
+        static let KN_229 = UIColor(value: 229)
+        static let KN_241_147_78 = UIColor(r: 241, g: 147, b: 78)
+        static let KN_133_189_175 = UIColor(r: 133, g: 189, b: 175)
+        static let KN_119_203_189 = UIColor(r: 119, g: 203, b: 189)
         
     }
     
@@ -50,8 +50,8 @@ class knGistTextField: UITextField {
        
         let descriptionText = UILabel()
         descriptionText.translatesAutoresizingMaskIntoConstraints = false
-        descriptionText.font = knFonts.smallFont
-        descriptionText.textColor = knColors.kn_127
+        descriptionText.font = KNFonts.smallFont
+        descriptionText.textColor = KNColors.KN_127
         descriptionText.isOpaque = true
         descriptionText.backgroundColor = .clear
         return descriptionText
@@ -69,7 +69,7 @@ class knGistTextField: UITextField {
         let underline = UIView()
         underline.isOpaque = true
         underline.translatesAutoresizingMaskIntoConstraints = false
-        underline.backgroundColor = knColors.kn_127
+        underline.backgroundColor = KNColors.KN_127
         addSubview(underline)
         underline.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
         underline.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
@@ -90,7 +90,7 @@ class knGistTextField: UITextField {
         label.alpha = 0
         label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = knFonts.mediumFont
+        label.font = KNFonts.mediumFont
         label.textColor = .red
         label.text = ""
         label.textAlignment = .right

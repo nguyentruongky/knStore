@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knDotLoadingIndicator: UIView {
+class KNDotLoadingIndicator: UIView {
     
     fileprivate let padding : CGFloat = 2
     fileprivate var loadingView = UIView()

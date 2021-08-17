@@ -1,6 +1,6 @@
 //
-//  knFont.swift
-//  knCollection
+//  KNFont.swift
+//  KNCollection
 //
 //  Created by Ky Nguyen on 10/12/17.
 //  Copyright © 2017 Ky Nguyen. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIFont {
-    enum knWeight: String {
+    enum KNWeight: String {
         case light = "Montserrat-Light"
         case medium = "Montserrat-Medium"
         case semibold = "Montserrat-SemiBold"
@@ -17,7 +17,7 @@ extension UIFont {
         case bold = "Montserrat-ExtraBold"
     }
 
-    static func main(_ weight: knWeight = .regular, size: CGFloat = 15) -> UIFont {
+    static func main(_ weight: KNWeight = .regular, size: CGFloat = 15) -> UIFont {
         return font(weight.rawValue, size: size)
     }
     

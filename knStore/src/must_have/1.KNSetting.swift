@@ -1,6 +1,6 @@
 //
 //  1.Setting.swift
-//  knCollection
+//  KNCollection
 //
 //  Created by Ky Nguyen Coinhako on 7/3/18.
 //  Copyright © 2018 Ky Nguyen. All rights reserved.

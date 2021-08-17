@@ -1,6 +1,6 @@
 //
 //  Messenger.swift
-//  knStore
+//  KNStore
 //
 //  Created by Ky Nguyen on 8/10/19.
 //  Copyright © 2019 Ky Nguyen. All rights reserved.

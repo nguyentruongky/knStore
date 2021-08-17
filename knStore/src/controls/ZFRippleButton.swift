@@ -186,8 +186,8 @@ open class ZFRippleButton: UIButton {
         super.layoutSubviews()
         
         setupRippleView()
-        if let knownTouchCenterLocation = touchCenterLocation {
-            rippleView.center = knownTouchCenterLocation
+        if let KNownTouchCenterLocation = touchCenterLocation {
+            rippleView.center = KNownTouchCenterLocation
         }
         
         rippleBackgroundView.layer.frame = bounds

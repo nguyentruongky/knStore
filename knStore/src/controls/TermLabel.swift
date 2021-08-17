@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knTermLabel: UILabel {
+class KNTermLabel: UILabel {
     private var fullText = ""
     private var boldTexts = [String]()
     private var actions = [() -> Void]()

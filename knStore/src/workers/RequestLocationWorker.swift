@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class knRequestLocationWorker: NSObject {
+class KNRequestLocationWorker: NSObject {
     
     var success: ((CLLocation) -> Void)?
     var locationOff: (() -> Void)?
@@ -60,7 +60,7 @@ class knRequestLocationWorker: NSObject {
     }
 }
 
-extension knRequestLocationWorker : CLLocationManagerDelegate {
+extension KNRequestLocationWorker : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {

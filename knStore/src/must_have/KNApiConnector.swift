@@ -31,7 +31,7 @@ struct ApiConnector {
                                 params: [String: Any]? = nil,
                                 headers: [String: String]? = nil,
                                 success: @escaping (_ result: AnyObject) -> Void,
-                                fail: ((_ error: knError) -> Void)? = nil) {
+                                fail: ((_ error: KNError) -> Void)? = nil) {
         let finalHeaders = headers ?? getHeaders()
         let apiUrl = getUrl(from: api)
         connector.request(withApi: apiUrl,
@@ -47,7 +47,7 @@ struct ApiConnector {
                                 params: [String: Any]? = nil,
                                 headers: [String: String]? = nil,
                                 returnData: @escaping (Data) -> Void,
-                                fail: ((_ error: knError) -> Void)? = nil) {
+                                fail: ((_ error: KNError) -> Void)? = nil) {
         let finalHeaders = headers ?? getHeaders()
         let apiUrl = getUrl(from: api)
         connector.request(withApi: apiUrl,
@@ -63,7 +63,7 @@ struct ApiConnector {
                     params: [String: Any]? = nil,
                     headers: [String: String]? = nil,
                     success: @escaping (_ result: AnyObject) -> Void,
-                    fail: ((_ error: knError) -> Void)? = nil) {
+                    fail: ((_ error: KNError) -> Void)? = nil) {
         request(api,
                 method: .get,
                 params: params,
@@ -76,7 +76,7 @@ struct ApiConnector {
                     params: [String: Any]? = nil,
                     headers: [String: String]? = nil,
                     returnData: @escaping (Data) -> Void,
-                    fail: ((_ error: knError) -> Void)? = nil) {
+                    fail: ((_ error: KNError) -> Void)? = nil) {
         request(api, method: .get,
                 params: params,
                 headers: headers,
@@ -89,7 +89,7 @@ struct ApiConnector {
                     params: [String: Any]? = nil,
                     headers: [String: String]? = nil,
                     success: @escaping (_ result: AnyObject) -> Void,
-                    fail: ((_ error: knError) -> Void)? = nil) {
+                    fail: ((_ error: KNError) -> Void)? = nil) {
         request(api,
                 method: .put,
                 params: params,
@@ -102,7 +102,7 @@ struct ApiConnector {
                     params: [String: Any]? = nil,
                     headers: [String: String]? = nil,
                     returnData: @escaping (Data) -> Void,
-                    fail: ((_ error: knError) -> Void)? = nil) {
+                    fail: ((_ error: KNError) -> Void)? = nil) {
         request(api,
                 method: .put,
                 params: params,
@@ -116,7 +116,7 @@ struct ApiConnector {
                      params: [String: Any]? = nil,
                      headers: [String: String]? = nil,
                      success: @escaping (_ result: AnyObject) -> Void,
-                     fail: ((_ error: knError) -> Void)? = nil) {
+                     fail: ((_ error: KNError) -> Void)? = nil) {
         request(api,
                 method: .post,
                 params: params,
@@ -129,7 +129,7 @@ struct ApiConnector {
                      params: [String: Any]? = nil,
                      headers: [String: String]? = nil,
                      returnData: @escaping (Data) -> Void,
-                     fail: ((_ error: knError) -> Void)? = nil) {
+                     fail: ((_ error: KNError) -> Void)? = nil) {
         request(api,
                 method: .post,
                 params: params,
@@ -142,7 +142,7 @@ struct ApiConnector {
                        params: [String: Any]? = nil,
                        headers: [String: String]? = nil,
                        success: @escaping (_ result: AnyObject) -> Void,
-                       fail: ((_ error: knError) -> Void)? = nil) {
+                       fail: ((_ error: KNError) -> Void)? = nil) {
         request(api, method: .delete, params: params, headers: headers, success: success, fail: fail)
     }
 
@@ -150,7 +150,7 @@ struct ApiConnector {
                        params: [String: Any]? = nil,
                        headers: [String: String]? = nil,
                        returnData: @escaping (Data) -> Void,
-                       fail: ((_ error: knError) -> Void)? = nil) {
+                       fail: ((_ error: KNError) -> Void)? = nil) {
         request(api,
                 method: .delete,
                 params: params,
@@ -167,7 +167,7 @@ struct AlamofireConnector {
                  params: [String: Any]? = nil,
                  header: [String: String]? = nil,
                  success: @escaping (_ result: AnyObject) -> Void,
-                 fail: ((_ error: knError) -> Void)?) {
+                 fail: ((_ error: KNError) -> Void)?) {
 
         guard let api = api else { return }
         let encoding: ParameterEncoding = method == .get ? URLEncoding.httpBody : JSONEncoding.default
@@ -183,7 +183,7 @@ struct AlamofireConnector {
 
     private func response(response: DataResponse<Any>,
                           withSuccessAction success: @escaping (_ result: AnyObject) -> Void,
-                          failAction fail: ((_ error: knError) -> Void)?) {
+                          failAction fail: ((_ error: KNError) -> Void)?) {
         let url = response.request?.url?.absoluteString ?? ""
         print(url)
 
@@ -193,7 +193,7 @@ struct AlamofireConnector {
         }
 
         if let error = response.result.error {
-            let err = knError(code: "unknow", message: error.localizedDescription)
+            let err = KNError(code: "unknow", message: error.localizedDescription)
             fail?(err)
             return
         }
@@ -215,7 +215,7 @@ struct AlamofireConnector {
                  params: [String: Any]? = nil,
                  header: [String: String]? = nil,
                  returnData: @escaping (Data) -> Void,
-                 fail: ((_ error: knError) -> Void)?) {
+                 fail: ((_ error: KNError) -> Void)?) {
 
         guard let api = api else { return }
         let encoding: ParameterEncoding = method == .get ? URLEncoding.httpBody : JSONEncoding.default
@@ -232,7 +232,7 @@ struct AlamofireConnector {
 
     private func response(response: DataResponse<Any>,
                           withReturnData success: @escaping (Data) -> Void,
-                          failAction fail: ((_ error: knError) -> Void)?) {
+                          failAction fail: ((_ error: KNError) -> Void)?) {
         let url = response.request?.url?.absoluteString ?? ""
         print(url)
 
@@ -242,7 +242,7 @@ struct AlamofireConnector {
         }
 
         if let error = response.result.error {
-            let err = knError(code: "unknow", message: error.localizedDescription)
+            let err = KNError(code: "unknow", message: error.localizedDescription)
             fail?(err)
             return
         }
@@ -261,7 +261,7 @@ struct AlamofireConnector {
 
 }
 
-class knError {
+class KNError {
     var code: String = "unknown"
     var message: String?
     var data: AnyObject?
@@ -275,7 +275,7 @@ class knError {
 }
 
 
-class knAuthError: knError {
+class KNAuthError: KNError {
     convenience init(message: String) {
         self.init()
         code = "auth_fail"

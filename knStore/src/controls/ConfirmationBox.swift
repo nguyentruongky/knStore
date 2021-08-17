@@ -9,11 +9,11 @@
 import UIKit
 fileprivate let padding: CGFloat = 24
 
-protocol knConfirmationDelegate: class {
+protocol KNConfirmationDelegate: class {
     func didConfirm()
 }
 
-class knConfirmationBoxView: KNView {
+class KNConfirmationBoxView: KNView {
     private let titleLabel = UIMaker.makeLabel(font: UIFont.main(.medium, size: 25),
                                                    color: UIColor(value: 34),
                                                    numberOfLines: 0,
@@ -28,7 +28,7 @@ class knConfirmationBoxView: KNView {
     
     private let container = UIMaker.makeStackView()
     private let backgroundButton = UIMaker.makeButton()
-    weak private var delegate: knConfirmationDelegate?
+    weak private var delegate: KNConfirmationDelegate?
     private let noButton = UIMaker.makeMainButton(title: "Cancel",
                                                     bgColor: .white,
                                                     titleColor: UIColor(value: 164),
@@ -37,7 +37,7 @@ class knConfirmationBoxView: KNView {
     func setup(title: String? = nil, content: String, icon: UIImage? = nil,
                confirmTitle: String = "Confirm",
                cancelTitle: String? = nil,
-               delegate: knConfirmationDelegate? = nil) {
+               delegate: KNConfirmationDelegate? = nil) {
         self.delegate = delegate
         confirmButton.setTitle(confirmTitle, for: .normal)
         contentLabel.text = content

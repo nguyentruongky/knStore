@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knAnimationScrollView: UIScrollView {
+class KNAnimationScrollView: UIScrollView {
     
     var effect = AnimationType.none
     

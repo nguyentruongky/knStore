@@ -9,12 +9,12 @@
 import UIKit
 import MapKit
 
-struct knLocation {
+struct KNLocation {
     var lat: Double
     var long: Double
 }
-class knMapController: KNController {
-    var location: knLocation?
+class KNMapController: KNController {
+    var location: KNLocation?
 
     lazy var mapView: MKMapView = { [weak self] in
         let view = MKMapView()
@@ -69,7 +69,7 @@ class knMapController: KNController {
 
 }
 
-extension knMapController: MKMapViewDelegate {
+extension KNMapController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let reuseID = "pin"

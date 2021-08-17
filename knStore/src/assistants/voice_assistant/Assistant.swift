@@ -11,14 +11,14 @@ import Speech
 import AVFoundation
 
 @available(iOS 10.0, *)
-class coinVoiceController: knCustomTableController {
+class coinVoiceController: KNCustomTableController {
     let padding: CGFloat = 24
     var navController: UINavigationController?
     
     private var datasource = [String]() { didSet { tableView.reloadData() }}
     private let microButton = UIMaker.makeButton(image: #imageLiteral(resourceName: "assitant").changeColor())
     let vocabulary = coinVocabulary()
-    let animationView = knRippleAnimationView()
+    let animationView = KNRippleAnimationView()
     let closeButton = UIMaker.makeButton(image: UIImage(named: "close"))
     let statementLabel = UIMaker.makeLabel(font: UIFont.main(size: 32), color: .white, numberOfLines: 0, alignment: .center)
     let userSpeechLabel = UIMaker.makeLabel(font: UIFont.main(size: 20), color: .white, numberOfLines: 0)
@@ -122,7 +122,7 @@ extension coinVoiceController: coinSpeakerDelegate {
 }
 
 
-class coinAssistantActionCell: knTableCell {
+class coinAssistantActionCell: KNTableCell {
     let padding: CGFloat = 24
     let titleLabel = UIMaker.makeLabel(font: UIFont.main(),
                                            color: UIColor(r: 205, g: 210, b: 215),

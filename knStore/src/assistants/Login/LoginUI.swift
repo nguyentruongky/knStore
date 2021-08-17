@@ -32,7 +32,7 @@ extension LoginController {
             return button
         }
 
-        func setupView() -> [knTableCell] {
+        func setupView() -> [KNTableCell] {
             emailTextField.keyboardType = .emailAddress
             emailTextField.autocapitalizationType = .none
             passwordTextField.isSecureTextEntry = true
@@ -40,7 +40,7 @@ extension LoginController {
                                                      image: UIImage(named: "show_pass_inactive"))
             revealButton.addTarget(self, action: #selector(showPass))
 
-            let contentCell = knTableCell()
+            let contentCell = KNTableCell()
             contentCell.addSubviews(views: emailTextField, passwordTextField, forgotButton, loginButton, registerButton)
             contentCell.addConstraints(withFormat: "V:|-24-[v0]-16-[v1]-24-[v2]-32-[v3]-32-[v4]-8-|",
                                        views: emailTextField, passwordTextField, forgotButton, loginButton, registerButton)

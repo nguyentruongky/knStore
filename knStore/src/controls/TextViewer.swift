@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class coinTextViewerController: knStaticListController {
+class coinTextViewerController: KNStaticListController {
     let padding: CGFloat = 24
     var text: String? { didSet {
         label.text = text
@@ -15,7 +15,7 @@ class coinTextViewerController: knStaticListController {
     override var title: String? { didSet { setNavBarTitle(text: title ?? "") }}
     let label = UIMaker.makeLabel(font: UIFont.main(), color: UIColor(value: 85), numberOfLines: 0)
     
-    fileprivate let textCell = knTableCell()
+    fileprivate let textCell = KNTableCell()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

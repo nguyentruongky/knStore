@@ -1,5 +1,5 @@
 //
-//  knUIColor.swift
+//  KNUIColor.swift
 //  kynguyenCodebase
 //
 //  Created by Ky Nguyen on 11/25/16.

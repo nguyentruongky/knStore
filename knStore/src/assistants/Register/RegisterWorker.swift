@@ -15,12 +15,12 @@ struct RegisterWorker {
     var email: String
     var password: String
     var success: ((smUser) -> Void)?
-    var fail: ((knError) -> Void)?
+    var fail: ((KNError) -> Void)?
 
     init(firstName: String, lastName: String,
          email: String, password: String,
          success: ((smUser) -> Void)?,
-         fail: ((knError) -> Void)?) {
+         fail: ((KNError) -> Void)?) {
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
@@ -44,7 +44,7 @@ struct RegisterWorker {
 
     func successResponse(returnData: AnyObject) {
         guard let raw = returnData["user"] as AnyObject? else {
-            let err = knError(code: "no_data", message: "No user data returned")
+            let err = KNError(code: "no_data", message: "No user data returned")
             failResponse(err: err)
             return
         }
@@ -54,7 +54,7 @@ struct RegisterWorker {
         success?(user)
     }
 
-    func failResponse(err: knError) {
+    func failResponse(err: KNError) {
         var newErr = err
         if err.code == "409" {
             newErr.message = "Your email is registered. Please try another one"

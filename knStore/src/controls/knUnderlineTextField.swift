@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knUnderlineTextField: UITextField {
+class KNUnderlineTextField: UITextField {
 
     fileprivate var underline : UIView!
     var underlineColor : UIColor = UIColor.darkGray {

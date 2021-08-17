@@ -11,7 +11,7 @@ import UIKit
 /**
 import SwiftyCam
 
-class knCameraCtr: SwiftyCamViewController {
+class KNCameraCtr: SwiftyCamViewController {
     let captureButton = UIMaker.makeButton(image: #imageLiteral(resourceName: "capture"))
     let switchButton = UIMaker.makeButton(image: #imageLiteral(resourceName: "switch_camera"))
     let flashButton = UIMaker.makeButton(image: #imageLiteral(resourceName: "flash_on"))
@@ -33,7 +33,7 @@ class knCameraCtr: SwiftyCamViewController {
             func didSelectImage(_ image: UIImage) {
                 nextStep(photo: image)
             }
-            knPhotoSelectorWorker(finishSelection: didSelectImage).execute()
+            KNPhotoSelectorWorker(finishSelection: didSelectImage).execute()
             return
         }
 
@@ -85,7 +85,7 @@ class knCameraCtr: SwiftyCamViewController {
     }
 }
 
-extension knCameraCtr: SwiftyCamViewControllerDelegate {
+extension KNCameraCtr: SwiftyCamViewControllerDelegate {
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
         nextStep(photo: photo)
     }

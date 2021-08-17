@@ -8,7 +8,7 @@
 
 import UIKit
 
-class snChangePassCtr: knStaticListController {
+class snChangePassCtr: KNStaticListController {
     let ui = UI()
     lazy var output = Interactor(controller: self)
     
@@ -55,7 +55,7 @@ extension snChangePassCtr {
         Messenger.showMessage(message)
     }
     
-    func didChangeFail(_ err: knError) {
+    func didChangeFail(_ err: KNError) {
         ui.saveButton.setProcess(visible: false)
         Messenger.showError(err.message ?? Messenger.defaultError)
     }
@@ -73,7 +73,7 @@ extension snChangePassCtr {
             if confirmPass == nil || confirmPass?.isEmpty == true  {
                 return (false, String(format: emptyMessage, "Confirm New Password")) }
             
-            let passwordCheck = knPasswordValidation()
+            let passwordCheck = KNPasswordValidation()
             let upperRule = "%@ must have at least 1 Uppercase character"
             let digitRule = "%@ must have at least 1 digit"
             
@@ -101,7 +101,7 @@ extension snChangePassCtr {
 extension snChangePassCtr {
     class Interactor {
         func updatePass(old: String, new: String, confirm: String) {
-            knChangePassWorker(oldPass: old, newPass: new, confirmPass: confirm, success: output?.didChange, fail: output?.didChangeFail).execute()
+            KNChangePassWorker(oldPass: old, newPass: new, confirmPass: confirm, success: output?.didChange, fail: output?.didChangeFail).execute()
         }
         
         private weak var output: Controller?

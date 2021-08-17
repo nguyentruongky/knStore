@@ -1,5 +1,5 @@
 //
-//  knInt.swift
+//  KNInt.swift
 //  Fixir
 //
 //  Created by Ky Nguyen on 3/23/17.

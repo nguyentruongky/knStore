@@ -1,5 +1,5 @@
 //
-//  knUIApplication.swift
+//  KNUIApplication.swift
 //  kynguyenCodebase
 //
 //  Created by Ky Nguyen on 12/12/16.

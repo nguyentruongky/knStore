@@ -8,22 +8,22 @@
 
 import UIKit
 
-enum knMessageType: String {
+enum KNMessageType: String {
     case audio, image, text
 }
 
-protocol knSendMessageDelegate: class {
-    func sendMessage(_ message: String, type: knMessageType)
+protocol KNSendMessageDelegate: class {
+    func sendMessage(_ message: String, type: KNMessageType)
 }
 
-protocol knComposerDelegate: class {
+protocol KNComposerDelegate: class {
     func didBeginEditing()
     func didShowImageSelection()
     func didSelectImage(_ image: UIImage)
     func didShowRecordView()
 }
 
-class knComposerView : UIView {
+class KNComposerView : UIView {
     lazy var textView : UITextView = { [weak self] in
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -72,7 +72,7 @@ class knComposerView : UIView {
         }() /* sendButton */
     
     @objc func handleSend() {
-        sendDelegate?.sendMessage(textView.text, type: knMessageType.text)
+        sendDelegate?.sendMessage(textView.text, type: KNMessageType.text)
     }
     
     let mediaView: UIView = {
@@ -81,9 +81,9 @@ class knComposerView : UIView {
         return view
     }() /* mediaView */
     
-    weak var delegate : knComposerDelegate? /* delegate */
+    weak var delegate : KNComposerDelegate? /* delegate */
     
-    weak var sendDelegate: knSendMessageDelegate?
+    weak var sendDelegate: KNSendMessageDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -151,7 +151,7 @@ class knComposerView : UIView {
     }
 }
 
-extension knComposerView : UITextViewDelegate {
+extension KNComposerView : UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
@@ -165,7 +165,7 @@ extension knComposerView : UITextViewDelegate {
         if newText.count > 0 {
             animateSendButton(visible: true)
             if text == "\n" {
-                sendDelegate?.sendMessage(newText, type: knMessageType.text)
+                sendDelegate?.sendMessage(newText, type: KNMessageType.text)
                 return false
             }
         } else {

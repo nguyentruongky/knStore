@@ -9,15 +9,15 @@
 import UIKit
 
 
-class knAnimateItemCollectionLayout : UICollectionViewFlowLayout {
+class KNAnimateItemCollectionLayout : UICollectionViewFlowLayout {
     
-    enum knAnimateItemType {
+    enum KNAnimateItemType {
         case zoom, move
     }
     
-    var animationType = knAnimateItemType.zoom
+    var animationType = KNAnimateItemType.zoom
     
-    convenience init(animationType: knAnimateItemType) {
+    convenience init(animationType: KNAnimateItemType) {
         self.init()
         self.animationType = animationType
     }

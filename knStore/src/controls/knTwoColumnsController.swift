@@ -1,5 +1,5 @@
 //
-//  knTwoColumnsController.swift
+//  KNTwoColumnsController.swift
 //  Ogenii
 //
 //  Created by Ky Nguyen on 6/15/17.
@@ -9,17 +9,17 @@
 import UIKit
 
 
-class knTwoColumnsController: KNController {
+class KNTwoColumnsController: KNController {
     let cellId = "cellId"
     
-    var layout : knTwoColumnsCollectionViewLayout!
+    var layout : KNTwoColumnsCollectionViewLayout!
     
     lazy var collectionView: UICollectionView = {
         
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: knTwoColumnsCollectionViewLayout())
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: KNTwoColumnsCollectionViewLayout())
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.backgroundColor = .white
-        let cellPadding = knTwoColumnCollectionViewSetting.cellPadding
+        let cellPadding = KNTwoColumnCollectionViewSetting.cellPadding
         cv.contentInset = UIEdgeInsets(top: 0, left: cellPadding, bottom: cellPadding, right: cellPadding)
         cv.layer.masksToBounds = true
         cv.showsVerticalScrollIndicator = false
@@ -36,7 +36,7 @@ class knTwoColumnsController: KNController {
     
     override func setupView() {
         
-        if let layout = collectionView.collectionViewLayout as? knTwoColumnsCollectionViewLayout {
+        if let layout = collectionView.collectionViewLayout as? KNTwoColumnsCollectionViewLayout {
             self.layout = layout
             layout.delegate = self
         }
@@ -51,14 +51,14 @@ class knTwoColumnsController: KNController {
     
 }
 
-extension knTwoColumnsController : knTwoColumnsCollectionViewLayoutDelegate {
+extension KNTwoColumnsController : KNTwoColumnsCollectionViewLayoutDelegate {
     
     func collectionView(collectionView: UICollectionView, heightForCellAtIndexPath indexPath: IndexPath) -> CGFloat {
         return 100
     }
 }
 
-extension knTwoColumnsController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension KNTwoColumnsController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
@@ -78,23 +78,23 @@ extension knTwoColumnsController : UICollectionViewDelegate, UICollectionViewDat
 
 
 
-struct knTwoColumnCollectionViewSetting {
+struct KNTwoColumnCollectionViewSetting {
     static let cellPadding : CGFloat = 6
     static let columnWidth = UIScreen.main.bounds.width / CGFloat(2) - cellPadding * 3
 }
 
-final class knTwoColumnsCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
+final class KNTwoColumnsCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
     
     var photoHeight: CGFloat = 0.0
     
     override func copy(with zone: NSZone? = nil) -> Any {
-        let copy = super.copy(with: zone) as! knTwoColumnsCollectionViewLayoutAttributes
+        let copy = super.copy(with: zone) as! KNTwoColumnsCollectionViewLayoutAttributes
         copy.photoHeight = photoHeight
         return copy
     }
     
     override func isEqual(_ object: Any?) -> Bool {
-        guard let attributes = object as? knTwoColumnsCollectionViewLayoutAttributes else { return false }
+        guard let attributes = object as? KNTwoColumnsCollectionViewLayoutAttributes else { return false }
         if attributes.photoHeight == photoHeight {
             return super.isEqual(object)
         }
@@ -102,15 +102,15 @@ final class knTwoColumnsCollectionViewLayoutAttributes: UICollectionViewLayoutAt
     }
 }
 
-protocol knTwoColumnsCollectionViewLayoutDelegate {
+protocol KNTwoColumnsCollectionViewLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForCellAtIndexPath indexPath: IndexPath) -> CGFloat
 }
 
 
-final class knTwoColumnsCollectionViewLayout: UICollectionViewLayout {
-    var delegate : knTwoColumnsCollectionViewLayoutDelegate!
+final class KNTwoColumnsCollectionViewLayout: UICollectionViewLayout {
+    var delegate : KNTwoColumnsCollectionViewLayoutDelegate!
     var numberOfColumns = 2
-    private var cache = [knTwoColumnsCollectionViewLayoutAttributes]()
+    private var cache = [KNTwoColumnsCollectionViewLayoutAttributes]()
     private var contentHeight : CGFloat = 0
     private var contentWidth : CGFloat {
         
@@ -140,11 +140,11 @@ final class knTwoColumnsCollectionViewLayout: UICollectionViewLayout {
             let indexPath = IndexPath(item: item, section: 0)
             
             let cellHeight = delegate.collectionView(collectionView: collectionView!, heightForCellAtIndexPath: indexPath)
-            let height = knTwoColumnCollectionViewSetting.cellPadding * 2 + cellHeight
+            let height = KNTwoColumnCollectionViewSetting.cellPadding * 2 + cellHeight
             let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: height)
-            let insetFrame = frame.insetBy(dx: knTwoColumnCollectionViewSetting.cellPadding, dy: knTwoColumnCollectionViewSetting.cellPadding)
+            let insetFrame = frame.insetBy(dx: KNTwoColumnCollectionViewSetting.cellPadding, dy: KNTwoColumnCollectionViewSetting.cellPadding)
             
-            let attributes = knTwoColumnsCollectionViewLayoutAttributes(forCellWith: indexPath)
+            let attributes = KNTwoColumnsCollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.photoHeight = cellHeight
             attributes.frame = insetFrame
             cache.append(attributes)

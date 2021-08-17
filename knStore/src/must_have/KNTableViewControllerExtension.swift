@@ -1,6 +1,6 @@
 //
 //  KNTableViewControllerExtension.swift
-//  knStore
+//  KNStore
 //
 //  Created by Ky Nguyen on 4/13/20.
 //  Copyright © 2020 Ky Nguyen. All rights reserved.

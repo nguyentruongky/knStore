@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class knBarButtonNumber : UIBarButtonItem {
+class KNBarButtonNumber : UIBarButtonItem {
 
     var _badgeValue : String = ""
     var badgeValue: String {

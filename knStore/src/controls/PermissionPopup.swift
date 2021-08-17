@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class knPermissionPopup: KNView {
+class KNPermissionPopup: KNView {
     let padding: CGFloat = 24
     enum Permission {
         case location, calendar, notification, contact

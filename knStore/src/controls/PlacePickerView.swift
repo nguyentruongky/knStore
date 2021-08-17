@@ -10,7 +10,7 @@ import UIKit
 /**
 import GooglePlaces
 
-class knPlacePickerView: knView {
+class KNPlacePickerView: KNView {
 
     var didSelectPlace: ((_ place: GMSPlace) -> Void)?
 
@@ -40,12 +40,12 @@ class knPlacePickerView: knView {
     }
 
     func registerCells() {
-        tableView.register(knLocationCell.self, forCellReuseIdentifier: "marLocationCell")
+        tableView.register(KNLocationCell.self, forCellReuseIdentifier: "marLocationCell")
     }
 
 }
 
-extension knPlacePickerView {
+extension KNPlacePickerView {
 
     func searchPlace(text: String) {
 
@@ -63,14 +63,14 @@ extension knPlacePickerView {
     }
 }
 
-extension knPlacePickerView: UITableViewDelegate, UITableViewDataSource {
+extension KNPlacePickerView: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datasource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "marLocationCell", for: indexPath) as! knLocationCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "marLocationCell", for: indexPath) as! KNLocationCell
         cell.data = datasource[indexPath.row].address
         return cell
     }
@@ -94,7 +94,7 @@ extension knPlacePickerView: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-class knLocationCell: knTableCell {
+class KNLocationCell: KNTableCell {
     
     var data: String? {
         didSet {

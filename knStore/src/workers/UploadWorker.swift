@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum knFileType: String {
+enum KNFileType: String {
  
     case image, audio
 }
 
-struct knUploadWorker {
+struct KNUploadWorker {
     
     var api: String
     var params: [String: Any]?

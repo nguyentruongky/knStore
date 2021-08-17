@@ -12,11 +12,11 @@ enum Language: String {
     case en, vi
 }
 
-var i18nBoss = knTranslatorBoss()
+var i18nBoss = KNTranslatorBoss()
 
-class knTranslatorBoss {
-    private lazy var onlineTranslator = knOnlineTranslator(lang: currentLang)
-    private lazy var offlineTranslator = knOfflineTranslator(lang: currentLang)
+class KNTranslatorBoss {
+    private lazy var onlineTranslator = KNOnlineTranslator(lang: currentLang)
+    private lazy var offlineTranslator = KNOfflineTranslator(lang: currentLang)
     
     func register() {
         onlineTranslator.register()
@@ -57,7 +57,7 @@ class knTranslatorBoss {
     }
 }
 
-private class knOnlineTranslator {
+private class KNOnlineTranslator {
     init(lang: Language) {
         register()
         change(to: lang)
@@ -85,7 +85,7 @@ private class knOnlineTranslator {
     }
 }
 
-private class knOfflineTranslator {
+private class KNOfflineTranslator {
     init(lang: Language) {
         dictionary = getLanguageFile(lang: lang)
     }

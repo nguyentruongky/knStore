@@ -1,5 +1,5 @@
 //
-//  knView.swift
+//  KNView.swift
 //  Ogenii
 //
 //  Created by Ky Nguyen on 3/17/17.
@@ -51,7 +51,7 @@ extension UIView {
 }
 
 
-class knCollectionCell: UICollectionViewCell {
+class KNCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -60,14 +60,14 @@ class knCollectionCell: UICollectionViewCell {
     func setupView() { }
 }
 
-class knTableCell : UITableViewCell {
+class KNTableCell : UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
         selectionStyle = .none
     }
-    static func wrap(view: UIView, space: UIEdgeInsets = .zero) -> knTableCell {
-        let cell = knTableCell()
+    static func wrap(view: UIView, space: UIEdgeInsets = .zero) -> KNTableCell {
+        let cell = KNTableCell()
         cell.backgroundColor = .clear
         cell.addSubviews(views: view)
         view.fill(toView: cell, space: space)

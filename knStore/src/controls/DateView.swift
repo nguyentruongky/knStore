@@ -21,7 +21,7 @@ struct INDate {
     }
 }
 
-class INMovieDateCell: knGridCell<INDate> {
+class INMovieDateCell: KNGridCell<INDate> {
     override var data: INDate? { didSet {
         guard let data = data else { return }
         dayOfWeekLabel.text = data.dayOfWeek
@@ -52,7 +52,7 @@ class INMovieDateCell: knGridCell<INDate> {
     }}
 }
 
-class INMovieDateView: knGridView<INMovieDateCell, INDate> {
+class INMovieDateView: KNGridView<INMovieDateCell, INDate> {
     var selectedIndex: IndexPath?
     
     override func setupView() {

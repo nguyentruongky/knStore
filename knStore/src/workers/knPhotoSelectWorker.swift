@@ -8,13 +8,13 @@
 
 import UIKit
 
-fileprivate protocol knPhotoSelectorDelegate: class {
+fileprivate protocol KNPhotoSelectorDelegate: class {
     func present(_ controller: UIViewController)
     func didSelect(_ image: UIImage)
 }
 
-fileprivate class knPhotoSelector : NSObject {
-    var delegate: knPhotoSelectorDelegate?
+fileprivate class KNPhotoSelector : NSObject {
+    var delegate: KNPhotoSelectorDelegate?
     func showSelection() {
         
         let pickPhoto = UIAlertAction(title: "Choose Photo", style: .default) { (action) in
@@ -36,7 +36,7 @@ fileprivate class knPhotoSelector : NSObject {
     }
 }
 
-extension knPhotoSelector: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+extension KNPhotoSelector: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var pickedImage : UIImage
@@ -68,23 +68,23 @@ extension knPhotoSelector: UINavigationControllerDelegate, UIImagePickerControll
     }
 }
 
-class knPhotoSelectorWorker {
+class KNPhotoSelectorWorker {
     var successResponse : ((UIImage) -> Void)? = nil
     var selectedImage : UIImage?
-    fileprivate var picker: knPhotoSelector?
+    fileprivate var picker: KNPhotoSelector?
     
     init(finishSelection: ((UIImage) -> Void)?) {
         successResponse = finishSelection
     }
     
     func execute() {
-        picker = knPhotoSelector()
+        picker = KNPhotoSelector()
         picker?.delegate = self
         picker?.showSelection()
     }
 }
 
-extension knPhotoSelectorWorker : knPhotoSelectorDelegate {
+extension KNPhotoSelectorWorker : KNPhotoSelectorDelegate {
     func present(_ controller: UIViewController) {
         DispatchQueue.main.async {
             UIApplication.present(controller)

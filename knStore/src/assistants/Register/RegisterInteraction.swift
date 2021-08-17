@@ -16,9 +16,9 @@ extension RegisterController {
         dismiss()
     }
 
-    func didRegisterFail(_ err: knError) {
+    func didRegisterFail(_ err: KNError) {
         ui.registerButton.setProcess(visible: false)
-//        knMessageHub.showError(err.message ?? "Can't register at this time", inSeconds: 5)
+//        KNMessageHub.showError(err.message ?? "Can't register at this time", inSeconds: 5)
     }
 }
 
@@ -59,7 +59,7 @@ extension RegisterController {
             if email?.isValidEmail() == false {
                 return (false, "Invalid email") }
 
-            let passwordCheck = knPasswordValidation()
+            let passwordCheck = KNPasswordValidation()
             if passwordCheck.checkCharCount(password!) == false {
                 return (false, "Password has at least 8 characters") }
             if passwordCheck.checkUpperCase(password!) == false {

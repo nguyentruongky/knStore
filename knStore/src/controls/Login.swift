@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginCtr: knStaticListController {
+class LoginCtr: KNStaticListController {
     let ui = UI()
     override func setupView() {
         view.addFill(tableView)
@@ -23,7 +23,7 @@ extension LoginCtr {
         lazy var passwordTextField = makeTextField(placeholder: "Password")
         let loginButton = UIMaker.makeMainButton(title: "LOGIN")
 
-        func setupView() -> [knTableCell] {
+        func setupView() -> [KNTableCell] {
             let forgotButton = UIMaker.makeButton(title: "Forgot Password?",
                                                   titleColor: UIColor.darkGray,
                                                   font: UIFont.main(.bold, size: 13))

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginController: knStaticListController {
+class LoginController: KNStaticListController {
     let ui = UI()
     lazy var output = Interactor(controller: self)
     var validation = Validation()
@@ -54,7 +54,7 @@ class LoginController: knStaticListController {
         validation.password = ui.passwordTextField.text
         let (valid, message) = validation.validate()
         if valid == false {
-//            knMessageHub.showError(message ?? "", inSeconds: 5)
+//            KNMessageHub.showError(message ?? "", inSeconds: 5)
             return
         }
 

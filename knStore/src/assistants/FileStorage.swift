@@ -1,6 +1,6 @@
 //
 //  FileStorage.swift
-//  knStore
+//  KNStore
 //
 //  Created by Ky Nguyen on 8/19/19.
 //  Copyright © 2019 Ky Nguyen. All rights reserved.

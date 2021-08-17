@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct knAvatarGenerator {
+struct KNAvatarGenerator {
     private func getColor() -> UIColor {
         let min: UInt32 = 50
         let max: UInt32 = 150

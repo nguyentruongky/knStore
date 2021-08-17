@@ -1,6 +1,6 @@
 //
 //  Notification.swift
-//  knStore
+//  KNStore
 //
 //  Created by Apple on 8/21/19.
 //  Copyright © 2019 Ky Nguyen. All rights reserved.
@@ -11,7 +11,7 @@ import UserNotifications
 import FirebaseMessaging
 import CoreLocation
 
-struct knNotification {
+struct KNNotification {
     var title: String
     var body: String
     var sound = UNNotificationSound.default
@@ -25,7 +25,7 @@ struct knNotification {
     }
 }
 
-class knNotificationCenter: NSObject {
+class KNNotificationCenter: NSObject {
     func requestPermission() {
         let center = UNUserNotificationCenter.current()
         center.delegate = self
@@ -51,7 +51,7 @@ class LocalNotification {
         return request
     }
     
-    static func createNotificationContent(data: knNotification) -> UNMutableNotificationContent {
+    static func createNotificationContent(data: KNNotification) -> UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
         content.title = data.title
         content.body = data.body
@@ -71,7 +71,7 @@ class LocalNotification {
         return UNNotificationAction(identifier: id, title: title, options: options)
     }
     
-    static func shoot(data: knNotification, trigger: UNNotificationTrigger, actions: [UNNotificationAction]) {
+    static func shoot(data: KNNotification, trigger: UNNotificationTrigger, actions: [UNNotificationAction]) {
         let content = LocalNotification.createNotificationContent(data: data)
         addActionsToNotification(actions: actions, content: content)
         let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
@@ -87,7 +87,7 @@ class LocalNotification {
 class SecondsNotification {
     func shoot(delaySeconds: Double,
                repeats: Bool = false,
-               data: knNotification) {
+               data: KNNotification) {
         let content = LocalNotification.createNotificationContent(data: data)
         let trigger = triggerInSeconds(delaySeconds, doesRepeat: repeats)
         let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
@@ -111,7 +111,7 @@ class SecondsNotification {
 
 
 class LocationNotification {
-    func shoot(inRegion region: CLRegion, repeats: Bool = false, data: knNotification) {
+    func shoot(inRegion region: CLRegion, repeats: Bool = false, data: KNNotification) {
         let content = LocalNotification.createNotificationContent(data: data)
         let trigger = UNLocationNotificationTrigger(region: region, repeats: repeats)
         let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
@@ -128,7 +128,7 @@ class LocationNotification {
 class DateNotification {
     func shoot(at date: Date,
                repeats: Bool = false,
-               data: knNotification) {
+               data: KNNotification) {
         let content = LocalNotification.createNotificationContent(data: data)
         let trigger = triggerAtDate(date, doesRepeat: repeats)
         let request = LocalNotification.createNotificationRequest(content: content, trigger: trigger)
@@ -148,7 +148,7 @@ class DateNotification {
 }
 
 
-extension knNotificationCenter: UNUserNotificationCenterDelegate {
+extension KNNotificationCenter: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {

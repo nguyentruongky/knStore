@@ -1,6 +1,6 @@
 //
-//  knPopup.swift
-//  knPopup
+//  KNPopup.swift
+//  KNPopup
 //
 //  Created by Ky Nguyen Coinhako on 10/9/18.
 //  Copyright © 2018 Ky Nguyen. All rights reserved.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-protocol knPopupDelegate: class {
+protocol KNPopupDelegate: class {
     func didSelectOK()
 }
 
-class knPopup: KNView {
-    weak var delegate: knPopupDelegate?
+class KNPopup: KNView {
+    weak var delegate: KNPopupDelegate?
     
     let blackView: UIButton = {
         let button = UIButton()

@@ -1,13 +1,13 @@
 //
-//  knExtendList.swift
-//  knStore
+//  KNExtendList.swift
+//  KNStore
 //
 //  Created by Ky Nguyen Coinhako on 12/11/18.
 //  Copyright © 2018 Ky Nguyen. All rights reserved.
 //
 
 import UIKit
-class knExpandItem<U> {
+class KNExpandItem<U> {
     var isExpand: Bool = false
     var data = [U]()
     init(data: [U]) {
@@ -15,8 +15,8 @@ class knExpandItem<U> {
     }
 }
 
-class knExpandItemCell<U>: knListCell<U> { }
-class knExpandList<Cell: knExpandItemCell<U>, Item: knExpandItem<U>, U>: KNController, UITableViewDelegate, UITableViewDataSource {
+class KNExpandItemCell<U>: KNListCell<U> { }
+class KNExpandList<Cell: KNExpandItemCell<U>, Item: KNExpandItem<U>, U>: KNController, UITableViewDelegate, UITableViewDataSource {
     
     var sections = [String]()
     var rowHeight: CGFloat = 48
@@ -45,7 +45,7 @@ class knExpandList<Cell: knExpandItemCell<U>, Item: knExpandItem<U>, U>: KNContr
     }
     
     func mapData(dictionary: [String: [U]]){
-        let map = dictionary.mapValues({ return knExpandItem(data: $0) })
+        let map = dictionary.mapValues({ return KNExpandItem(data: $0) })
         sections = Array(dictionary.keys)
         sections.sort()
         datasource = map as! [String: Item]

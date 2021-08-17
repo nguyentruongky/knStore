@@ -19,11 +19,11 @@ class FacebookLoginWorker {
     weak var host: UIViewController?
     var permission: [String]
     private var successAction: ((Reader) -> Void)?
-    private var failAction: ((knError) -> Void)?
+    private var failAction: ((KNError) -> Void)?
     init(host: UIViewController,
          permission: [String],
          successAction: ((Reader) -> Void)?,
-         failAction: ((knError) -> Void)?) {
+         failAction: ((KNError) -> Void)?) {
         self.host = host
         self.permission = permission
         self.successAction = successAction
@@ -35,13 +35,13 @@ class FacebookLoginWorker {
         loginManager.logIn(permissions: permission, from: host!) {
             (result, error) in
             if let error = error {
-                let err = knAuthError(message: error.localizedDescription)
+                let err = KNAuthError(message: error.localizedDescription)
                 self.failAction?(err)
                 return
             }
             
             guard let accessToken = AccessToken.current?.tokenString else {
-                let err = knAuthError(message: "Can't get access token")
+                let err = KNAuthError(message: "Can't get access token")
                 self.failAction?(err)
                 return
             }
@@ -49,7 +49,7 @@ class FacebookLoginWorker {
             let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
             Auth.auth().signIn(with: credential, completion: { (user, error) in
                 if let error = error {
-                    let err = knAuthError(message: error.localizedDescription)
+                    let err = KNAuthError(message: error.localizedDescription)
                     self.failAction?(err)
                     return
                 }

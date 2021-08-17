@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  knStateview
+//  KNStateview
 //
 //  Created by Ky Nguyen Coinhako on 10/23/18.
 //  Copyright © 2018 Ky Nguyen. All rights reserved.
@@ -23,7 +23,7 @@ extension State {
     }
 }
 
-class knBottomSheetTestCtr: UIViewController {
+class KNBottomSheetTestCtr: UIViewController {
     
     private lazy var popupView: UIView = {
         let view = UIView()

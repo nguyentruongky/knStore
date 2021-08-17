@@ -1,5 +1,5 @@
 //
-//  knUIButton.swift
+//  KNUIButton.swift
 //  kynguyenCodebase
 //
 //  Created by Ky Nguyen on 12/9/16.

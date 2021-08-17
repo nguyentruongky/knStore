@@ -126,7 +126,7 @@ extension UIView {
     }
     
     /**
-     Fully rounds an autolayout view (e.g. one with no known frame) with the given diameter and border
+     Fully rounds an autolayout view (e.g. one with no KNown frame) with the given diameter and border
      
      - parameter diameter:    The view's diameter
      - parameter borderColor: The border color

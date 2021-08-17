@@ -8,20 +8,20 @@
 
 import UIKit
 let tabHeight: CGFloat = hasNotch() ? 49 : 66
-var tabBoss: knTabBoss?
+var tabBoss: KNTabBoss?
 extension UIViewController {
     func setTab(visible: Bool) {
-        tabBoss?.kn_tabBar.isHidden = !visible
+        tabBoss?.KN_tabBar.isHidden = !visible
         tabBoss?.tabBar.isHidden = true
     }
 }
-class knTabBoss: knTabController {
+class KNTabBoss: KNTabController {
     override func setupView() {
         let itemHeight: CGFloat = 44
         let font = UIFont.systemFont(ofSize: 10)
         
         // define tab items
-        let storiesTab = knTabBarItem(icon: #imageLiteral(resourceName: "home"), title: "HOME", font: font)
+        let storiesTab = KNTabBarItem(icon: #imageLiteral(resourceName: "home"), title: "HOME", font: font)
         storiesTab.itemHeight = itemHeight
 
         // define tab controllers
@@ -32,7 +32,7 @@ class knTabBoss: knTabController {
         normalColor = UIColor(value: 178)
         selectedColor = UIColor(value: 29)
 
-        kn_tabBar.backgroundColor = .white
+        KN_tabBar.backgroundColor = .white
         selectedIndex = 1
         
         tabBoss = self

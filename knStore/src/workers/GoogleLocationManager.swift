@@ -10,13 +10,13 @@ import UIKit
 import CoreLocation
 //import GooglePlaces
 
-class knLocationManager: NSObject {
+class KNLocationManager: NSObject {
 
     var successResponse: ((_ location: CLLocation) -> Void)?
     var offResponse: (() -> Void)?
     var deniedResponse: (() -> Void)?
 
-    var requestWorker: knRequestLocationWorker?
+    var requestWorker: KNRequestLocationWorker?
 
     var address: String?
 
@@ -25,7 +25,7 @@ class knLocationManager: NSObject {
     func getLocation(for controller: UIViewController) {
         holder = controller
 
-        requestWorker = knRequestLocationWorker(success: getLocationSuccess,
+        requestWorker = KNRequestLocationWorker(success: getLocationSuccess,
                                                 locationOff: locationOff,
                                                 deniedLocation: locationDenied)
         requestWorker?.execute()

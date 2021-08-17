@@ -17,17 +17,17 @@ extension INAddCardCtr {
         var saveSwitch = UISwitch()
         let saveButton = UIMaker.makeMainButton(title: "SAVE AND CONTINUE")
         
-        let datePicker = knPickerView.make(texts: [])
-        func setupView() -> [knTableCell] {
+        let datePicker = KNPickerView.make(texts: [])
+        func setupView() -> [KNTableCell] {
             datePicker.changeDateMode(mode: .date)
             let detailView = makeDetailView()
             let saveView = makeSaveView()
             
-            let spaceCell = knTableCell()
+            let spaceCell = KNTableCell()
             spaceCell.backgroundColor = UIColor(r: 243, g: 245, b: 248)
             spaceCell.height(44)
             
-            let cell = knTableCell()
+            let cell = KNTableCell()
             cell.addSubviews(views: detailView, saveView)
             cell.addConstraints(withFormat: "V:|-24-[v0][v1]|", views: detailView, saveView)
             detailView.horizontal(toView: cell)

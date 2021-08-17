@@ -107,7 +107,7 @@ extension UILabel{
             attributedString = NSMutableAttributedString(string: text ?? "")
         }
         guard let text = text, let index = text.indexOf(string) else { return }
-        
+
         attributedString.addAttribute(NSAttributedString.Key.underlineStyle,
                                       value: NSUnderlineStyle.single.rawValue,
                                       range: NSMakeRange(index, string.count))

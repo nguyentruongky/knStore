@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct knRegisterDeviceTokenWorker {
+struct KNRegisterDeviceTokenWorker {
 
     var api: String
     var params: [String: Any]
@@ -19,7 +19,7 @@ struct knRegisterDeviceTokenWorker {
             print(returnData)
         }
 
-        func handleError(_ error: knError) {
+        func handleError(_ error: KNError) {
         }
 
 //        ServiceConnector.post(api, params: params, success: handleSuccess, fail: handleError)

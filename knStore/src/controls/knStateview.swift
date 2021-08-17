@@ -8,20 +8,20 @@
 
 import UIKit
 
-enum knState: String {
+enum KNState: String {
     case success
     case noInternet
     case error, empty, loading
     case unknown
 }
 
-class knOffineView: KNView {
+class KNOffineView: KNView {
     var retry: (() -> Void)?
 }
 
 
 
-class knStateView: KNView {
+class KNStateView: KNView {
     struct StateContent {
         var icon: UIImage?
         var title: String?
@@ -36,7 +36,7 @@ class knStateView: KNView {
     }
     private var currentView: UIView?
     var retry: (() -> Void)?
-    private var customViews = [knState: UIView]()
+    private var customViews = [KNState: UIView]()
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -47,19 +47,19 @@ class knStateView: KNView {
         setupView()
     }
 
-    private var stateContents: [knState: StateContent] = [
-        knState.noInternet: StateContent(iconName: "no_internet",
+    private var stateContents: [KNState: StateContent] = [
+        KNState.noInternet: StateContent(iconName: "no_internet",
                                          title: "Oops, no connection",
                                          content: "The internet connection appears to be offline."),
-        knState.error: StateContent(iconName: "generic_error",
+        KNState.error: StateContent(iconName: "generic_error",
                                     title: "There's an error",
                                     content: "There was an error. Please try again later."),
-        knState.empty: StateContent(iconName: "empty",
+        KNState.empty: StateContent(iconName: "empty",
                                     title: "No content",
                                     content: "I am lonly here"),
     ]
 
-    func setStateContent(state: knState, imageName: String?, title: String?, content: String?) {
+    func setStateContent(state: KNState, imageName: String?, title: String?, content: String?) {
         stateContents[state] = StateContent(iconName: imageName, title: title, content: content)
     }
 
@@ -80,22 +80,22 @@ class knStateView: KNView {
         }
     }
 
-    func setCustomView(_ view: UIView, for state: knState) {
+    func setCustomView(_ view: UIView, for state: KNState) {
         customViews[state] = view
     }
 
-    private func getView(for state: knState) -> UIView? {
+    private func getView(for state: KNState) -> UIView? {
         return customViews[state]
     }
 
-    func show(state: knState, in view: UIView, space: UIEdgeInsets = .zero) {
+    func show(state: KNState, in view: UIView, space: UIEdgeInsets = .zero) {
         view.addSubviews(views: self)
         fill(toView: view, space: space)
 
         self.state = state
     }
 
-    var state = knState.unknown {
+    var state = KNState.unknown {
         didSet {
             guard state != oldValue else { return }
             currentView?.removeFromSuperview()

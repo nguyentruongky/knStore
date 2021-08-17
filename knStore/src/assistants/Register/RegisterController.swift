@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterController: knStaticListController {
+class RegisterController: KNStaticListController {
     lazy var output = Interactor(controller: self)
     let validation = Validation()
     let ui = UI()

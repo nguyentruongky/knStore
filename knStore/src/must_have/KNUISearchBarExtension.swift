@@ -1,6 +1,6 @@
 //
-//  knUISearchBar.swift
-//  knCollection
+//  KNUISearchBar.swift
+//  KNCollection
 //
 //  Created by Ky Nguyen on 2/27/17.
 //  Copyright © 2017 Ky Nguyen. All rights reserved.

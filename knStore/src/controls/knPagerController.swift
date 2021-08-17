@@ -1,5 +1,5 @@
 //
-//  knPagerController.swift
+//  KNPagerController.swift
 //  Fixir
 //
 //  Created by Ky Nguyen on 4/5/17.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class knPagerController : PagerController {
+class KNPagerController : PagerController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,7 @@ class knPagerController : PagerController {
 }
 
 
-extension knPagerController : PagerDataSource {
+extension KNPagerController : PagerDataSource {
     
     func numberOfTabs(_ pager: PagerController) -> Int {
         return 2

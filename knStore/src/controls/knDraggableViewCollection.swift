@@ -1,5 +1,5 @@
 //
-//  knDraggableViewCollection.swift
+//  KNDraggableViewCollection.swift
 //  RewardShopr
 //
 //  Created by Ky Nguyen on 11/19/16.
@@ -13,21 +13,21 @@ import UIKit
 
 // MARK: DRAGGABLE VIEW COLLECTION
 
-protocol knDraggableViewCollectionDatasource {
+protocol KNDraggableViewCollectionDatasource {
     
-    func numberOfItem(in draggableViewCollection: knDraggableViewCollection) -> Int
+    func numberOfItem(in draggableViewCollection: KNDraggableViewCollection) -> Int
     
-    func draggableViewCollection(draggableViewCollection: knDraggableViewCollection, itemAtIndex: Int) -> knDraggableView
+    func draggableViewCollection(draggableViewCollection: KNDraggableViewCollection, itemAtIndex: Int) -> KNDraggableView
 }
 
-protocol knDraggableViewCollectionDelegate {
+protocol KNDraggableViewCollectionDelegate {
     
     func swipeToLeft(at index: Int)
     func swipeToRight(at index: Int)
     
 }
 
-class knDraggableViewCollection: UIView, knDraggableViewDelegate {
+class KNDraggableViewCollection: UIView, KNDraggableViewDelegate {
     
     private var itemCount : Int {
         
@@ -35,16 +35,16 @@ class knDraggableViewCollection: UIView, knDraggableViewDelegate {
         return dataSource!.numberOfItem(in: self)
     }
     
-    var dataSource : knDraggableViewCollectionDatasource? {
+    var dataSource : KNDraggableViewCollectionDatasource? {
         didSet {
             loadCards()
         }
     }
-    var delegate: knDraggableViewCollectionDelegate?
+    var delegate: KNDraggableViewCollectionDelegate?
     let MAX_BUFFER_SIZE = 3
     private var cardsLoadedIndex: Int = 0
     private var currentCardIndex: Int = -1
-    private var onScreenCards: [knDraggableView]!
+    private var onScreenCards: [KNDraggableView]!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -65,7 +65,7 @@ class knDraggableViewCollection: UIView, knDraggableViewDelegate {
         loadCards()
     }
     
-    private func createDraggableViewWithDataAtIndex(_ index: NSInteger) -> knDraggableView {
+    private func createDraggableViewWithDataAtIndex(_ index: NSInteger) -> KNDraggableView {
         let cardFrame = getCardFrame(at: onScreenCards.count)
         
         if let view = dataSource?.draggableViewCollection(draggableViewCollection: self, itemAtIndex: index) {
@@ -75,7 +75,7 @@ class knDraggableViewCollection: UIView, knDraggableViewDelegate {
             return view
         }
         
-        let draggableView = knDraggableView(frame: cardFrame)
+        let draggableView = KNDraggableView(frame: cardFrame)
         draggableView.backgroundColor = UIColor.blue
         draggableView.delegate = self
         return draggableView
@@ -137,12 +137,12 @@ class knDraggableViewCollection: UIView, knDraggableViewDelegate {
 
 // MARK: DRAGGABLE VIEW
 
-protocol knDraggableViewDelegate {
+protocol KNDraggableViewDelegate {
     func cardSwipedLeft(_ card: UIView) -> Void
     func cardSwipedRight(_ card: UIView) -> Void
 }
 
-class knDraggableView: UIView {
+class KNDraggableView: UIView {
     
     private struct EffectKitSetting {
         
@@ -154,7 +154,7 @@ class knDraggableView: UIView {
         static let ROTATION_ANGLE: Float = 3.14/8  //%%% Higher = stronger rotation angle
     }
     
-    var delegate: knDraggableViewDelegate!
+    var delegate: KNDraggableViewDelegate!
     private var panGestureRecognizer: UIPanGestureRecognizer!
     private var originPoint: CGPoint!
     private var xFromCenter: Float = 0

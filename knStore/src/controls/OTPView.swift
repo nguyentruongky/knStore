@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knOTPView: KNView {
+class KNOTPView: KNView {
     let padding: CGFloat = 24
     let hiddenTextField = UIMaker.makeTextField(font: UIFont.main(), color: UIColor(value: 85))
     var labels = [UILabel]()
@@ -102,7 +102,7 @@ class knOTPView: KNView {
 }
 
 
-extension knOTPView: UITextFieldDelegate {
+extension KNOTPView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var newText = string
         if isInvalid {

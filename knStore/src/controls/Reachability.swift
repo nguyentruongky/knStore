@@ -8,7 +8,7 @@
 
 import SystemConfiguration
 
-class knCheckConnectionWorker: NSObject {
+class KNCheckConnectionWorker: NSObject {
     
     let repeatSeconds: Double = 5
     private var allowShowMessage = true

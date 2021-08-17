@@ -8,11 +8,11 @@
 
 import UIKit
 
-class knListCell<U>: knTableCell {
+class KNListCell<U>: KNTableCell {
     var data: U?
 }
 
-class knListView<C: knListCell<U>, U>: KNView, UITableViewDataSource, UITableViewDelegate {
+class KNListView<C: KNListCell<U>, U>: KNView, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
     fileprivate let cellId = String(describing: C.self)
     var rowHeight: CGFloat = UITableView.automaticDimension
@@ -49,8 +49,8 @@ class knListView<C: knListCell<U>, U>: KNView, UITableViewDataSource, UITableVie
     func didSelectRow(at indexPath: IndexPath) { }
 }
 
-class knStaticListView: KNView, UITableViewDataSource, UITableViewDelegate {
-    var datasource = [knTableCell]() { didSet { tableView.reloadData() }}
+class KNStaticListView: KNView, UITableViewDataSource, UITableViewDelegate {
+    var datasource = [KNTableCell]() { didSet { tableView.reloadData() }}
     var rowHeight = UITableView.automaticDimension
     
     lazy var tableView: UITableView = { [weak self] in
@@ -82,7 +82,7 @@ class knStaticListView: KNView, UITableViewDataSource, UITableViewDelegate {
 }
 
 
-class knListController<C: knListCell<U>, U>: KNController, UITableViewDataSource, UITableViewDelegate {
+class KNListController<C: KNListCell<U>, U>: KNController, UITableViewDataSource, UITableViewDelegate {
     var datasource = [U]() { didSet { tableView.reloadData() }}
     fileprivate let cellId = String(describing: C.self)
     var rowHeight = UITableView.automaticDimension
@@ -139,7 +139,7 @@ class knListController<C: knListCell<U>, U>: KNController, UITableViewDataSource
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat { return 0 }
 }
 
-class knStaticListController: KNController, UITableViewDelegate, UITableViewDataSource {
+class KNStaticListController: KNController, UITableViewDelegate, UITableViewDataSource {
     var datasource = [UITableViewCell]() { didSet { tableView.reloadData() }}
     var rowHeight = UITableView.automaticDimension
     var contentInset: UIEdgeInsets?
@@ -177,8 +177,8 @@ class knStaticListController: KNController, UITableViewDelegate, UITableViewData
     deinit {
         print("Deinit \(NSStringFromClass(type(of: self)))")
     }
-    func wrapToCell(view: UIView) -> knTableCell {
-        let cell = knTableCell()
+    func wrapToCell(view: UIView) -> KNTableCell {
+        let cell = KNTableCell()
         cell.addSubview(view)
         view.fill(toView: cell)
         return cell

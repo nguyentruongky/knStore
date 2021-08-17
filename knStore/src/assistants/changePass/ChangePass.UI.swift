@@ -42,7 +42,7 @@ extension snChangePassCtr {
             button.setImage(image, for: .normal)
         }
         
-        func setupView() -> [knTableCell] {
+        func setupView() -> [KNTableCell] {
             oldPassTextField.returnKeyType = .next
             oldPassTextField.delegate = self
             
@@ -56,7 +56,7 @@ extension snChangePassCtr {
             let label = UIMaker.makeLabel(text: note, font: UIFont.main(size: 11),
                                           color: UIColor(r: 163, g: 169, b: 175), numberOfLines: 0)
             label.setLineSpacing()
-            let noteCell = knTableCell()
+            let noteCell = KNTableCell()
             noteCell.addSubviews(views: label)
             label.fill(toView: noteCell, space: UIEdgeInsets(left: padding, bottom: 32, right: padding))
             
@@ -68,8 +68,8 @@ extension snChangePassCtr {
             ]
         }
         
-        func makeCell(tf: UITextField) -> knTableCell {
-            let cell = knTableCell()
+        func makeCell(tf: UITextField) -> KNTableCell {
+            let cell = KNTableCell()
             cell.addSubviews(views: tf)
             tf.fill(toView: cell, space: UIEdgeInsets(left: padding, bottom: 16, right: padding))
             tf.height(50)

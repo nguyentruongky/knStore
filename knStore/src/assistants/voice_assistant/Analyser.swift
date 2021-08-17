@@ -9,12 +9,12 @@
 import UIKit
 import AVFoundation
 
-class knObject: NSObject {
+class KNObject: NSObject {
     override init() { super.init() }
 }
 
 @available(iOS 10.0, *)
-class coinAnalyser: knObject {
+class coinAnalyser: KNObject {
     weak var assistant: coinVoiceController?
     private var responseTexts = [String]()
     private let texter = coinTexter()
@@ -61,7 +61,7 @@ class coinAnalyser: knObject {
     }
     
     @objc func closeProtector() {
-        assistant?.navController?.kn_dismiss()
+        assistant?.navController?.KN_dismiss()
     }
     
     func sayMessage(_ response: Response) {

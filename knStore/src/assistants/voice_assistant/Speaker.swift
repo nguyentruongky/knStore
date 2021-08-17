@@ -14,7 +14,7 @@ protocol coinSpeakerDelegate: class {
 }
 
 @available(iOS 10.0, *)
-class coinSpeaker: knObject {
+class coinSpeaker: KNObject {
     private let synth = AVSpeechSynthesizer()
     var delegate: coinSpeakerDelegate?
     

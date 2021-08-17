@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol knDateDialogDelegate: class {
+protocol KNDateDialogDelegate: class {
     
     func didSelectDate(date: Date)
     
@@ -18,9 +18,9 @@ protocol knDateDialogDelegate: class {
 
 
 
-class knDateDialog: UIView {
+class KNDateDialog: UIView {
     
-    struct knFonts {
+    struct KNFonts {
         
         private init() { }
         static let mediumFont = UIFont.systemFont(ofSize: 15)
@@ -28,14 +28,14 @@ class knDateDialog: UIView {
         
     }
     
-    struct knColors {
+    struct KNColors {
         private init() { }
         
-        static let kn_127 = UIColor(value: 127)
-        static let kn_229 = UIColor(value: 229)
-        static let kn_241_147_78 = UIColor(r: 241, g: 147, b: 78)
-        static let kn_133_189_175 = UIColor(r: 133, g: 189, b: 175)
-        static let kn_119_203_189 = UIColor(r: 119, g: 203, b: 189)
+        static let KN_127 = UIColor(value: 127)
+        static let KN_229 = UIColor(value: 229)
+        static let KN_241_147_78 = UIColor(r: 241, g: 147, b: 78)
+        static let KN_133_189_175 = UIColor(r: 133, g: 189, b: 175)
+        static let KN_119_203_189 = UIColor(r: 119, g: 203, b: 189)
         
     }
 
@@ -50,9 +50,9 @@ class knDateDialog: UIView {
     
     
     
-    weak var delegate: knDateDialogDelegate?
+    weak var delegate: KNDateDialogDelegate?
     
-    static let center = knDateDialog()
+    static let center = KNDateDialog()
     
     lazy var backgroundView: UIView = { [weak self] in
         
@@ -88,9 +88,9 @@ class knDateDialog: UIView {
             
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
-            label.font = knFonts.mediumFont
+            label.font = KNFonts.mediumFont
             label.textColor = .white
-            label.backgroundColor = knColors.kn_119_203_189
+            label.backgroundColor = KNColors.KN_119_203_189
             label.text = "SET APPOINTMENT"
             label.textAlignment = .center
             label.numberOfLines = 0
@@ -100,18 +100,18 @@ class knDateDialog: UIView {
         let setButton: UIButton = {
             
             let title = "SET APPOINTMENT!"
-            let color = knColors.kn_127
+            let color = KNColors.KN_127
             
             let button = UIButton()
             button.translatesAutoresizingMaskIntoConstraints = false
             button.setTitle(title, for: .normal)
             button.setTitleColor(color, for: .normal)
-            button.titleLabel?.font = knFonts.mediumFont
+            button.titleLabel?.font = KNFonts.mediumFont
             
             let separator = UIView()
             separator.translatesAutoresizingMaskIntoConstraints = false
             separator.height(1)
-            separator.backgroundColor = knColors.kn_119_203_189
+            separator.backgroundColor = KNColors.KN_119_203_189
             
             button.addSubview(separator)
             separator.horizontal(toView: button)

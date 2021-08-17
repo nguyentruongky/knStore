@@ -1,6 +1,6 @@
 //
 //  UIMaker.swift
-//  knCollection
+//  KNCollection
 //
 //  Created by Ky Nguyen on 10/12/17.
 //  Copyright © 2017 Ky Nguyen. All rights reserved.
@@ -192,15 +192,15 @@ class UIMaker {
         return view
     }
     
-    static func wrapToCell(_ view: UIView, space: UIEdgeInsets = .zero) -> knTableCell {
-        let cell = knTableCell()
+    static func wrapToCell(_ view: UIView, space: UIEdgeInsets = .zero) -> KNTableCell {
+        let cell = KNTableCell()
         cell.addSubviews(views: view)
         view.fill(toView: cell, space: space)
         return cell
     }
     
-    static func makeEmptyCell(height: CGFloat = 16, color: UIColor = .lightGray) -> knTableCell {
-        let cell = knTableCell()
+    static func makeEmptyCell(height: CGFloat = 16, color: UIColor = .lightGray) -> KNTableCell {
+        let cell = KNTableCell()
         cell.height(height)
         cell.backgroundColor = color
         return cell
@@ -271,6 +271,30 @@ extension UIButton {
         }
     }
 }
+
+class Style {
+    
+}
+
+class BaseButton: UIButton {
+    var style: Style?
+    init(style: Style) {
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class PrimaryButton: BaseButton {
+    init() {
+        style = .primay
+    }
+}
+
+let button = PrimaryButton()
+let button = BaseButton(style: .primamy)
 
 extension UILabel {
     convenience init(text: String? = nil,
@@ -371,7 +395,7 @@ extension UIStackView {
     }
 }
 
-extension knTableCell {
+extension KNTableCell {
     convenience init(height h: CGFloat = 16, color: UIColor = .lightGray) {
         self.init()
         self.height(h)

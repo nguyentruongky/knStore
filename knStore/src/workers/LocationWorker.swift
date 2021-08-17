@@ -9,15 +9,15 @@
 import UIKit
 import CoreLocation
 
-typealias knLocationData = (lat: Double, long: Double)
+typealias KNLocationData = (lat: Double, long: Double)
 
 
-class knLocationWorker: NSObject {
+class KNLocationWorker: NSObject {
     
-    var responseToSuccess: ((knLocationData) -> Void)?
-    var responseToFail: ((knError) -> Void)?
+    var responseToSuccess: ((KNLocationData) -> Void)?
+    var responseToFail: ((KNError) -> Void)?
     
-    init(responseToSuccess: ((knLocationData) -> Void)?, responseToFail: ((knError) -> Void)?) {
+    init(responseToSuccess: ((KNLocationData) -> Void)?, responseToFail: ((KNError) -> Void)?) {
         self.responseToSuccess = responseToSuccess
         self.responseToFail = responseToFail
     
@@ -38,7 +38,7 @@ class knLocationWorker: NSObject {
     }
 }
 
-extension knLocationWorker : CLLocationManagerDelegate {
+extension KNLocationWorker : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -48,13 +48,13 @@ extension knLocationWorker : CLLocationManagerDelegate {
         let longitude = userLocation.coordinate.longitude
         let latitude = userLocation.coordinate.latitude
         
-        let location = knLocationData(latitude, longitude)
+        let location = KNLocationData(latitude, longitude)
         locationManager = nil 
         responseToSuccess?(location)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        let err = knError(code: "get_location_fail", message: error.localizedDescription)
+        let err = KNError(code: "get_location_fail", message: error.localizedDescription)
         responseToFail?(err)
     }
 }

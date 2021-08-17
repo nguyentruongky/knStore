@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  knTabController
+//  KNTabController
 //
 //  Created by Ky Nguyen on 4/7/18.
 //  Copyright © 2018 kynguyen. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class knTabBarItem: UIButton {
+class KNTabBarItem: UIButton {
     var itemHeight: CGFloat = 0
     var lock = false
 //    let line = UIMaker.makeLine(height: 2)
@@ -59,25 +59,25 @@ class knTabBarItem: UIButton {
     }
 }
 
-class knTabBar: UITabBar {
-    var kn_items = [knTabBarItem]()
-    convenience init(items: [knTabBarItem]) {
+class KNTabBar: UITabBar {
+    var KN_items = [KNTabBarItem]()
+    convenience init(items: [KNTabBarItem]) {
         self.init()
-        kn_items = items
+        KN_items = items
         translatesAutoresizingMaskIntoConstraints = false
         setupView()
     }
     
     override var tintColor: UIColor! {
         didSet {
-            for item in kn_items {
+            for item in KN_items {
                 item.color = tintColor
             }}}
     
     func setupView() {
         removeLine()
         backgroundColor = .white
-        if kn_items.count == 0 { return }
+        if KN_items.count == 0 { return }
         
         let line = UIMaker.makeHorizontalLine(height: 0.5)
         addSubviews(views: line)
@@ -85,9 +85,9 @@ class knTabBar: UITabBar {
         line.top(toView: self)
         
         var horizontalConstraints = "H:|"
-        let itemWidth: CGFloat = screenWidth / CGFloat(kn_items.count)
-        for i in 0 ..< kn_items.count {
-            let item = kn_items[i]
+        let itemWidth: CGFloat = screenWidth / CGFloat(KN_items.count)
+        for i in 0 ..< KN_items.count {
+            let item = KN_items[i]
             addSubviews(views: item)
             if item.itemHeight == 0 {
                 item.vertical(toView: self)
@@ -103,24 +103,24 @@ class knTabBar: UITabBar {
         }
         
         horizontalConstraints += "|"
-        addConstraints(withFormat: horizontalConstraints, arrayOf: kn_items)
+        addConstraints(withFormat: horizontalConstraints, arrayOf: KN_items)
     }
 }
 
-class knTabController: UITabBarController {
-    var kn_tabBar: knTabBar!
+class KNTabController: UITabBarController {
+    var KN_tabBar: KNTabBar!
     var selectedColor = UIColor.darkGray
     var normalColor = UIColor.lightGray {
         didSet {
-            kn_tabBar.tintColor = normalColor
+            KN_tabBar.tintColor = normalColor
         }}
     
     override var selectedIndex: Int { didSet {
-        let item = kn_tabBar.kn_items[selectedIndex]
+        let item = KN_tabBar.KN_items[selectedIndex]
         item.color = selectedColor
 //        item.setIndicator(visible: true)
         }}
-    private var kn_tabBarHeight: CGFloat = 49
+    private var KN_tabBarHeight: CGFloat = 49
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.isHidden = true
@@ -129,14 +129,14 @@ class knTabController: UITabBarController {
     
     func setupView() {}
     
-    func setTabBar(items: [knTabBarItem], height: CGFloat = 49) {
+    func setTabBar(items: [KNTabBarItem], height: CGFloat = 49) {
         guard items.count > 0 else { return }
         
-        kn_tabBar = knTabBar(items: items)
-        guard let bar = kn_tabBar else { return }
-        kn_tabBar.barTintColor = .white
-        kn_tabBar.tintColor = normalColor
-        bar.kn_items.first?.color = selectedColor
+        KN_tabBar = KNTabBar(items: items)
+        guard let bar = KN_tabBar else { return }
+        KN_tabBar.barTintColor = .white
+        KN_tabBar.tintColor = normalColor
+        bar.KN_items.first?.color = selectedColor
         
         view.addSubviews(views: bar)
         bar.horizontal(toView: view)
@@ -145,8 +145,8 @@ class knTabController: UITabBarController {
         } else {
             bar.bottom(toView: view)
         }
-        kn_tabBarHeight = height
-        bar.height(kn_tabBarHeight)
+        KN_tabBarHeight = height
+        bar.height(KN_tabBarHeight)
         for i in 0 ..< items.count {
             let item = items[i]
             item.tag = i
@@ -160,15 +160,15 @@ class knTabController: UITabBarController {
     }
     
     private func changeTab(from fromIndex: Int, to toIndex: Int) {
-        let oldItem = kn_tabBar.kn_items[fromIndex]
+        let oldItem = KN_tabBar.KN_items[fromIndex]
 //        oldItem.setIndicator(visible: false)
         oldItem.color = normalColor
-        kn_tabBar.kn_items[toIndex].color = selectedColor
+        KN_tabBar.KN_items[toIndex].color = selectedColor
         animateSliding(from: fromIndex, to: toIndex)
     }
 }
 
-extension knTabController {
+extension KNTabController {
 
     func animateSliding(from fromIndex: Int, to toIndex: Int) {
         guard fromIndex != toIndex else { return }
