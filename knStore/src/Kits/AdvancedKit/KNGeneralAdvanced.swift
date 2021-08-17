@@ -1,18 +1,10 @@
-//
-//  GlobalSupporter.swift
-//  Fixir
-//
-//  Created by Ky Nguyen on 3/9/17.
-//  Copyright © 2017 Ky Nguyen. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 
 var screenWidth: CGFloat { return UIScreen.main.bounds.width }
 var screenHeight: CGFloat { return UIScreen.main.bounds.height }
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-var statusBarStyle = UIStatusBarStyle.lightContent
-var isStatusBarHidden = false
 
 func run(_ action: @escaping () -> Void, after second: Double) {
     let triggerTime = DispatchTime.now() + .milliseconds(Int(second * 1000))
@@ -21,14 +13,10 @@ func run(_ action: @escaping () -> Void, after second: Double) {
 
 extension AppDelegate {
     @objc func hideKeyboard() {
-    UIApplication.shared.sendAction(
-        #selector(UIResponder.resignFirstResponder),
-        to: nil, from: nil, for: nil)
+        UIApplication.shared.sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil, from: nil, for: nil)
     }
-}
-
-func hideKeyboard() {
-    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 }
 
 func makeCall(to number: String) {
@@ -57,10 +45,6 @@ func hasNotch() -> Bool {
         DeviceType.isIphoneXSMax
 }
 
-func wrap(controller: UIViewController) -> UINavigationController {
-    return UINavigationController(rootViewController: controller)
-}
-
 func openUrlInSafari(_ url: String) {
     guard let link = URL(string: url) else { return }
     UIApplication.shared.open(link, options: [:], completionHandler: nil)
@@ -73,3 +57,22 @@ let isSimulator: Bool = {
     return false
     #endif
 }()
+
+extension UIFont {
+    enum KNWeight: String {
+        case black = "Muli-Black"
+        case bold = "Muli-Bold"
+        case medium = "Muli-SemiBold"
+        case regular = "Muli-Regular"
+    }
+    
+    static func main(_ weight: KNWeight = .regular, size: CGFloat = 15) -> UIFont {
+        return font(weight.rawValue, size: size)
+    }
+    
+    static func font(_ name: String, size: CGFloat) -> UIFont {
+        guard let font = UIFont(name: name, size: size) else { return UIFont.boldSystemFont(ofSize: size) }
+        return font
+    }
+}
+

@@ -1,10 +1,4 @@
-//
-//  CollectionView.swift
-//  Ogenii
-//
-//  Created by Ky Nguyen Coinhako on 7/19/18.
-//  Copyright © 2018 Ogenii. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 

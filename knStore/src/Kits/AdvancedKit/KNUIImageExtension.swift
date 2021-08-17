@@ -1,10 +1,4 @@
-//
-//  UIImage.swift
-//  kLibrary
-//
-//  Created by Ky Nguyen on 8/26/16.
-//  Copyright © 2016 Ky Nguyen. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 import Kingfisher

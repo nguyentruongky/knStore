@@ -1,10 +1,4 @@
-//
-//  TDTouchableView.swift
-//  ios-doctor
-//
-//  Created on 3/28/20
-//  Copyright © 2020 Jun Ho Hong. All rights reserved. 
-//
+//  Created by Ky Nguyen
 
 import UIKit
 enum TDTouchableViewType {

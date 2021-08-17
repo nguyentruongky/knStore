@@ -1,12 +1,82 @@
-//
-//  KNTableViewControllerExtension.swift
-//  KNStore
-//
-//  Created by Ky Nguyen on 4/13/20.
-//  Copyright © 2020 Ky Nguyen. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
+
+class KNTableCell : UITableViewCell {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupView()
+        selectionStyle = .none
+    }
+    static func wrap(view: UIView, space: UIEdgeInsets = .zero) -> KNTableCell {
+        let cell = KNTableCell()
+        cell.backgroundColor = .clear
+        cell.addSubviews(views: view)
+        view.fill(toView: cell, space: space)
+        return cell
+    }
+    
+    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    func setupView() { }
+}
+
+class KNFixedTableController: UITableViewController {
+    var itemCount: Int { return 0 }
+    var shouldGetDataViewDidLoad = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundColor = .white
+        registerCells()
+        setupView()
+        if shouldGetDataViewDidLoad {
+            getData()
+        }
+    }
+    
+    func setupView() {}
+    func registerCells() {}
+    func getData() {}
+    deinit {
+        print("Deinit \(NSStringFromClass(type(of: self)))")
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return itemCount }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { return UITableViewCell() }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { return 100 }
+}
+
+class KNTableController: KNController {
+    var itemCount: Int { return 0 }
+    var rowHeight: CGFloat { return 100 }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        registerCells()
+    }
+    
+    func registerCells() {}
+    
+    lazy var tableView: UITableView = { [weak self] in
+        let tb = UITableView()
+        tb.translatesAutoresizingMaskIntoConstraints = false
+        tb.separatorStyle = .none
+        tb.showsVerticalScrollIndicator = false
+        tb.dataSource = self
+        tb.delegate = self
+        return tb
+    }()
+    
+    deinit {
+        print("Deinit \(NSStringFromClass(type(of: self)))")
+    }
+}
+
+extension KNTableController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return itemCount }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { return UITableViewCell() }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { return rowHeight }
+}
+
 extension UITableView {
     convenience init(cells: [AnyClass], delegate: UITableViewDelegate? = nil, datasource: UITableViewDataSource? = nil) {
         self.init()
@@ -130,7 +200,7 @@ extension UITableViewController {
                            options: UIView.AnimationOptions(),
                            animations: {
                             cell.transform = CGAffineTransform(translationX: 0, y: 0)
-            })
+                           })
             index += 1
         }
     }

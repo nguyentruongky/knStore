@@ -1,10 +1,4 @@
-//
-//  KNInt.swift
-//  Fixir
-//
-//  Created by Ky Nguyen on 3/23/17.
-//  Copyright © 2017 Ky Nguyen. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 

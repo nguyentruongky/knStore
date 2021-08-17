@@ -1,10 +1,4 @@
-//
-//  KNUIApplication.swift
-//  kynguyenCodebase
-//
-//  Created by Ky Nguyen on 12/12/16.
-//  Copyright © 2016 kynguyen. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 

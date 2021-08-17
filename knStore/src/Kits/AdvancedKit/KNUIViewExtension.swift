@@ -1,27 +1,11 @@
-//
-//  UIView.swift
-//  kLibrary
-//
-//  Created by Ky Nguyen on 8/27/16.
-//  Copyright © 2016 Ky Nguyen. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 
 extension UIView {
-    func setBorder(width: CGFloat, color: UIColor) {
-        layer.borderColor = color.cgColor
-        layer.borderWidth = width
-    }
-
-    func circleCorner() {
+   func circleCorner() {
         superview?.layoutIfNeeded()
         setCorner(radius: frame.width / 2)
-    }
-    
-    func setCorner(radius: CGFloat) {
-        layer.cornerRadius = radius
-        clipsToBounds = true
     }
     
     func createImage() -> UIImage {
@@ -97,9 +81,6 @@ extension UIView {
     }
 }
 
-
-
-
 extension UIView {
     
     /**
@@ -156,20 +137,5 @@ extension UIView {
         borderLayer.lineWidth = borderWidth
         borderLayer.frame = bounds
         layer.addSublayer(borderLayer)
-    }
-    
-}
-
-extension UIStackView {
-    func addViews(_ views: UIView...) {
-        for v in views {
-            addArrangedSubview(v)
-        }
-    }
-    
-    func addViews(_ views: [UIView]) {
-        for v in views {
-            addArrangedSubview(v)
-        }
     }
 }

@@ -1,10 +1,4 @@
-//
-//  KNView.swift
-//  Ogenii
-//
-//  Created by Ky Nguyen on 3/17/17.
-//  Copyright © 2017 Ky Nguyen. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 
@@ -50,30 +44,34 @@ extension UIView {
     }
 }
 
-
-class KNCollectionCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
+class KNController: UIViewController {
+    var shouldGetDataViewDidLoad: Bool {
+        return false
     }
-    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    func setupView() { }
-}
-
-class KNTableCell : UITableViewCell {
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
         setupView()
-        selectionStyle = .none
-    }
-    static func wrap(view: UIView, space: UIEdgeInsets = .zero) -> KNTableCell {
-        let cell = KNTableCell()
-        cell.backgroundColor = .clear
-        cell.addSubviews(views: view)
-        view.fill(toView: cell, space: space)
-        return cell
+        if shouldGetDataViewDidLoad {
+            getData()
+        }
     }
     
-    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    func setupView() { }
+    func setupView() {}
+    func getData() {}
+    deinit {
+        print("Deinit \(NSStringFromClass(type(of: self)))")
+    }
+}
+
+extension UIView {
+    func setBorder(width: CGFloat, color: UIColor) {
+        layer.borderColor = color.cgColor
+        layer.borderWidth = width
+    }
+    
+    func setCorner(radius: CGFloat) {
+        layer.cornerRadius = radius
+        clipsToBounds = true
+    }
 }

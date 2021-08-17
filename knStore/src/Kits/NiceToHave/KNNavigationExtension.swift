@@ -66,27 +66,27 @@ extension UINavigationController {
 
 /// Extend navigation bar height
 extension UINavigationController {
-//    var statusBarView: UIView? {
-//        return view.viewWithTag(999)
-//    }
-//    
-//    open override func viewDidLoad() {
-//        super.viewDidLoad()
-//        if hasNotch() == false {
-//            let statusBarView = UIView(frame: CGRect(x: 0, y: -38, width: screenWidth, height: 20))
-//            statusBarView.tag = 999
-//            statusBarView.backgroundColor = .white
-//            navigationBar.addSubview(statusBarView)
-//        }
-//    }
-//    
-//    override open func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
-//        if hasNotch() == false {
-//            let height = CGFloat(48)
-//            navigationBar.frame = CGRect(x: 0, y: 38, width: screenWidth, height: height)
-//        }
-//    }
+    var statusBarView: UIView? {
+        return view.viewWithTag(999)
+    }
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        if hasNotch() == false {
+            let statusBarView = UIView(frame: CGRect(x: 0, y: -38, width: screenWidth, height: 20))
+            statusBarView.tag = 999
+            statusBarView.backgroundColor = .white
+            navigationBar.addSubview(statusBarView)
+        }
+    }
+    
+    override open func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if hasNotch() == false {
+            let height = CGFloat(48)
+            navigationBar.frame = CGRect(x: 0, y: 38, width: screenWidth, height: height)
+        }
+    }
 }
 
 

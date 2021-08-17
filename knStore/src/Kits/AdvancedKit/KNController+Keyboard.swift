@@ -1,10 +1,3 @@
-//
-//  UIViewController+Keyboard.swift
-//
-//  Created by Håkon Bogen on 10/12/14.
-//  Copyright (c) 2014 Håkon Bogen. All rights reserved.
-//  MIT LICENSE
-
 import UIKit
 
 private var scrollViewKey : UInt8 = 0

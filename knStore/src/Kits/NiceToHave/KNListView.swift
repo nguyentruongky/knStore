@@ -1,10 +1,4 @@
-//
-//  ListView.swift
-//  Ogenii
-//
-//  Created by Ky Nguyen Coinhako on 7/20/18.
-//  Copyright © 2018 Ogenii. All rights reserved.
-//
+//  Created by Ky Nguyen
 
 import UIKit
 
